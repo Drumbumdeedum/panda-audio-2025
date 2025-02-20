@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProductsPage() {
+async function ProductsPage() {
   return <div>ProductsPage</div>;
 }
 

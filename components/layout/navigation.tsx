@@ -1,48 +1,51 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+import panda_logo from "@/public/images/panda_logo.webp";
+
+const links = [
+  { name: "Products", href: "/products" },
+  { name: "Artists", href: "/artists" },
+];
 
 function Navigation() {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-16">
         <div className="flex items-center space-x-4">
-          {/* <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="https://sjc.microlink.io/NScQPLbR8IPXCGDxlqZgdVaVsqqVst1JUOw4M_a_YDn4lpr1Unj8MeFFiW8qcv5Iz1zoc_JOJMCD50CY_YREew.jpeg"
-              width={40}
-              height={40}
+              src={panda_logo}
+              width={45}
+              height={45}
               alt="Panda Audio Logo"
-              className="rounded-full"
+              className="rounded-full "
             />
             <span className="text-xl font-bold">Panda Audio</span>
-          </Link> */}
+          </Link>
         </div>
         <nav className="flex items-center space-x-6">
-          <Link
-            href="products"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Products
-          </Link>
-          {/* <Link
-            href="#about"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            href="#contact"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Contact
-          </Link> */}
-          <Link
-            href="artists"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Artists
-          </Link>
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={clsx(
+                "hover:underline underline-offset-4 transition-all",
+                pathname === link.href
+                  ? "text-slate-900 underline underline-offset-4"
+                  : " text-stone-500 hover:text-slate-900"
+              )}
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
