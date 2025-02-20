@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <div className="bg-black justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main>
-          {/* Hero Section */}
           <section className="py-20 relative">
             <div className="container mx-auto px-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -23,9 +22,11 @@ export default function Home() {
                     applications.
                   </p>
                   <div className="flex gap-4">
-                    <Button variant="outline" size="lg">
-                      <a href="/products">Explore Products</a>
-                    </Button>
+                    <a href="/products">
+                      <Button variant="outline" size="lg">
+                        Explore Products
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
