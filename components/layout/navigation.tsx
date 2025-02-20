@@ -19,13 +19,13 @@ function Navigation() {
           </Link> */}
         </div>
         <nav className="flex items-center space-x-6">
-          {/* <Link
-            href="#products"
+          <Link
+            href="products"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             Products
           </Link>
-          <Link
+          {/* <Link
             href="#about"
             className="text-sm font-medium hover:underline underline-offset-4"
           >

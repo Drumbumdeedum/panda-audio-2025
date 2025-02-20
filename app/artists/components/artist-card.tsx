@@ -12,14 +12,21 @@ import { ArtistData } from "../lib/artist-data";
 import Image from "next/image";
 import Link from "next/link";
 
-function ArtistCard({ artistData }: { artistData: ArtistData }) {
+type ArtistCardProps = {
+  artistData: ArtistData;
+  priority: boolean;
+};
+
+function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
   return (
     <Card key={artistData.name} className="group overflow-hidden">
       <div className="aspect-[16/15] relative overflow-hidden">
         <Image
+          priority={priority}
           src={artistData.image}
           alt={artistData.name}
           fill
+          sizes="(max-width: 384px) 100vw, 384px"
           className="object-cover transition duration-300 group-hover:scale-105"
         />
       </div>

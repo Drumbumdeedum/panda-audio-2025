@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { artists } from "./lib/artist-data";
 import ArtistCard from "./components/artist-card";
+import { PANDA_AUDIO_MAILTO_ADDRESS } from "@/lib/constants";
 
 export default function ArtistsPage() {
   return (
@@ -24,8 +25,12 @@ export default function ArtistsPage() {
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {artists.map((artist) => (
-            <ArtistCard key={artist.name} artistData={artist} />
+          {artists.map((artist, i) => (
+            <ArtistCard
+              key={artist.name}
+              priority={i < 3}
+              artistData={artist}
+            />
           ))}
         </div>
       </div>
@@ -41,7 +46,9 @@ export default function ArtistsPage() {
               products? We&apos;d love to hear from you.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg">Contact Us</Button>
+              <Button size="lg">
+                <a href={`mailto:${PANDA_AUDIO_MAILTO_ADDRESS}`}>Contact Us</a>
+              </Button>
               <Button variant="outline" size="lg">
                 View Products
               </Button>

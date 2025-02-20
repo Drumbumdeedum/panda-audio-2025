@@ -1,17 +1,17 @@
-import chickCorea from "@/public/images/artists/chick_corea.jpeg";
-import chickAndAndras from "@/public/images/artists/chick_andras.jpg";
-import herbie from "@/public/images/artists/herbie.png";
-import etienneMbappe from "@/public/images/artists/etienne_mbappe.jpeg";
-import robertHarper from "@/public/images/artists/robert_harper.jpeg";
-import bootsyCollins from "@/public/images/artists/bootsy_collins.jpeg";
-import chrisWolstenholme from "@/public/images/artists/chris_wolstenholme.jpeg";
-import howardJones from "@/public/images/artists/howard_jones.jpeg";
-import lasse from "@/public/images/artists/lasse.jpeg";
-import johnMcLauglin from "@/public/images/artists/john_mclaughlin.jpeg";
-import alissiaBenveniste from "@/public/images/artists/alissia_benveniste.jpeg";
-import waldemar_golebski from "@/public/images/artists/waldemar_golebski.jpeg";
-import reinHardRietsch from "@/public/images/artists/reinhard.jpeg";
-import mohiniDey from "@/public/images/artists/mohinidey.jpg";
+import chickCorea from "@/public/images/artists/chick_corea.webp";
+import chickAndAndras from "@/public/images/artists/chick_andras.webp";
+import herbie from "@/public/images/artists/herbie.webp";
+import etienneMbappe from "@/public/images/artists/etienne_mbappe.webp";
+import robertHarper from "@/public/images/artists/robert_harper.webp";
+import bootsyCollins from "@/public/images/artists/bootsy_collins.webp";
+import chrisWolstenholme from "@/public/images/artists/chris_wolstenholme.webp";
+import howardJones from "@/public/images/artists/howard_jones.webp";
+import lasse from "@/public/images/artists/lasse.webp";
+import johnMcLauglin from "@/public/images/artists/john_mclaughlin.webp";
+import alissiaBenveniste from "@/public/images/artists/alissia_benveniste.webp";
+import waldemar_golebski from "@/public/images/artists/waldemar_golebski.webp";
+import reinHardRietsch from "@/public/images/artists/reinhard.webp";
+import mohiniDey from "@/public/images/artists/mohinidey.webp";
 import { StaticImageData } from "next/image";
 
 export type ArtistData = {
@@ -67,19 +67,19 @@ export const artists: ArtistData[] = [
     product: "Future Impact",
   },
   {
-    name: "Étienne M'Bappé",
-    role: "Jazz Funk Artist",
-    image: etienneMbappe,
-    quote: "Jazz funk never sounded this hard!",
-    product: "Future Impact",
-  },
-  {
     name: "John McLaughlin",
     role: "Guitar Maestro",
     image: johnMcLauglin,
     quote: "Yes, he also uses midiBeam.",
     link: "https://www.johnmclaughlin.com",
     product: "midiBeam",
+  },
+  {
+    name: "Étienne M'Bappé",
+    role: "Jazz Funk Artist",
+    image: etienneMbappe,
+    quote: "Jazz funk never sounded this hard!",
+    product: "Future Impact",
   },
   {
     name: "Bootsy Collins",
