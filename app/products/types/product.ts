@@ -2,6 +2,7 @@ export interface Price {
   id: string;
   unit_amount: number;
   currency: string;
+  product: Product;
 }
 
 export interface Product {
@@ -9,5 +10,4 @@ export interface Product {
   name: string;
   images: string[];
   description?: string;
-  default_price?: Price;
 }
