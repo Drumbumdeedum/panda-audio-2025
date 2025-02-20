@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { FEATURED_PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -30,7 +32,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Features Section */}
           <section className="py-20 bg-slate-900/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
@@ -84,44 +85,24 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Products Section */}
           <section className="py-20">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
                 Featured Products
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "midiBeam v2 Wireless",
-                    description: "Professional wireless MIDI interface",
-                    image:
-                      "https://sjc.microlink.io/NScQPLbR8IPXCGDxlqZgdVaVsqqVst1JUOw4M_a_YDn4lpr1Unj8MeFFiW8qcv5Iz1zoc_JOJMCD50CY_YREew.jpeg",
-                  },
-                  {
-                    name: "Future Impact",
-                    description: "Bass guitar synthesizer and MIDI expander",
-                    image:
-                      "https://sjc.microlink.io/NScQPLbR8IPXCGDxlqZgdVaVsqqVst1JUOw4M_a_YDn4lpr1Unj8MeFFiW8qcv5Iz1zoc_JOJMCD50CY_YREew.jpeg",
-                  },
-                  {
-                    name: "midiBeam 4Control",
-                    description: "Advanced MIDI control system",
-                    image:
-                      "https://sjc.microlink.io/NScQPLbR8IPXCGDxlqZgdVaVsqqVst1JUOw4M_a_YDn4lpr1Unj8MeFFiW8qcv5Iz1zoc_JOJMCD50CY_YREew.jpeg",
-                  },
-                ].map((product, index) => (
+                {FEATURED_PRODUCTS.map((product, index) => (
                   <div
                     key={index}
                     className="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden"
                   >
-                    <div className="relative h-48">
-                      {/*  <Image
+                    <div className="aspect-[9/6] relative">
+                      <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
                         className="object-cover"
-                      /> */}
+                      />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-white mb-2">
