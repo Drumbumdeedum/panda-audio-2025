@@ -26,14 +26,6 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
-                <div className="relative h-[400px]">
-                  {/*  <Image
-                    src="https://sjc.microlink.io/NScQPLbR8IPXCGDxlqZgdVaVsqqVst1JUOw4M_a_YDn4lpr1Unj8MeFFiW8qcv5Iz1zoc_JOJMCD50CY_YREew.jpeg"
-                    alt="midiBeam Product"
-                    fill
-                    className="object-contain"
-                  /> */}
-                </div>
               </div>
             </div>
           </section>
