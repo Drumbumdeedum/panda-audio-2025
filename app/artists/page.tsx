@@ -50,7 +50,7 @@ export default function ArtistsPage() {
                 <a href={`mailto:${PANDA_AUDIO_MAILTO_ADDRESS}`}>Contact Us</a>
               </Button>
               <Button variant="outline" size="lg">
-                View Products
+                <a href="/products">View Products</a>
               </Button>
             </div>
           </div>

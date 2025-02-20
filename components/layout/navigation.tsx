@@ -39,7 +39,7 @@ function Navigation() {
               className={clsx(
                 "hover:underline underline-offset-4 transition-all",
                 pathname === link.href
-                  ? "text-slate-900 underline underline-offset-4"
+                  ? "text-blue-400 underline underline-offset-4"
                   : " text-stone-500 hover:text-slate-900"
               )}
             >
