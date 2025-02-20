@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="bg-black justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main>
-          <section className="py-20 relative">
+          <section className="pb-20 pt-10 relative">
             <div className="container mx-auto px-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
@@ -127,7 +127,8 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-slate-300 text-sm">
-                © {new Date().getFullYear()} Panda Audio. All rights reserved.
+                &copy; {new Date().getFullYear()} Panda Audio. All rights
+                reserved.
               </div>
               <div className="flex gap-6">
                 {["About Us", "FAQ", "Contact", "Privacy Policy"].map(

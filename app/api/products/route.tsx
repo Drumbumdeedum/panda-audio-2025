@@ -5,8 +5,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export async function GET(): Promise<NextResponse> {
   try {
-    const products = await stripe.products.list({
-      expand: ["data.default_price"],
+    const products = await stripe.prices.list({
+      expand: ["data.product"],
     });
 
     return NextResponse.json(products.data);
