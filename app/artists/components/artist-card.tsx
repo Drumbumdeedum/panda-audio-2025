@@ -15,7 +15,7 @@ import Link from "next/link";
 function ArtistCard({ artistData }: { artistData: ArtistData }) {
   return (
     <Card key={artistData.name} className="group overflow-hidden">
-      <div className="aspect-[4/3] relative overflow-hidden">
+      <div className="aspect-[16/15] relative overflow-hidden">
         <Image
           src={artistData.image}
           alt={artistData.name}

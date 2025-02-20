@@ -119,7 +119,7 @@ export const artists: ArtistData[] = [
     image: howardJones,
     quote:
       "Howard Jones on stage with his Yamaha KX5, equipped with midiBeam. Total freedom.",
-    link: "https://www.howardjones.com",
+    link: "http://www.howardjones.com",
     product: "midiBeam",
   },
   {
