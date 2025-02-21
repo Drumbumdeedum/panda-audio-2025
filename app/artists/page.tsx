@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { artists } from "./lib/artist-data";
 import ArtistCard from "./components/artist-card";
-import { PANDA_AUDIO_MAILTO_ADDRESS } from "@/lib/constants";
 
 export default function ArtistsPage() {
   return (

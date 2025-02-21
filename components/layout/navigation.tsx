@@ -7,6 +7,9 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 import panda_logo from "@/public/images/panda_logo.webp";
+import { Button } from "../ui/button";
+import { ShoppingCart } from "lucide-react";
+import { useProductCartStore } from "@/store/cart";
 
 const links = [
   { name: "Products", href: "/products" },
@@ -15,6 +18,11 @@ const links = [
 
 function Navigation() {
   const pathname = usePathname();
+  const { products } = useProductCartStore();
+  const productsCount = products.reduce(
+    (acc, product) => acc + product.amount,
+    0
+  );
   return (
     <header className="sticky top-0 z-50 w-full  bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-16">
@@ -45,6 +53,14 @@ function Navigation() {
               {link.name}
             </Link>
           ))}
+          <Button className="relative">
+            <ShoppingCart />
+            {productsCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-background text-foreground shadow-sm border-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {productsCount}
+              </span>
+            )}
+          </Button>
         </nav>
       </div>
     </header>
