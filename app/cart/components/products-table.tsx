@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -13,6 +14,7 @@ import {
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import { useProductCartStore } from "@/store/cart";
 import { useCurrencyStore } from "@/store/currency";
+import { MinusIcon, PlusIcon } from "lucide-react";
 
 function ProductsTable() {
   const { products } = useProductCartStore();
@@ -55,7 +57,17 @@ function ProductsTable() {
                     </p>
                   </>
                 </TableCell>
-                <TableCell className="text-center">{product.amount}</TableCell>
+                <TableCell className="text-center">
+                  <div className="flex justify-center items-center ">
+                    <Button className="h-6 w-6 p-0 rounded-full">
+                      <MinusIcon className="w-4 h-4" />
+                    </Button>
+                    <p className="px-3">{product.amount}</p>
+                    <Button className="h-6 w-6 p-0 rounded-full">
+                      <PlusIcon className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </TableCell>
                 <TableCell className="text-right">
                   {formatCurrency(price.currency)}
                   {formatAmount(product.amount * price.amount)}
