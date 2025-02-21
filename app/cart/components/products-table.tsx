@@ -5,6 +5,7 @@ import {
   TableBody,
   TableCaption,
   TableCell,
+  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -16,6 +17,12 @@ import { useCurrencyStore } from "@/store/currency";
 function ProductsTable() {
   const { products } = useProductCartStore();
   const { currency } = useCurrencyStore();
+  const total = products.reduce((acc, product) => {
+    const price = product.prices.find(
+      (p) => p.currency.toLowerCase() === currency.toLowerCase()
+    )!;
+    return acc + product.amount * price.amount;
+  }, 0);
   return (
     <div className="px-72 pt-8">
       <Table>
@@ -57,6 +64,15 @@ function ProductsTable() {
             );
           })}
         </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TableCell colSpan={2}>Total</TableCell>
+            <TableCell className="text-right">
+              {formatCurrency(currency.toLowerCase())}
+              {formatAmount(total)}
+            </TableCell>
+          </TableRow>
+        </TableFooter>
       </Table>
     </div>
   );
