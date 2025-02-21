@@ -19,7 +19,7 @@ type ArtistCardProps = {
 
 function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
   return (
-    <Card className="group overflow-hidden">
+    <Card className="group overflow-hidden flex flex-col">
       <div className="aspect-[16/15] relative overflow-hidden">
         <Image
           priority={priority}
@@ -52,8 +52,8 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
           )}
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="flex gap-4">
+      <CardContent className="flex flex-col flex-1">
+        <div className="flex flex-1 gap-4">
           <Quote className="h-5 w-5 shrink-0 text-muted-foreground" />
           <p className="text-sm text-muted-foreground">{artistData.quote}</p>
         </div>
