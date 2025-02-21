@@ -14,7 +14,7 @@ import {
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import { useProductCartStore } from "@/store/cart";
 import { useCurrencyStore } from "@/store/currency";
-import { MinusIcon, PlusIcon } from "lucide-react";
+import { ChevronRightIcon, MinusIcon, PlusIcon } from "lucide-react";
 
 function ProductsTable() {
   const { products, decreaseProductAmount, increaseProductAmount } =
@@ -27,7 +27,15 @@ function ProductsTable() {
     return acc + product.amount * price.amount;
   }, 0);
   return (
-    <div className="px-72 pt-8">
+    <div className="px-72 space-y-4">
+      <div className="flex justify-between items-center">
+        <h1 className="font-bold text-xl">Confirm your order</h1>
+        {products.length > 0 && (
+          <Button>
+            Continue <ChevronRightIcon />
+          </Button>
+        )}
+      </div>
       <Table>
         {products.length === 0 && (
           <TableCaption className="text-center">
