@@ -4,7 +4,7 @@ import PageHeader from "@/components/layout/page-header";
 
 export default function ArtistsPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <PageHeader
         title="Our Artist Partners"
         subtitle="Discover the incredible musicians and producers who trust Panda Audio for their creative expression."
@@ -20,6 +20,6 @@ export default function ArtistsPage() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 }

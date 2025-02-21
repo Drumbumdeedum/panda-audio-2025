@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <main>
           <Navigation />
-          {children}
+          <div className="min-h-screen">{children}</div>
           <Toaster closeButton />
           <footer className="border-t py-8">
             <div className="container mx-auto px-4">

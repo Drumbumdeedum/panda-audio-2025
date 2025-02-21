@@ -15,7 +15,7 @@ function CurrencySelect() {
     currency === "EUR" ? "* EU residents only" : "* for non-EU residents";
 
   return (
-    <div className="flex justify-start items-end gap-2">
+    <div className="space-y-2">
       <div className="w-24">
         <Select defaultValue="EUR" onValueChange={setCurrency}>
           <SelectTrigger className="w-full">
@@ -27,7 +27,7 @@ function CurrencySelect() {
           </SelectContent>
         </Select>
       </div>
-      <p className="text-sm leading-none text-background/70 ">{tooltip}</p>
+      <p className="text-xs leading-none text-foreground/70">{tooltip}</p>
     </div>
   );
 }
