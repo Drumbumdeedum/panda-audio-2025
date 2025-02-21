@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   const handleAddProduct = () => {
     addProduct(product);
-    toast(`${product.name} has been added to your cart`);
+    toast.success(`${product.name} has been added to your cart`);
   };
 
   return (
