@@ -1,4 +1,4 @@
-export interface Price {
+export interface PriceWithProduct {
   id: string;
   unit_amount: number;
   currency: string;

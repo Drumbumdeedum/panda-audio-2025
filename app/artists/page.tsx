@@ -5,16 +5,15 @@ import { PANDA_AUDIO_MAILTO_ADDRESS } from "@/lib/constants";
 
 export default function ArtistsPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="relative overflow-hidden bg-black py-24 sm:py-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black" />
+    <div className="min-h-screen bg-background">
+      <div className="relative overflow-hidden bg-foreground py-24 sm:py-32">
         <div className="relative">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h1 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
                 Our Artist Partners
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
+              <p className="mt-6 text-lg leading-8 text-background/70">
                 Discover the incredible musicians and producers who trust Panda
                 Audio for their creative expression.
               </p>
