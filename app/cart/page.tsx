@@ -1,10 +1,11 @@
 import PageHeader from "@/components/layout/page-header";
-import React from "react";
+import ProductsTable from "./components/products-table";
 
 function Cart() {
   return (
     <>
       <PageHeader title="Cart" subtitle="Current products in your cart" />
+      <ProductsTable />
     </>
   );
 }

@@ -51,8 +51,8 @@ export default function ProductCard({ product }: { product: Product }) {
           <CardDescription>
             {price && (
               <>
-                {formatCurrency(price?.currency)}
-                {formatAmount(price?.amount)}
+                {formatCurrency(price.currency)}
+                {formatAmount(price.amount)}
               </>
             )}
           </CardDescription>
