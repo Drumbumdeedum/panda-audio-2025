@@ -9,6 +9,8 @@ export type ProductWithAmount = Product & {
 interface ProductCartStore {
   products: ProductWithAmount[];
   addProduct: (newProduct: Product) => void;
+  decreaseProductAmount: (productId: number) => void;
+  increaseProductAmount: (productId: number) => void;
 }
 
 export const useProductCartStore = create<ProductCartStore>()(
@@ -32,20 +34,6 @@ export const useProductCartStore = create<ProductCartStore>()(
           }
         });
       },
-      increaseProductAmount: (productId: number) => {
-        set((state) => {
-          const productIndex = state.products.findIndex(
-            (p) => p.id === productId
-          );
-          if (productIndex !== -1) {
-            const updatedProducts = state.products.map((p, index) =>
-              index === productIndex ? { ...p, amount: p.amount + 1 } : p
-            );
-            return { products: updatedProducts };
-          }
-          return state;
-        });
-      },
       decreaseProductAmount: (productId: number) => {
         set((state) => {
           const productIndex = state.products.findIndex(
@@ -63,6 +51,20 @@ export const useProductCartStore = create<ProductCartStore>()(
             );
             return { products: updatedProducts };
           }
+        });
+      },
+      increaseProductAmount: (productId: number) => {
+        set((state) => {
+          const productIndex = state.products.findIndex(
+            (p) => p.id === productId
+          );
+          if (productIndex !== -1) {
+            const updatedProducts = state.products.map((p, index) =>
+              index === productIndex ? { ...p, amount: p.amount + 1 } : p
+            );
+            return { products: updatedProducts };
+          }
+          return state;
         });
       },
     }),
