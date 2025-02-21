@@ -33,30 +33,6 @@ export default function ArtistsPage() {
           ))}
         </div>
       </div>
-
-      <footer className="border-t bg-gray-50/50">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Join Our Artist Family
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Are you a professional musician interested in Panda Audio
-              products? We&apos;d love to hear from you.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg">
-                <a href={`mailto:${PANDA_AUDIO_MAILTO_ADDRESS}`}>Contact Us</a>
-              </Button>
-              <a href="/products">
-                <Button variant="outline" size="lg">
-                  View Products
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

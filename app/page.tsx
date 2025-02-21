@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -13,14 +12,16 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl font-bold text-background leading-tight">
-                  Professional Audio Innovation
-                </h1>
-                <p className="text-background/70 text-lg md:text-xl">
-                  Independent R&D company specializing in digital signal
-                  processing and embedded systems for professional audio
-                  applications.
-                </p>
+                <div>
+                  <h1 className="text-4xl md:text-6xl font-bold text-background leading-tight">
+                    Professional Audio Innovation
+                  </h1>
+                  <p className="text-background/70 text-lg md:text-xl">
+                    Independent R&D company specializing in digital signal
+                    processing and embedded systems for professional audio
+                    applications.
+                  </p>
+                </div>
                 <div className="flex gap-4">
                   <a href="/products">
                     <Button variant="outline" size="lg">
@@ -100,7 +101,7 @@ export default function Home() {
                   >
                     <div className="aspect-[9/6] relative">
                       <Image
-                        src={product.image || "/placeholder.svg"}
+                        src={product.image}
                         alt={product.name}
                         fill
                         className="object-cover"
@@ -121,30 +122,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <footer className="border-t py-8">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-muted-foreground text-sm">
-                &copy; {new Date().getFullYear()} Panda Audio. All rights
-                reserved.
-              </div>
-              <div className="flex gap-6">
-                {["About Us", "FAQ", "Contact", "Privacy Policy"].map(
-                  (item) => (
-                    <Link
-                      key={item}
-                      href="#"
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  )
-                )}
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );
