@@ -44,7 +44,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
         />
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>

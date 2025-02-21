@@ -27,7 +27,7 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
           alt={artistData.name}
           fill
           sizes="(max-width: 384px) 100vw, 384px"
-          className="object-cover transition duration-300 group-hover:scale-105"
+          className="object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
       <CardHeader>

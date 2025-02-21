@@ -53,8 +53,8 @@ function Navigation() {
               {link.name}
             </Link>
           ))}
-          <Link href={"/cart"}>
-            <Button className="relative">
+          <Button className="relative">
+            <Link href={"/cart"} className="flex gap-2">
               View Cart
               <ShoppingCart />
               {productsCount > 0 && (
@@ -62,8 +62,8 @@ function Navigation() {
                   {productsCount}
                 </span>
               )}
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </nav>
       </div>
     </header>
