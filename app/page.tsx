@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <>
+    <div className="space-y-24 pb-20">
       <section className="py-20 relative bg-foreground">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -33,9 +33,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Advanced Audio Technology
             </h2>
@@ -86,9 +86,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
             Featured Products
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -121,6 +121,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
