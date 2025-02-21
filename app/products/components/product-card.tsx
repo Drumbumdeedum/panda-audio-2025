@@ -16,6 +16,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -46,11 +47,14 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex justify-between">
-            <Button onClick={() => setIsModalOpen(true)}>More Info</Button>
-            <Button variant="secondary">Buy Now</Button>
-          </div>
+          <CardDescription>{price.product.description}</CardDescription>
         </CardContent>
+        <div className="p-6 pt-0 flex justify-between">
+          <Button variant="secondary" onClick={() => setIsModalOpen(true)}>
+            More Info
+          </Button>
+          <Button>Buy Now</Button>
+        </div>
       </Card>
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent>
