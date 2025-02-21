@@ -1,24 +1,15 @@
 import React from "react";
 import ProductGrid from "./components/product-grid";
 import CurrencySelect from "@/components/ui/currency-select";
+import PageHeader from "@/components/layout/page-header";
 
 async function ProductsPage() {
   return (
     <div className="min-h-screen space-y-8">
-      <div className="relative overflow-hidden bg-foreground py-12">
-        <div className="relative">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:mx-0 ">
-              <h1 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
-                Products
-              </h1>
-              <p className="text-lg leading-none text-background/70">
-                Discover the full range of Panda Audio&apos;s products.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        title="Products"
+        subtitle="Discover the full range of Panda Audio's products."
+      />
       <div className="container mx-auto px-4 space-y-4">
         <CurrencySelect />
         <ProductGrid />
