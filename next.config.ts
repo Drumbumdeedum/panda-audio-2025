@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         protocol: undefined,
         hostname: "files.stripe.com",
         port: "",
-        pathname: "",
+        pathname: "**",
         search: "",
       },
     ],
