@@ -17,7 +17,8 @@ import { useCurrencyStore } from "@/store/currency";
 import { MinusIcon, PlusIcon } from "lucide-react";
 
 function ProductsTable() {
-  const { products } = useProductCartStore();
+  const { products, decreaseProductAmount, increaseProductAmount } =
+    useProductCartStore();
   const { currency } = useCurrencyStore();
   const total = products.reduce((acc, product) => {
     const price = product.prices.find(
@@ -38,7 +39,7 @@ function ProductsTable() {
           <TableRow>
             <TableHead className="flex-grow">Product name</TableHead>
             <TableHead className="text-center">Amount</TableHead>
-            <TableHead className="text-right">Total</TableHead>
+            <TableHead className="text-right w-24">Total</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -59,11 +60,17 @@ function ProductsTable() {
                 </TableCell>
                 <TableCell className="text-center">
                   <div className="flex justify-center items-center ">
-                    <Button className="h-6 w-6 p-0 rounded-full">
+                    <Button
+                      className="h-6 w-6 p-0 rounded-full"
+                      onClick={() => decreaseProductAmount(product.id)}
+                    >
                       <MinusIcon className="w-4 h-4" />
                     </Button>
                     <p className="px-3">{product.amount}</p>
-                    <Button className="h-6 w-6 p-0 rounded-full">
+                    <Button
+                      className="h-6 w-6 p-0 rounded-full"
+                      onClick={() => increaseProductAmount(product.id)}
+                    >
                       <PlusIcon className="w-4 h-4" />
                     </Button>
                   </div>

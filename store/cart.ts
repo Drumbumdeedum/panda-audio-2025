@@ -32,6 +32,39 @@ export const useProductCartStore = create<ProductCartStore>()(
           }
         });
       },
+      increaseProductAmount: (productId: number) => {
+        set((state) => {
+          const productIndex = state.products.findIndex(
+            (p) => p.id === productId
+          );
+          if (productIndex !== -1) {
+            const updatedProducts = state.products.map((p, index) =>
+              index === productIndex ? { ...p, amount: p.amount + 1 } : p
+            );
+            return { products: updatedProducts };
+          }
+          return state;
+        });
+      },
+      decreaseProductAmount: (productId: number) => {
+        set((state) => {
+          const productIndex = state.products.findIndex(
+            (p) => p.id === productId
+          );
+          const currentAmount = state.products[productIndex].amount;
+          if (currentAmount > 1) {
+            const updatedProducts = state.products.map((p, index) =>
+              index === productIndex ? { ...p, amount: p.amount - 1 } : p
+            );
+            return { products: updatedProducts };
+          } else {
+            const updatedProducts = state.products.filter(
+              (p) => p.id !== productId
+            );
+            return { products: updatedProducts };
+          }
+        });
+      },
     }),
     {
       name: "product-cart-store",
