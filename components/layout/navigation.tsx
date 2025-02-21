@@ -15,7 +15,6 @@ const links = [
 
 function Navigation() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <header className="sticky top-0 z-50 w-full  bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-16">

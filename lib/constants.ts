@@ -1,22 +1,41 @@
-import future_impact from "@/public/images/products/future_impact_v3.webp";
+import future_impact_v4 from "@/public/images/products/future_impact_v4.webp";
 import midibeam_v2 from "@/public/images/products/midibeam_v2.webp";
 import midibeam_4control from "@/public/images/products/midibeam_4control.webp";
+import { Product } from "@/types/product";
 
-export const FEATURED_PRODUCTS = [
+export const PRODUCTS: Product[] = [
   {
+    id: 1,
+    featured: true,
     name: "Future Impact",
     description: "Bass guitar synthesizer and MIDI expander",
-    image: future_impact,
+    image: future_impact_v4,
+    prices: [
+      { amount: 29900, currency: "eur" },
+      { amount: 24500, currency: "usd" },
+    ],
   },
   {
+    id: 2,
+    featured: true,
     name: "midiBeam 4Control",
     description: "Advanced MIDI control system",
     image: midibeam_4control,
+    prices: [
+      { amount: 6900, currency: "eur" },
+      { amount: 5900, currency: "usd" },
+    ],
   },
   {
+    id: 3,
+    featured: true,
     name: "midiBeam v2 Wireless",
     description: "Professional wireless MIDI interface",
     image: midibeam_v2,
+    prices: [
+      { amount: 16900, currency: "eur" },
+      { amount: 14000, currency: "usd" },
+    ],
   },
 ];
 

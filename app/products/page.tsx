@@ -1,5 +1,6 @@
 import React from "react";
 import ProductGrid from "./components/product-grid";
+import CurrencySelect from "@/components/ui/currency-select";
 
 async function ProductsPage() {
   return (
@@ -14,6 +15,7 @@ async function ProductsPage() {
               <p className="mt-6 text-lg leading-8 text-background/70">
                 Discover the full range of Panda Audio&apos;s products.
               </p>
+              <CurrencySelect />
             </div>
           </div>
         </div>

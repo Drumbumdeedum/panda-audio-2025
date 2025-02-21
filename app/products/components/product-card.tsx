@@ -10,7 +10,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { PriceWithProduct } from "../types/product";
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import {
   Card,
@@ -19,34 +18,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Product } from "@/types/product";
 
-export default function ProductCard({ price }: { price: PriceWithProduct }) {
+export default function ProductCard({ product }: { product: Product }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const productImage =
-    price.product.images.length > 0
-      ? price.product.images[0]
-      : "/placeholder.svg";
   return (
     <>
       <Card className="group overflow-hidden">
-        {/* <div className="bg-primary/70 shadow-md overflow-hidden border border-border/30 rounded-lg"> */}
         <Image
-          src={productImage}
-          alt={price.product.name}
+          src={product.image}
+          alt={product.name}
           unoptimized
           width={300}
           height={300}
           className="w-full h-48 object-cover"
         />
         <CardHeader>
-          <CardTitle>{price.product.name}</CardTitle>
+          <CardTitle>{product.name}</CardTitle>
           <CardDescription>
-            {formatCurrency(price.currency)}
-            {formatAmount(price.unit_amount)}
+            {formatCurrency("eur")}
+            {formatAmount(66666)}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <CardDescription>{price.product.description}</CardDescription>
+          <CardDescription>{product.description}</CardDescription>
         </CardContent>
         <div className="p-6 pt-0 flex justify-between">
           <Button variant="secondary" onClick={() => setIsModalOpen(true)}>
@@ -58,15 +53,15 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{price.product.name}</DialogTitle>
+            <DialogTitle>{product.name}</DialogTitle>
             <DialogDescription>
-              Detailed information about {price.product.name}
+              Detailed information about {product.name}
             </DialogDescription>
           </DialogHeader>
           <div className="mt-4">
             <Image
-              src={productImage}
-              alt={price.product.name}
+              src={product.image}
+              alt={product.name}
               width={400}
               height={400}
               unoptimized
@@ -86,8 +81,8 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
               <li>Compatible with various devices</li>
             </ul>
             <p className="text-xl font-bold mb-4">
-              Price: {formatCurrency(price.currency)}
-              {formatAmount(price.unit_amount)}
+              Price: {formatCurrency("eur")}
+              {formatAmount(66666)}
             </p>
             <Button className="w-full">Add to Cart</Button>
           </div>

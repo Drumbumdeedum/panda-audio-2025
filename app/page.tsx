@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FEATURED_PRODUCTS } from "@/lib/constants";
+import { PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -92,30 +92,32 @@ export default function Home() {
               Featured Products
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {FEATURED_PRODUCTS.map((product, index) => (
-                <Card
-                  key={index}
-                  className="border border-border/30 rounded-lg overflow-hidden"
-                >
-                  <div className="aspect-[9/6] relative">
-                    <Image
-                      src={product.image || "/placeholder.svg"}
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle>{product.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4">
-                      {product.description}
-                    </p>
-                    <Button className="w-full">Learn More</Button>
-                  </CardContent>
-                </Card>
-              ))}
+              {PRODUCTS.filter((product) => product.featured).map(
+                (product, index) => (
+                  <Card
+                    key={index}
+                    className="border border-border/30 rounded-lg overflow-hidden"
+                  >
+                    <div className="aspect-[9/6] relative">
+                      <Image
+                        src={product.image || "/placeholder.svg"}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{product.name}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground mb-4">
+                        {product.description}
+                      </p>
+                      <Button className="w-full">Learn More</Button>
+                    </CardContent>
+                  </Card>
+                )
+              )}
             </div>
           </div>
         </section>
