@@ -22,7 +22,7 @@ export default function ArtistsPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {artists.map((artist, i) => (
             <ArtistCard

@@ -3,12 +3,13 @@ import { FEATURED_PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <>
-      <div className="justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <section className="pb-20 pt-10 relative">
+      <div className="min-h-screen">
+        <section className="py-20 relative bg-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -32,13 +33,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-primary/50">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-background mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Advanced Audio Technology
               </h2>
-              <p className="text-background/70 max-w-2xl mx-auto">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 Developing cutting-edge MIDI products and professional audio
                 solutions with expertise in embedded systems and real-time
                 processing.
@@ -87,14 +88,14 @@ export default function Home() {
 
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-background mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
               Featured Products
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {FEATURED_PRODUCTS.map((product, index) => (
-                <div
+                <Card
                   key={index}
-                  className="bg-primary/70 border border-border/30 rounded-lg overflow-hidden"
+                  className="border border-border/30 rounded-lg overflow-hidden"
                 >
                   <div className="aspect-[9/6] relative">
                     <Image
@@ -104,27 +105,25 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-background mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-background/70 mb-4">
+                  <CardHeader>
+                    <CardTitle>{product.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">
                       {product.description}
                     </p>
-                    <Button variant="secondary" className="w-full">
-                      Learn More
-                    </Button>
-                  </div>
-                </div>
+                    <Button className="w-full">Learn More</Button>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
-        <footer className="border-t border-foreground py-8">
+        <footer className="border-t py-8">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-background/70 text-sm">
+              <div className="text-muted-foreground text-sm">
                 &copy; {new Date().getFullYear()} Panda Audio. All rights
                 reserved.
               </div>
@@ -134,7 +133,7 @@ export default function Home() {
                     <Link
                       key={item}
                       href="#"
-                      className="text-sm text-background/70 hover:text-background transition-colors"
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item}
                     </Link>

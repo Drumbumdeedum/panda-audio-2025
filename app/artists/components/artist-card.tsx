@@ -19,7 +19,7 @@ type ArtistCardProps = {
 
 function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
   return (
-    <Card key={artistData.name} className="group overflow-hidden">
+    <Card className="group overflow-hidden">
       <div className="aspect-[16/15] relative overflow-hidden">
         <Image
           priority={priority}

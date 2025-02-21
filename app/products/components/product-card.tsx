@@ -11,7 +11,14 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { PriceWithProduct } from "../types/product";
-import { formatAmount } from "@/lib/utils";
+import { formatAmount, formatCurrency } from "@/lib/utils";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function ProductCard({ price }: { price: PriceWithProduct }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,28 +27,31 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
       ? price.product.images[0]
       : "/placeholder.svg";
   return (
-    <div className="bg-primary/70 shadow-md overflow-hidden border border-border/30 rounded-lg">
-      <Image
-        src={productImage}
-        alt={price.product.name}
-        unoptimized
-        width={300}
-        height={300}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <h2 className="text-xl text-background font-semibold mb-2">
-          {price.product.name}
-        </h2>
-        <p className="text-background/70 mb-4">
-          ${formatAmount(price.unit_amount)}
-        </p>
-        <div className="flex justify-between">
-          <Button onClick={() => setIsModalOpen(true)}>More Info</Button>
-          <Button variant="secondary">Buy Now</Button>
-        </div>
-      </div>
-
+    <>
+      <Card className="group overflow-hidden">
+        {/* <div className="bg-primary/70 shadow-md overflow-hidden border border-border/30 rounded-lg"> */}
+        <Image
+          src={productImage}
+          alt={price.product.name}
+          unoptimized
+          width={300}
+          height={300}
+          className="w-full h-48 object-cover"
+        />
+        <CardHeader>
+          <CardTitle>{price.product.name}</CardTitle>
+          <CardDescription>
+            {formatCurrency(price.currency)}
+            {formatAmount(price.unit_amount)}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex justify-between">
+            <Button onClick={() => setIsModalOpen(true)}>More Info</Button>
+            <Button variant="secondary">Buy Now</Button>
+          </div>
+        </CardContent>
+      </Card>
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent>
           <DialogHeader>
@@ -73,12 +83,13 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
               <li>Compatible with various devices</li>
             </ul>
             <p className="text-xl font-bold mb-4">
-              Price: ${formatAmount(price.unit_amount)}
+              Price: {formatCurrency(price.currency)}
+              {formatAmount(price.unit_amount)}
             </p>
             <Button className="w-full">Add to Cart</Button>
           </div>
         </DialogContent>
       </Dialog>
-    </div>
+    </>
   );
 }

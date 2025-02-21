@@ -8,3 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 export function formatAmount(amountInCents: number): string {
   return (amountInCents / 100).toFixed(2);
 }
+
+export function formatCurrency(currency: string): string {
+  if (currency === "usd") return "$";
+  if (currency === "eur") return "€";
+  return "Unknown";
+}
