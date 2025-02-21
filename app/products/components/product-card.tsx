@@ -14,11 +14,14 @@ import { PriceWithProduct } from "../types/product";
 
 export default function ProductCard({ price }: { price: PriceWithProduct }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(price.product.images[0]);
+  const productImage =
+    price.product.images.length > 0
+      ? price.product.images[0]
+      : "/placeholder.svg";
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <Image
-        src={price.product.images[0] || "/placeholder.svg"}
+        src={productImage}
         alt={price.product.name}
         unoptimized
         width={300}
@@ -44,7 +47,7 @@ export default function ProductCard({ price }: { price: PriceWithProduct }) {
           </DialogHeader>
           <div className="mt-4">
             <Image
-              src={price.product.images[0] || "/placeholder.svg"}
+              src={productImage}
               alt={price.product.name}
               width={400}
               height={400}
