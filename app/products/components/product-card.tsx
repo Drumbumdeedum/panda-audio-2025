@@ -15,10 +15,12 @@ import { useCurrencyStore } from "@/store/currency";
 import { ShoppingCart } from "lucide-react";
 import { useProductCartStore } from "@/store/cart";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { currency } = useCurrencyStore();
   const { addProduct } = useProductCartStore();
+  const router = useRouter();
 
   const price = product.prices.find(
     (p) => p.currency.toLowerCase() === currency.toLowerCase()
@@ -26,7 +28,14 @@ export default function ProductCard({ product }: { product: Product }) {
 
   const handleAddProduct = () => {
     addProduct(product);
-    toast.success(`${product.name} has been added to your cart`);
+    toast(`${product.name} has been added to your cart`, {
+      action: {
+        label: "View Cart",
+        onClick: () => {
+          router.push("/cart");
+        },
+      },
+    });
   };
 
   return (

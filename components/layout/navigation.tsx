@@ -53,14 +53,17 @@ function Navigation() {
               {link.name}
             </Link>
           ))}
-          <Button className="relative">
-            <ShoppingCart />
-            {productsCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-background text-foreground shadow-sm border-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                {productsCount}
-              </span>
-            )}
-          </Button>
+          <Link href={"/cart"}>
+            <Button className="relative">
+              View Cart
+              <ShoppingCart />
+              {productsCount > 0 && (
+                <span className="absolute -bottom-2 -right-2 bg-background text-foreground shadow border-foreground text-2xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {productsCount}
+                </span>
+              )}
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>
