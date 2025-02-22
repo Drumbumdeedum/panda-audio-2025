@@ -3,6 +3,7 @@ import { PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -113,7 +114,9 @@ export default function Home() {
                     <p className="text-muted-foreground mb-4">
                       {product.description}
                     </p>
-                    <Button className="w-full">Learn More</Button>
+                    <Button className="w-full">
+                      <Link href={product.href}>Learn more</Link>
+                    </Button>
                   </CardContent>
                 </Card>
               )

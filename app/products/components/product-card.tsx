@@ -16,6 +16,8 @@ import { ShoppingCart } from "lucide-react";
 import { useProductCartStore } from "@/store/cart";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import clsx from "clsx";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { currency } = useCurrencyStore();
@@ -60,8 +62,17 @@ export default function ProductCard({ product }: { product: Product }) {
         <CardContent className="flex-1">
           <CardDescription>{product.description}</CardDescription>
         </CardContent>
-        <div className="p-6 pt-0 flex justify-between">
-          <Button variant="secondary">More Info</Button>
+        <div
+          className={clsx(
+            "p-6 pt-0 flex",
+            product.href ? "justify-between" : "justify-end"
+          )}
+        >
+          {product.href && (
+            <Button variant="secondary">
+              <Link href={product.href}>More Info</Link>
+            </Button>
+          )}
           <Button onClick={handleAddProduct}>
             <ShoppingCart /> Add to cart
           </Button>

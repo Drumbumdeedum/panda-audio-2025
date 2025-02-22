@@ -7,6 +7,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     featured: true,
+    href: "/future-impact",
     name: "Future Impact",
     description: "Bass guitar synthesizer and MIDI expander",
     image: future_impact_v4,
@@ -18,6 +19,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 2,
     featured: true,
+    href: "/midibeam-4control",
     name: "midiBeam 4Control",
     description: "Advanced MIDI control system",
     image: midibeam_4control,
@@ -29,6 +31,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 3,
     featured: true,
+    href: "/midibeam-v2-wireless",
     name: "midiBeam v2 Wireless",
     description: "Professional wireless MIDI interface",
     image: midibeam_v2,
