@@ -12,7 +12,7 @@ function FutureImpactPage() {
         subtitle="Bass guitar synthesizer and MIDI expander"
       />
       <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8">
-        <section className="flex flex-col space-y-4 lg:flex-row shadow p-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row p-4 rounded-lg">
           <Image
             src={future_impact_v4}
             alt="Future impact"
@@ -32,7 +32,8 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
-        <section className="flex flex-col space-y-4 lg:flex-row shadow px-8 py-4 rounded-lg">
+        <hr className="my-4 border-t-2 border-border" />
+        <section className="flex flex-col space-y-4 lg:flex-row px-8 py-4 rounded-lg">
           <Image
             src={future_impact_v4_top}
             alt="Future impact"
@@ -43,15 +44,17 @@ function FutureImpactPage() {
               The project garnered tremendous support from forum members who
               funded the first batch of 100 pedals in late 2015. From there, the
               FI&apos;s popularity and reputation grew; ever more people
-              clamoured to own one, including notable players such as Chris
-              Wolstenholme (Muse), Doug Wimbish (Living Colour, The Rolling
-              Stones) and Bootsy Collins. Thanks to the generous input of
-              members of the online bass-playing community, the FI continued to
-              go from strength to strength.
+              clamoured to own one, including notable players such as{" "}
+              <strong>Chris Wolstenholme</strong> (Muse),{" "}
+              <strong>Doug Wimbish</strong> (Living Colour, The Rolling Stones)
+              and <strong>Bootsy Collins</strong>. Thanks to the generous input
+              of members of the online bass-playing community, the FI continued
+              to go from strength to strength.
             </p>
           </div>
         </section>
-        <section className="flex flex-col space-y-4 lg:flex-row shadow p-4 rounded-lg">
+        <hr className="my-4 border-t-2 border-border" />
+        <section className="flex flex-col space-y-4 lg:flex-row p-4 rounded-lg">
           <Image
             src={future_impact_v4_back}
             alt="Future impact"
