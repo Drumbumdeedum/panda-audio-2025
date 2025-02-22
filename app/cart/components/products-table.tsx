@@ -27,7 +27,7 @@ function ProductsTable() {
     return acc + product.amount * price.amount;
   }, 0);
   return (
-    <div className="px-72 space-y-4">
+    <div className="px-4 md:px-24 xl:px-72 space-y-4">
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">Confirm your order</h1>
         {products.length > 0 && (
@@ -46,8 +46,8 @@ function ProductsTable() {
         <TableHeader>
           <TableRow>
             <TableHead className="flex-grow">Product name</TableHead>
-            <TableHead className="text-center">Amount</TableHead>
-            <TableHead className="text-right w-24">Total</TableHead>
+            <TableHead className="text-center w-32">Amount</TableHead>
+            <TableHead className="text-right w-32">Total</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
