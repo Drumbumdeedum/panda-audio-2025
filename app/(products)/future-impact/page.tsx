@@ -3,6 +3,7 @@ import Image from "next/image";
 import future_impact_v4 from "@/public/images/products/future-impact/future_impact_v4.jpg";
 import future_impact_v4_top from "@/public/images/products/future-impact/future_impact_v4_top.webp";
 import future_impact_v4_back from "@/public/images/products/future-impact/future_impact_v4_back.webp";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 function FutureImpactPage() {
   return (
@@ -82,6 +83,128 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
+        <hr className="my-4 border-t-2 border-border" />
+        <section>
+          <h1 className="text-2xl font-bold mb-6">New Features for V4</h1>
+          <ul className="list-disc space-y-2 pl-4">
+            <li>
+              <strong>CV/Gate output</strong> - Simultaneously play a 1V/octave
+              analog synth using the pedal
+            </li>
+            <li>
+              <strong>Detented Parameter dial with extended range</strong> -
+              More variations on each sound
+            </li>
+            <li>
+              <strong>Sturdier knobs</strong> - The potentiometer shafts are now
+              made from solid metal
+            </li>
+            <li>
+              <strong>Long Release</strong> - Audio-triggered sounds now use the
+              full release time of the ADSR
+            </li>
+            <li>
+              <strong>Oscillator sync</strong> - VCO2 can sync to VCO1 for more
+              harmonically complex sounds
+            </li>
+            <li>
+              <strong>Improved audio fidelity</strong> - Via an ultra-low-noise
+              CoDec and noise-reduction coding
+            </li>
+            <li>
+              <strong>Overwrite programs</strong> - On-pedal edits can be saved
+              to patch data before uploading
+            </li>
+            <li>
+              <strong>Superior pitch tracking</strong> - Greatly reduced latency
+              and increased sensitivity to input instrument dynamics. Pitch
+              detection can now be set to prioritize speed or accuracy
+            </li>
+            <li>
+              <strong>Octave transposition</strong> - Two new MIDI CCs to
+              transpose the pitch by ±2 octaves
+            </li>
+            <li>
+              <strong>63 new Flexi curves</strong> - Create a split point
+              between any two adjacent semitones
+            </li>
+            <li>
+              <strong>Robust firmware update process</strong> - Now any MIDI
+              interface can be used
+            </li>
+            <li>
+              <strong>Alternative quick access to Global Menu</strong> -
+              Enter/exit menu without power cycling
+            </li>
+            <li>
+              <strong>Better Global Menu layout</strong> - Items are
+              repositioned and more meaningfully labelled
+            </li>
+            <li>
+              <strong>Fresh Editor look</strong> - An updated color scheme with
+              a clearer and more logical layout
+            </li>
+            <li>
+              <strong>Onscreen Mod Wheel</strong> - Send out MIDI CCs or
+              Aftertouch directly from the Editor
+            </li>
+            <li>
+              <strong>midiBeam 4Control integration</strong> - MIDI signals from
+              expression pedals and switches are automatically passed to the FI4
+              when connected to the Editor
+            </li>
+          </ul>
+        </section>
+        <hr className="my-4 border-t-2 border-border" />
+        <section>
+          <h1 className="text-2xl font-bold mb-6">
+            Check out these product videos:
+          </h1>
+          <div className="space-y-12">
+            <div className="w-full">
+              <AspectRatio ratio={9 / 6}>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/RBH9UDVkG6c?start=664"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </AspectRatio>
+            </div>
+            <div className="w-full">
+              <AspectRatio ratio={9 / 6}>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/uMddCxSDACY"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </AspectRatio>
+            </div>
+            <div className="w-full">
+              <AspectRatio ratio={9 / 6}>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/G0A-3MnNrWw"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </AspectRatio>
+            </div>
+            <div className="w-full">
+              <AspectRatio ratio={9 / 6}>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/7F3SbUk8Uas"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </AspectRatio>
+            </div>
+          </div>
+        </section>
+        <hr className="my-4 border-t-2 border-border" />
+        <h1 className="text-2xl font-bold mb-6">Product support</h1>
       </div>
     </>
   );
