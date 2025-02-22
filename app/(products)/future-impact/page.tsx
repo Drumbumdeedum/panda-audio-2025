@@ -12,7 +12,7 @@ function FutureImpactPage() {
         subtitle="Bass guitar synthesizer and MIDI expander"
       />
       <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8">
-        <section className="flex flex-col space-y-4 lg:flex-row shadow-lg p-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row shadow p-4 rounded-lg">
           <Image
             src={future_impact_v4}
             alt="Future impact"
@@ -32,8 +32,13 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
-        <section className="flex flex-col space-y-4 lg:flex-row shadow-lg px-8 py-4 rounded-lg">
-          <div className="flex flex-col justify-center align-baseline">
+        <section className="flex flex-col space-y-4 lg:flex-row shadow px-8 py-4 rounded-lg">
+          <Image
+            src={future_impact_v4_top}
+            alt="Future impact"
+            className="object-cover px-8"
+          />
+          <div className="flex flex-col justify-center align-baseline lg:order-first">
             <p>
               The project garnered tremendous support from forum members who
               funded the first batch of 100 pedals in late 2015. From there, the
@@ -45,13 +50,8 @@ function FutureImpactPage() {
               go from strength to strength.
             </p>
           </div>
-          <Image
-            src={future_impact_v4_top}
-            alt="Future impact"
-            className="object-cover px-8"
-          />
         </section>
-        <section className="flex flex-col space-y-4 lg:flex-row shadow-lg p-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row shadow p-4 rounded-lg">
           <Image
             src={future_impact_v4_back}
             alt="Future impact"
