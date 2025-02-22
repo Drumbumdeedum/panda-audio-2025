@@ -83,9 +83,22 @@ function Navigation() {
               <SheetTrigger>
                 <Menu />
               </SheetTrigger>
-              <SheetContent side="top" className="h-screen opacity-85">
+              <SheetContent side="top" className="h-screen">
                 <SheetHeader>
-                  <SheetTitle className="text-4xl mb-8">Menu</SheetTitle>
+                  <SheetTitle className="text-4xl mb-8">
+                    <SheetClose asChild>
+                      <Link href="/" className="flex items-center space-x-3">
+                        <Image
+                          src={panda_logo}
+                          width={45}
+                          height={45}
+                          alt="Panda Audio Logo"
+                          className="rounded-full "
+                        />
+                        <span className="text-xl font-bold">Panda Audio</span>
+                      </Link>
+                    </SheetClose>
+                  </SheetTitle>
                   <SheetDescription className="flex flex-col space-y-8 mx-auto text-left">
                     {links.map((link) => (
                       <SheetClose asChild key={link.href}>
