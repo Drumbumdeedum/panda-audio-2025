@@ -48,10 +48,10 @@ function FutureImpactPage() {
               FI&apos;s popularity and reputation grew; ever more people
               clamoured to own one, including notable players such as{" "}
               <strong>Chris Wolstenholme</strong> (Muse),{" "}
-              <strong>Doug Wimbish</strong> (Living Colour, The Rolling Stones)
-              and <strong>Bootsy Collins</strong>. Thanks to the generous input
-              of members of the online bass-playing community, the FI continued
-              to go from strength to strength.
+              <strong>Doug Wimbish</strong> (Living Colour, The Rolling Stones),{" "}
+              <strong>Mohini Dey</strong> and <strong>Bootsy Collins</strong>.
+              Thanks to the generous input of members of the online bass-playing
+              community, the FI continued to go from strength to strength.
             </p>
           </div>
         </section>
