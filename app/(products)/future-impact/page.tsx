@@ -41,7 +41,7 @@ function FutureImpactPage() {
           />
           <div className="flex flex-col justify-center align-baseline lg:order-first">
             <h1 className="font-bold text-2xl mb-4">
-              From Grassroots Support to Global Recognition
+              From grassroots support to global recognition
             </h1>
             <p>
               The project garnered tremendous support from forum members who
@@ -65,7 +65,7 @@ function FutureImpactPage() {
           />
           <div className="flex flex-col justify-center align-baseline">
             <h1 className="font-bold text-2xl mb-4">
-              Pushing the Limits: Transitioning to the FI4 for Future Growth
+              Pushing the limits: transitioning to the FI4 for future growth
             </h1>
             <p>
               With each successive update, we gradually added more and more
