@@ -11,6 +11,7 @@ import React from "react";
 import { ArtistData } from "../lib/artist-data";
 import Image from "next/image";
 import Link from "next/link";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 type ArtistCardProps = {
   artistData: ArtistData;
@@ -20,15 +21,16 @@ type ArtistCardProps = {
 function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
   return (
     <Card className="group overflow-hidden flex flex-col">
-      <div className="aspect-[16/15] relative overflow-hidden">
-        <Image
-          priority={priority}
-          src={artistData.image}
-          alt={artistData.name}
-          fill
-          sizes="(max-width: 384px) 100vw, 384px"
-          className="object-cover transition duration-500 group-hover:scale-105"
-        />
+      <div className="w-full">
+        <AspectRatio ratio={16 / 15}>
+          <Image
+            priority={priority}
+            src={artistData.image}
+            alt={artistData.name}
+            fill
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </AspectRatio>
       </div>
       <CardHeader>
         <div className="flex items-center justify-between">
