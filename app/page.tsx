@@ -23,11 +23,11 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <a href="/products">
+                <Link href="/products">
                   <Button variant="outline" size="lg">
                     Explore Products
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -114,9 +114,9 @@ export default function Home() {
                     <p className="text-muted-foreground mb-4">
                       {product.description}
                     </p>
-                    <Button className="w-full">
-                      <Link href={product.href}>Learn more</Link>
-                    </Button>
+                    <Link href={product.href}>
+                      <Button className="w-full">Learn more</Button>
+                    </Link>
                   </CardContent>
                 </Card>
               )

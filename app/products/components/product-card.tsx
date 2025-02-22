@@ -69,9 +69,9 @@ export default function ProductCard({ product }: { product: Product }) {
           )}
         >
           {product.href && (
-            <Button variant="secondary">
-              <Link href={product.href}>More Info</Link>
-            </Button>
+            <Link href={product.href}>
+              <Button variant="secondary">More Info</Button>
+            </Link>
           )}
           <Button onClick={handleAddProduct}>
             <ShoppingCart /> Add to cart

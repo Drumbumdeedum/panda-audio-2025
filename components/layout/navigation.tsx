@@ -67,8 +67,8 @@ function Navigation() {
               </Link>
             ))}
           </div>
-          <Button className="relative">
-            <Link href={"/cart"} className="flex gap-2">
+          <Link href={"/cart"} className="flex gap-2">
+            <Button className="relative">
               <span className="hidden sm:block">View Cart</span>
               <ShoppingCart />
               {productsCount > 0 && (
@@ -76,8 +76,8 @@ function Navigation() {
                   {productsCount}
                 </span>
               )}
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           <div className="block md:hidden">
             <Sheet>
               <SheetTrigger>
