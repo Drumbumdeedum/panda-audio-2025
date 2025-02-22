@@ -8,12 +8,24 @@ import clsx from "clsx";
 
 import panda_logo from "@/public/images/panda_logo.webp";
 import { Button } from "../ui/button";
-import { ShoppingCart } from "lucide-react";
+import { Menu, ShoppingCart } from "lucide-react";
 import { useProductCartStore } from "@/store/cart";
+
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const links = [
   { name: "Products", href: "/products" },
   { name: "Artists", href: "/artists" },
+  { name: "Downloads", href: "/downloads" },
+  { name: "About us", href: "/about" },
 ];
 
 function Navigation() {
@@ -24,8 +36,8 @@ function Navigation() {
     0
   );
   return (
-    <header className="sticky top-0 z-50 w-full  bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 px-16">
+    <header className="sticky top-0 z-50 w-full bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="flex h-16 justify-between sm:space-x-0 px-4 md:px-8 lg:px-16">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-3">
             <Image
@@ -39,23 +51,25 @@ function Navigation() {
           </Link>
         </div>
         <nav className="flex items-center space-x-6">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={clsx(
-                "transition-all",
-                pathname === link.href
-                  ? "text-foreground underline underline-offset-4"
-                  : " text-muted-foreground hover:text-foreground"
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
+          <div className="hidden md:flex space-x-6 items-center ">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={clsx(
+                  "transition-all",
+                  pathname === link.href
+                    ? "text-foreground underline underline-offset-4"
+                    : " text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
           <Button className="relative">
             <Link href={"/cart"} className="flex gap-2">
-              View Cart
+              <span className="hidden sm:block">View Cart</span>
               <ShoppingCart />
               {productsCount > 0 && (
                 <span className="absolute -bottom-2 -right-2 bg-background text-foreground shadow border-foreground text-2xs rounded-full w-5 h-5 flex items-center justify-center">
@@ -64,6 +78,35 @@ function Navigation() {
               )}
             </Link>
           </Button>
+          <div className="block md:hidden">
+            <Sheet>
+              <SheetTrigger>
+                <Menu />
+              </SheetTrigger>
+              <SheetContent side="top" className="h-screen opacity-85">
+                <SheetHeader>
+                  <SheetTitle className="text-4xl mb-8">Menu</SheetTitle>
+                  <SheetDescription className="flex flex-col space-y-8 mx-auto text-left">
+                    {links.map((link) => (
+                      <SheetClose asChild key={link.href}>
+                        <Link
+                          href={link.href}
+                          className={clsx(
+                            "transition-all text-3xl",
+                            pathname === link.href
+                              ? "text-foreground underline underline-offset-4"
+                              : " text-foreground/80 hover:text-foreground"
+                          )}
+                        >
+                          {link.name}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
+          </div>
         </nav>
       </div>
     </header>
