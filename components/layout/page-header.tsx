@@ -11,9 +11,7 @@ function PageHeader({ title, subtitle }: PageHeaderProps) {
       <div className="relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto lg:mx-0 ">
-            <h1 className="text-3xl font-bold tracking-tight text-background sm:text-4xl">
-              {title}
-            </h1>
+            <h1 className="tracking-tight mb-0 text-background">{title}</h1>
             <p className="text-lg leading-none text-background/70">
               {subtitle}
             </p>

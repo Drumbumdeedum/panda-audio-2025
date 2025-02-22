@@ -20,7 +20,7 @@ function FutureImpactPage() {
             className=" object-cover"
           />
           <div className="flex flex-col justify-center align-baseline">
-            <h1 className="font-bold text-2xl mb-4">How it began</h1>
+            <h2>How it began</h2>
             <p>
               The <strong>Future Impact</strong> is the subject of one of those
               heartwarming stories of the internet as a force for good. It began
@@ -41,9 +41,7 @@ function FutureImpactPage() {
             className="object-cover px-8"
           />
           <div className="flex flex-col justify-center align-baseline lg:order-first">
-            <h1 className="font-bold text-2xl mb-4">
-              From grassroots support to global recognition
-            </h1>
+            <h2>From grassroots support to global recognition</h2>
             <p>
               The project garnered tremendous support from forum members who
               funded the first batch of 100 pedals in late 2015. From there, the
@@ -65,9 +63,9 @@ function FutureImpactPage() {
             className="object-cover px-8 py-24"
           />
           <div className="flex flex-col justify-center align-baseline">
-            <h1 className="font-bold text-2xl mb-4">
+            <h2>
               Pushing the limits: transitioning to the FI4 for future growth
-            </h1>
+            </h2>
             <p>
               With each successive update, we gradually added more and more
               features and refinements. With the v3.60 update of June 2021, we
@@ -85,7 +83,7 @@ function FutureImpactPage() {
         </section>
         <hr className="my-4 border-t-2 border-border" />
         <section>
-          <h1 className="text-2xl font-bold mb-6">New Features for V4</h1>
+          <h2>New Features for V4</h2>
           <ul className="list-disc space-y-2 pl-4">
             <li>
               <strong>CV/Gate output</strong> - Simultaneously play a 1V/octave
@@ -157,9 +155,7 @@ function FutureImpactPage() {
         </section>
         <hr className="my-4 border-t-2 border-border" />
         <section>
-          <h1 className="text-2xl font-bold mb-6">
-            Check out these product videos:
-          </h1>
+          <h2>Check out these product videos:</h2>
           <div className="space-y-12">
             <div className="w-full">
               <AspectRatio ratio={9 / 6}>
@@ -204,7 +200,7 @@ function FutureImpactPage() {
           </div>
         </section>
         <hr className="my-4 border-t-2 border-border" />
-        <h1 className="text-2xl font-bold mb-6">Product support</h1>
+        <h2>Product support</h2>
       </div>
     </>
   );

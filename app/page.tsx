@@ -31,7 +31,11 @@ export default function Home() {
               </div>
               <div className="flex gap-4">
                 <Link className="group" href="/products">
-                  <Button variant="outline" size="lg">
+                  <Button
+                    className="text-foreground"
+                    variant="outline"
+                    size="lg"
+                  >
                     Explore Products
                     <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
                   </Button>
@@ -45,9 +49,7 @@ export default function Home() {
       <section>
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Advanced Audio Technology
-            </h2>
+            <h1>Advanced Audio Technology</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Developing cutting-edge MIDI products and professional audio
               solutions with expertise in embedded systems and real-time
@@ -97,9 +99,12 @@ export default function Home() {
 
       <section>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Featured Products
-          </h2>
+          <div className="text-center mb-8">
+            <h1>Featured Products</h1>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Check out some of our most popular products.
+            </p>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PRODUCTS.filter((product) => product.featured).map(
               (product, index) => (

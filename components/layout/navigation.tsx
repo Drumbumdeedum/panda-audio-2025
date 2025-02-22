@@ -47,7 +47,9 @@ function Navigation() {
               alt="Panda Audio Logo"
               className="rounded-full "
             />
-            <span className="text-xl font-bold">Panda Audio</span>
+            <span className="text-xl font-bold text-foreground">
+              Panda Audio
+            </span>
           </Link>
         </div>
         <nav className="flex items-center space-x-6">
