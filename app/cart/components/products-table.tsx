@@ -31,8 +31,9 @@ function ProductsTable() {
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">Confirm your order</h1>
         {products.length > 0 && (
-          <Button>
-            Continue <ChevronRightIcon />
+          <Button className="group">
+            Continue
+            <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
           </Button>
         )}
       </div>
