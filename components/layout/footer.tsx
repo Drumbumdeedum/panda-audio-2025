@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+const footerLinks = [
+  { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
+];
+
 function Footer() {
   return (
     <footer className="border-t py-8">
@@ -9,13 +14,13 @@ function Footer() {
             &copy; {new Date().getFullYear()} Panda Audio. All rights reserved.
           </div>
           <div className="flex gap-6">
-            {["FAQ", "Contact"].map((item) => (
+            {footerLinks.map((item) => (
               <Link
-                key={item}
-                href="#"
+                key={item.href}
+                href={item.href}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {item}
+                {item.name}
               </Link>
             ))}
           </div>
