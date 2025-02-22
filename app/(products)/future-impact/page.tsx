@@ -12,7 +12,7 @@ function FutureImpactPage() {
         subtitle="Bass guitar synthesizer and MIDI expander"
       />
       <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8">
-        <section className="flex flex-col space-y-4 lg:flex-row p-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4}
             alt="Future impact"
@@ -33,7 +33,7 @@ function FutureImpactPage() {
           </div>
         </section>
         <hr className="my-4 border-t-2 border-border" />
-        <section className="flex flex-col space-y-4 lg:flex-row px-8 py-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4_top}
             alt="Future impact"
@@ -57,7 +57,7 @@ function FutureImpactPage() {
           </div>
         </section>
         <hr className="my-4 border-t-2 border-border" />
-        <section className="flex flex-col space-y-4 lg:flex-row p-4 rounded-lg">
+        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4_back}
             alt="Future impact"
