@@ -1,9 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { PRODUCTS } from "@/lib/constants";
-import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
+import {
+  AudioLines,
+  ChevronRightIcon,
+  Cpu,
+  Headphones,
+  Radio,
+} from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function Home() {
   return (
@@ -23,9 +30,10 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <Link href="/products">
+                <Link className="group" href="/products">
                   <Button variant="outline" size="lg">
                     Explore Products
+                    <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
               </div>
@@ -97,15 +105,17 @@ export default function Home() {
               (product, index) => (
                 <Card
                   key={index}
-                  className="border border-border/30 rounded-lg overflow-hidden"
+                  className="group border border-border/30 rounded-lg overflow-hidden"
                 >
-                  <div className="aspect-[9/6] relative">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="w-full">
+                    <AspectRatio ratio={3 / 2}>
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    </AspectRatio>
                   </div>
                   <CardHeader>
                     <CardTitle>{product.name}</CardTitle>

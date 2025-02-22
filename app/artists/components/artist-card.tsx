@@ -11,7 +11,7 @@ import React from "react";
 import { ArtistData } from "../lib/artist-data";
 import Image from "next/image";
 import Link from "next/link";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 type ArtistCardProps = {
   artistData: ArtistData;
@@ -60,9 +60,11 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
           <p className="text-sm text-muted-foreground">{artistData.quote}</p>
         </div>
         <div className="mt-4">
-          <Button variant="secondary" size="sm">
-            Using {artistData.product}
-          </Button>
+          <Link href={artistData.productHref}>
+            <Button variant="secondary" size="sm">
+              Using {artistData.product}
+            </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>

@@ -21,6 +21,7 @@ export type ArtistData = {
   quote: string;
   link?: string | undefined;
   product: string;
+  productHref: string;
 };
 
 export const artists: ArtistData[] = [
@@ -30,7 +31,8 @@ export const artists: ArtistData[] = [
     image: chickCorea,
     quote: "His legendary KX-5 is midiBeamised already.",
     link: "https://chickcorea.com",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Chick and András",
@@ -38,7 +40,8 @@ export const artists: ArtistData[] = [
     image: chickAndAndras,
     quote:
       "Chick receiving his midiBeam wireless MIDI interface from András personally.",
-    product: "midiBeam Wireless",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Herbie Hancock",
@@ -47,7 +50,8 @@ export const artists: ArtistData[] = [
     quote:
       "Herbie opening his brand new midiBeam wireless MIDI interface at NAMM.",
     link: "https://herbiehancock.com",
-    product: "midiBeam Wireless",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Chris Wolstenholme",
@@ -57,6 +61,7 @@ export const artists: ArtistData[] = [
       "The pedal is just as good as the original, which is what I was hoping for. The new presets and bank space are a bonus too.",
     link: "https://muse.mu",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "Mohini Dey",
@@ -65,6 +70,7 @@ export const artists: ArtistData[] = [
     quote:
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "John McLaughlin",
@@ -72,7 +78,8 @@ export const artists: ArtistData[] = [
     image: johnMcLauglin,
     quote: "Yes, he also uses midiBeam.",
     link: "https://www.johnmclaughlin.com",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Étienne M'Bappé",
@@ -80,6 +87,7 @@ export const artists: ArtistData[] = [
     image: etienneMbappe,
     quote: "Jazz funk never sounded this hard!",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "Bootsy Collins",
@@ -89,6 +97,7 @@ export const artists: ArtistData[] = [
       "The best Bass Synthesizer pedal hands up or down. The Future Impact, Built to Blast! Now, where'd u get yr Funk from? Bootsy baby!!!",
     link: "https://www.bootsycollins.com",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "Robert Harper",
@@ -97,6 +106,7 @@ export const artists: ArtistData[] = [
     quote:
       "The tracking on this Future Impact Bass Synth Pedal is very accurate.",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "Reinhard Rietsch",
@@ -104,7 +114,8 @@ export const artists: ArtistData[] = [
     image: reinHardRietsch,
     quote: "Reinhard from Camo & Krooked celebrates his new midiBeam.",
     link: "https://www.camoandkrooked.com",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Alissia Benveniste",
@@ -112,6 +123,7 @@ export const artists: ArtistData[] = [
     image: alissiaBenveniste,
     quote: "The greatest female bassist of the funk world has chosen us.",
     product: "Future Impact",
+    productHref: "/future-impact",
   },
   {
     name: "Howard Jones",
@@ -120,7 +132,8 @@ export const artists: ArtistData[] = [
     quote:
       "Howard Jones on stage with his Yamaha KX5, equipped with midiBeam. Total freedom.",
     link: "http://www.howardjones.com",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Lasse Raelahti",
@@ -128,13 +141,15 @@ export const artists: ArtistData[] = [
     image: lasse,
     quote:
       "MidiBeam in action. Lasse Raelahti playing his keytar in Fear of Domination.",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Waldemar Gołębski",
     role: "Musician",
     image: waldemar_golebski,
     quote: "MidiBeam in action in Gdansk, Shakespeare Theatre, Poland.",
-    product: "midiBeam",
+    product: "midiBeam v2 wireless",
+    productHref: "/midibeam-v2-wireless",
   },
 ];

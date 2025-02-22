@@ -18,6 +18,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export default function ProductCard({ product }: { product: Product }) {
   const { currency } = useCurrencyStore();
@@ -42,12 +43,17 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <>
-      <Card className="group overflow-hidden h-['400px'] flex flex-col">
-        <Image
-          src={product.image}
-          alt={product.name}
-          className="w-full h-48 object-cover transition duration-500 group-hover:scale-105"
-        />
+      <Card className="group overflow-hidden  flex flex-col">
+        <div className="w-full">
+          <AspectRatio ratio={3 / 2}>
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          </AspectRatio>
+        </div>
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
           <CardDescription>
