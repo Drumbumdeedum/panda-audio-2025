@@ -196,6 +196,72 @@ function AboutPage() {
             </AspectRatio>
           </div>
         </section>
+        <section>
+          <h4>Press & publications on András Szalay&apos;s work</h4>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <a href="/downloads/about/EMM-83.pdf" target="_blank">
+                Muzix81 in Electronics & MusicMaker (UK, 1983)
+              </a>
+            </li>
+            <li>
+              <a href="/downloads/about/ESCM-85.pdf" target="_blank">
+                Muzix81 in Electronic Soundmaker and Electronic Music (UK, 1985)
+              </a>
+            </li>
+            <li>
+              <a
+                href="/downloads/about/muzix81-keyboards-feb-1985.pdf"
+                target="_blank"
+              >
+                Muzix81 in Keyboards (Germany, Feb 1985)
+              </a>
+            </li>
+            <li>
+              <a
+                href="/downloads/about/wersi-keyboard-aug-1992.pdf"
+                target="_blank"
+              >
+                Jim Aikin&quot;s review of the Wersi CPF-1 in Keyboard (Aug
+                &apos;92)
+              </a>
+            </li>
+            <li>
+              <a href="/downloads/about/axon-flyer.pdf" target="_blank">
+                Flyer for the Blue Chip Music Axon NGC66 system (1994)
+              </a>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h1>Zsolt Rammer</h1>
+          <p>
+            Zsolt Rammer joined Panda-Audio early 2015. He has a very wide
+            spectrum of activities covering practically everything in connection
+            with the development of musical instruments, especially guitar
+            effects. He can do hardware design, PCB design, building his own
+            prototypes. But his most important activity is writing guitar effect
+            algorithms and user interfaces on all possible platforms (PC, MAC,
+            IOS). He released amazing guitar effect plugin series under the
+            brand name{" "}
+            <a href="https://www.audiorammer.com/site/" target="_blank">
+              audiorammer
+            </a>
+            .
+          </p>
+        </section>
+        <hr />
+        <section>
+          <h1>George Peng</h1>
+          <p>
+            George Peng joined Panda-Audio formally in 2016, but he did the PCB
+            and 3D mechanical design of all products and prototypes since 2010.
+            Beyond these activities he has experience in hardware and software
+            development and web programming. He is responsible for the
+            production management of Panda-Audio&apos;s own products.
+          </p>
+        </section>
       </div>
     </>
   );
