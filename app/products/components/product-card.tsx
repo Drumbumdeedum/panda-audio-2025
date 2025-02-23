@@ -66,7 +66,9 @@ export default function ProductCard({ product }: { product: Product }) {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex-1">
-          <CardDescription>{product.description}</CardDescription>
+          <CardDescription>
+            <p>{product.description}</p>
+          </CardDescription>
         </CardContent>
         <div
           className={clsx(

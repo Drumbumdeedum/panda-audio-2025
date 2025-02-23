@@ -1,27 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { PRODUCTS } from "@/lib/constants";
-import {
-  AudioLines,
-  ChevronRightIcon,
-  Cpu,
-  Headphones,
-  Radio,
-} from "lucide-react";
+import { AudioLines, Cpu, Headphones, Radio } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Hero from "@/components/layout/hero";
+import PageContent from "@/components/layout/page-content";
 
 export default function Home() {
   return (
     <div className="space-y-24 pb-20">
       <Hero />
-
-      <section>
-        <div className="container mx-auto px-4">
+      <PageContent>
+        <section>
           <div className="text-center mb-8">
-            <h1>Advanced Audio Technology</h1>
+            <h1 className="mb-0">Advanced Audio Technology</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Developing cutting-edge MIDI products and professional audio
               solutions with expertise in embedded systems and real-time
@@ -66,13 +60,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <div className="container mx-auto px-4">
+        <section>
           <div className="text-center mb-8">
-            <h1>Featured Products</h1>
+            <h1 className="mb-0">Featured Products</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Check out some of our most popular products.
             </p>
@@ -109,8 +101,8 @@ export default function Home() {
               )
             )}
           </div>
-        </div>
-      </section>
+        </section>
+      </PageContent>
     </div>
   );
 }
