@@ -3,6 +3,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
 import Image from "next/image";
 import placeholder from "@/public/placeholder.svg";
+import PageContent from "@/components/layout/page-content";
 
 function AboutPage() {
   return (
@@ -11,7 +12,7 @@ function AboutPage() {
         title="About us"
         subtitle="Get to know the people behind Panda Audio"
       />
-      <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8">
+      <PageContent type="narrow">
         <section>
           <h1>Panda Audio</h1>
           <p>
@@ -262,7 +263,8 @@ function AboutPage() {
             production management of Panda-Audio&apos;s own products.
           </p>
         </section>
-      </div>
+      </PageContent>
+      <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8"></div>
     </>
   );
 }

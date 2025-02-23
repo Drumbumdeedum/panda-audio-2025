@@ -12,10 +12,8 @@ async function ProductsPage() {
         subtitle="Discover the full range of Panda Audio's products."
       />
       <PageContent>
-        <div className="pt-8 space-y-8">
-          <CurrencySelect />
-          <ProductGrid />
-        </div>
+        <CurrencySelect />
+        <ProductGrid />
       </PageContent>
     </>
   );

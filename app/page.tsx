@@ -10,10 +10,10 @@ import PageContent from "@/components/layout/page-content";
 
 export default function Home() {
   return (
-    <div className="space-y-24 pb-20">
+    <>
       <Hero />
       <PageContent>
-        <div className="space-y-24">
+        <div className="space-y-24 py-8">
           <section>
             <div className="text-center mb-8">
               <h1 className="mb-0">Advanced Audio Technology</h1>
@@ -105,6 +105,6 @@ export default function Home() {
           </section>
         </div>
       </PageContent>
-    </div>
+    </>
   );
 }
