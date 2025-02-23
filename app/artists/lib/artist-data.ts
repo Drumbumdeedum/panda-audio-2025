@@ -61,7 +61,7 @@ export const artists: ArtistData[] = [
       "The pedal is just as good as the original, which is what I was hoping for. The new presets and bank space are a bonus too.",
     link: "https://muse.mu",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "Mohini Dey",
@@ -70,7 +70,7 @@ export const artists: ArtistData[] = [
     quote:
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "John McLaughlin",
@@ -87,7 +87,7 @@ export const artists: ArtistData[] = [
     image: etienneMbappe,
     quote: "Jazz funk never sounded this hard!",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "Bootsy Collins",
@@ -97,7 +97,7 @@ export const artists: ArtistData[] = [
       "The best Bass Synthesizer pedal hands up or down. The Future Impact, Built to Blast! Now, where'd u get yr Funk from? Bootsy baby!!!",
     link: "https://www.bootsycollins.com",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "Robert Harper",
@@ -106,7 +106,7 @@ export const artists: ArtistData[] = [
     quote:
       "The tracking on this Future Impact Bass Synth Pedal is very accurate.",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "Reinhard Rietsch",
@@ -123,7 +123,7 @@ export const artists: ArtistData[] = [
     image: alissiaBenveniste,
     quote: "The greatest female bassist of the funk world has chosen us.",
     product: "Future Impact",
-    productHref: "/future-impact",
+    productHref: "/future-impact-v4",
   },
   {
     name: "Howard Jones",

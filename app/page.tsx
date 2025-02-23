@@ -13,9 +13,9 @@ export default function Home() {
     <>
       <Hero />
       <PageContent>
-        <div className="space-y-24 py-8">
+        <div className="space-y-24 pb-8">
           <section>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <h1 className="mb-0">Advanced Audio Technology</h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Developing cutting-edge MIDI products and professional audio
@@ -64,7 +64,7 @@ export default function Home() {
           </section>
 
           <section>
-            <div className="text-center mb-8">
+            <div className="text-center mb-4">
               <h1 className="mb-0">Featured Products</h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Check out some of our most popular products.

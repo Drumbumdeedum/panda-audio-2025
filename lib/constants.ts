@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     featured: true,
-    href: "/future-impact-vip",
+    href: "/future-impact-v4-vip",
     name: "Future Impact V4 - VIP",
     description: "Bass guitar synthesizer and MIDI expander - minified",
     image: future_impact_vip,
@@ -20,7 +20,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 2,
     featured: true,
-    href: "/future-impact",
+    href: "/future-impact-v4",
     name: "Future Impact V4",
     description: "Bass guitar synthesizer and MIDI expander",
     image: future_impact_v4,

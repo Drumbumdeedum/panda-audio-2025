@@ -6,7 +6,7 @@ import future_impact_v4_back from "@/public/images/products/future-impact/future
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import PageContent from "@/components/layout/page-content";
 
-function FutureImpactPage() {
+function FutureImpactV4Page() {
   return (
     <>
       <PageHeader
@@ -241,4 +241,4 @@ function FutureImpactPage() {
   );
 }
 
-export default FutureImpactPage;
+export default FutureImpactV4Page;

@@ -56,8 +56,8 @@ function AboutPage() {
             <Link href="/midibeam-v2-wireless">midiBeam v2 wireless</Link> MIDI
             interface. Also, currently we are evaluating wireless audio
             technologies for professional audio applications. Our most recent
-            product is the <Link href="/future-impact">Future Impact</Link> bass
-            guitar synthesizer and analog modeling MIDI expander.
+            product is the <Link href="/future-impact-v4">Future Impact</Link>{" "}
+            bass guitar synthesizer and analog modeling MIDI expander.
           </p>
         </section>
         <hr />
