@@ -1,4 +1,5 @@
 import future_impact_v4 from "@/public/images/products/future-impact/future_impact_v4.jpg";
+import future_impact_vip from "@/public/images/products/future_impact_vip.webp";
 import midibeam_v2 from "@/public/images/products/midiBeam_v2_wireless.jpg";
 import midibeam_4control from "@/public/images/products/midiBeam_4Control.jpg";
 import { Product } from "@/types/product";
@@ -7,8 +8,20 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     featured: true,
+    href: "/future-impact-vip",
+    name: "Future Impact V4 - VIP",
+    description: "Bass guitar synthesizer and MIDI expander - minified",
+    image: future_impact_vip,
+    prices: [
+      { amount: 101, currency: "eur" },
+      { amount: 101, currency: "usd" },
+    ],
+  },
+  {
+    id: 2,
+    featured: true,
     href: "/future-impact",
-    name: "Future Impact",
+    name: "Future Impact V4",
     description: "Bass guitar synthesizer and MIDI expander",
     image: future_impact_v4,
     prices: [
@@ -17,7 +30,7 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     featured: true,
     href: "/midibeam-4control",
     name: "midiBeam 4Control",
@@ -29,7 +42,7 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     featured: true,
     href: "/midibeam-v2-wireless",
     name: "midiBeam v2 Wireless",
