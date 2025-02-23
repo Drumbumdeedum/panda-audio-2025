@@ -156,7 +156,7 @@ function FutureImpactPage() {
         <hr className="my-4 border-t-2 border-border" />
         <section>
           <h2>Check out these product videos:</h2>
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full">
               <AspectRatio ratio={9 / 6}>
                 <iframe
