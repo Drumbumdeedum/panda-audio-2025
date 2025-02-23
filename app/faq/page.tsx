@@ -74,7 +74,7 @@ function FaqPage() {
             <AccordionItem value="item-2">
               <AccordionTrigger>
                 <strong>
-                  Question: OK, I do not bend the strings, so I could not care
+                  Question: Ok, I do not bend the strings, so I could not care
                   less. Then can I use my guitar synthesizer on one channel
                   without compromises, yes?
                 </strong>
@@ -93,7 +93,7 @@ function FaqPage() {
             <AccordionItem value="item-3">
               <AccordionTrigger>
                 <strong>
-                  Question: OK, I do not use hammer-on and pull-off, I pick
+                  Question: Ok, I do not use hammer-on and pull-off, I pick
                   every note. Then I really do not need Pitch Bend, so I can use
                   one channel only, right?
                 </strong>
