@@ -136,9 +136,9 @@ function AboutPage() {
               <p>
                 He also designed several guitar synthesizers: the first one for
                 Shadow (1986), and later the neural net based AXON series for
-                Blue Chip Music (1994), then Axon Technologies. After Yamaha has
-                licensed the technology of the AXON, András developed the
-                processing engine of the Yamaha G50 guitar synthesizer.
+                Blue Chip Music (1994). After Yamaha has licensed the technology
+                of the AXON, András developed the processing engine of the
+                Yamaha G50 guitar synthesizer.
               </p>
             </div>
             <div className="w-full">

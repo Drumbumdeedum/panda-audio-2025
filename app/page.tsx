@@ -78,7 +78,7 @@ export default function Home() {
                     className="group border border-border/30 rounded-lg overflow-hidden flex flex-col"
                   >
                     <div className="w-full">
-                      <AspectRatio ratio={3 / 2}>
+                      <AspectRatio ratio={5 / 4}>
                         <Image
                           src={product.image}
                           alt={product.name}

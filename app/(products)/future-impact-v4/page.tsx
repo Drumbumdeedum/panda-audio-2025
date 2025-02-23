@@ -192,7 +192,7 @@ function FutureImpactV4Page() {
           <h2>Product videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full">
-              <AspectRatio ratio={9 / 6}>
+              <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/RBH9UDVkG6c?start=664"
@@ -202,7 +202,7 @@ function FutureImpactV4Page() {
               </AspectRatio>
             </div>
             <div className="w-full">
-              <AspectRatio ratio={9 / 6}>
+              <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/uMddCxSDACY"
@@ -212,7 +212,7 @@ function FutureImpactV4Page() {
               </AspectRatio>
             </div>
             <div className="w-full">
-              <AspectRatio ratio={9 / 6}>
+              <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/G0A-3MnNrWw"
@@ -222,7 +222,7 @@ function FutureImpactV4Page() {
               </AspectRatio>
             </div>
             <div className="w-full">
-              <AspectRatio ratio={9 / 6}>
+              <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/7F3SbUk8Uas"

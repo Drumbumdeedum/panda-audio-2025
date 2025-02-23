@@ -45,7 +45,7 @@ export default function ProductCard({ product }: { product: Product }) {
     <>
       <Card className="group overflow-hidden  flex flex-col">
         <div className="w-full">
-          <AspectRatio ratio={3 / 2}>
+          <AspectRatio ratio={5 / 4}>
             <Image
               src={product.image}
               alt={product.name}
