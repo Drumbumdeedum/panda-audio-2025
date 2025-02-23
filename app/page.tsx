@@ -70,7 +70,7 @@ export default function Home() {
                 Check out some of our most popular products.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 px-0 md:px-16 lg:px-44">
               {PRODUCTS.filter((product) => product.featured).map(
                 (product, index) => (
                   <Card
@@ -95,7 +95,9 @@ export default function Home() {
                         {product.description}
                       </p>
                       <Link href={product.href}>
-                        <Button className="w-full">Learn more</Button>
+                        <Button className="w-full py-6 text-lg">
+                          Learn more
+                        </Button>
                       </Link>
                     </CardContent>
                   </Card>

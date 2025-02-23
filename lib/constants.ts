@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 3,
-    featured: true,
+    featured: false,
     href: "/midibeam-4control",
     name: "midiBeam 4Control",
     description: "Advanced MIDI control system",
