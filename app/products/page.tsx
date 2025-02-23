@@ -2,6 +2,7 @@ import React from "react";
 import ProductGrid from "./components/product-grid";
 import CurrencySelect from "@/components/ui/currency-select";
 import PageHeader from "@/components/layout/page-header";
+import PageContent from "@/components/layout/page-content";
 
 async function ProductsPage() {
   return (
@@ -10,10 +11,12 @@ async function ProductsPage() {
         title="Products"
         subtitle="Discover the full range of Panda Audio's products."
       />
-      <div className="container mx-auto px-4 space-y-4 py-8">
-        <CurrencySelect />
-        <ProductGrid />
-      </div>
+      <PageContent>
+        <div className="pt-8 space-y-8">
+          <CurrencySelect />
+          <ProductGrid />
+        </div>
+      </PageContent>
     </>
   );
 }
