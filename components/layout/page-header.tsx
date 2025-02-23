@@ -11,7 +11,7 @@ function PageHeader({ title, subtitle }: PageHeaderProps) {
       <div className="px-4 md:px-8 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="tracking-tight mb-0 text-background">{title}</h1>
+            <h1 className="mb-2 text-background">{title}</h1>
             <p className="text-lg leading-none text-background/70">
               {subtitle}
             </p>
