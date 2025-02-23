@@ -19,8 +19,8 @@ function Hero() {
           </div>
           <div className="flex gap-4">
             <Link className="group" href="/products">
-              <Button className="text-foreground" variant="outline" size="lg">
-                Explore Products
+              <Button variant="cta" size="lg">
+                <span>Explore Products</span>
                 <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
