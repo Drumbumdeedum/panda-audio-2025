@@ -11,40 +11,12 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Hero from "@/components/layout/hero";
 
 export default function Home() {
   return (
     <div className="space-y-24 pb-20">
-      <section className="py-20 relative bg-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div>
-                <h1 className="text-4xl md:text-6xl font-bold text-background leading-tight">
-                  Professional Audio Innovation
-                </h1>
-                <p className="text-background/70 text-lg md:text-xl">
-                  Independent R&D company specializing in digital signal
-                  processing and embedded systems for professional audio
-                  applications.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <Link className="group" href="/products">
-                  <Button
-                    className="text-foreground"
-                    variant="outline"
-                    size="lg"
-                  >
-                    Explore Products
-                    <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       <section>
         <div className="container mx-auto px-4">
