@@ -7,7 +7,7 @@ export default function ArtistsPage() {
   return (
     <>
       <PageHeader
-        title="Our Artist Partners"
+        title="Our artist partners"
         subtitle="Discover the incredible musicians and producers who trust Panda Audio for their creative expression."
       />
       <PageContent>
