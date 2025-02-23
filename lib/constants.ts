@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 4,
-    featured: true,
+    featured: false,
     href: "/midibeam-v2-wireless",
     name: "midiBeam v2 Wireless",
     description: "Professional wireless MIDI interface",

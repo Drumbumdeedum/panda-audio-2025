@@ -75,7 +75,7 @@ export default function Home() {
                 (product, index) => (
                   <Card
                     key={index}
-                    className="group border border-border/30 rounded-lg overflow-hidden"
+                    className="group border border-border/30 rounded-lg overflow-hidden flex flex-col"
                   >
                     <div className="w-full">
                       <AspectRatio ratio={3 / 2}>
@@ -90,8 +90,8 @@ export default function Home() {
                     <CardHeader>
                       <CardTitle>{product.name}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground mb-4">
+                    <CardContent className="flex flex-col flex-1">
+                      <p className="text-muted-foreground mb-4 flex-1">
                         {product.description}
                       </p>
                       <Link href={product.href}>
