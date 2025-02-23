@@ -4,6 +4,7 @@ import future_impact_v4 from "@/public/images/products/future-impact/future_impa
 import future_impact_v4_top from "@/public/images/products/future-impact/future_impact_v4_top.webp";
 import future_impact_v4_back from "@/public/images/products/future-impact/future_impact_v4_back.webp";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import PageContent from "@/components/layout/page-content";
 
 function FutureImpactPage() {
   return (
@@ -12,7 +13,7 @@ function FutureImpactPage() {
         title="Future Impact V4"
         subtitle="Bass guitar synthesizer and MIDI expander"
       />
-      <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8">
+      <PageContent type="narrow">
         <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4}
@@ -20,7 +21,7 @@ function FutureImpactPage() {
             className=" object-cover"
           />
           <div className="flex flex-col justify-center align-baseline">
-            <h2>How it began</h2>
+            <h3>How it began</h3>
             <p>
               The <strong>Future Impact</strong> is the subject of one of those
               heartwarming stories of the internet as a force for good. It began
@@ -41,7 +42,7 @@ function FutureImpactPage() {
             className="object-cover px-8"
           />
           <div className="flex flex-col justify-center align-baseline lg:order-first">
-            <h2>From grassroots support to global recognition</h2>
+            <h3>From grassroots support to global recognition</h3>
             <p>
               The project garnered tremendous support from forum members who
               funded the first batch of 100 pedals in late 2015. From there, the
@@ -63,9 +64,9 @@ function FutureImpactPage() {
             className="object-cover px-8 py-24"
           />
           <div className="flex flex-col justify-center align-baseline">
-            <h2>
+            <h3>
               Pushing the limits: transitioning to the FI4 for future growth
-            </h2>
+            </h3>
             <p>
               With each successive update, we gradually added more and more
               features and refinements. With the v3.60 update of June 2021, we
@@ -188,7 +189,7 @@ function FutureImpactPage() {
         </section>
         <hr />
         <section>
-          <h2>Check out these product videos:</h2>
+          <h2>Product videos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full">
               <AspectRatio ratio={9 / 6}>
@@ -234,7 +235,8 @@ function FutureImpactPage() {
         </section>
         <hr />
         <h2>Product support</h2>
-      </div>
+      </PageContent>
+      <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8"></div>
     </>
   );
 }
