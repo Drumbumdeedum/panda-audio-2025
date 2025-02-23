@@ -33,7 +33,7 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
-        <hr className="my-4 border-t-2 border-border" />
+        <hr />
         <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4_top}
@@ -55,7 +55,7 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
-        <hr className="my-4 border-t-2 border-border" />
+        <hr />
         <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
           <Image
             src={future_impact_v4_back}
@@ -81,7 +81,7 @@ function FutureImpactPage() {
             </p>
           </div>
         </section>
-        <hr className="my-4 border-t-2 border-border" />
+        <hr />
         <section>
           <h2>New Features for V4</h2>
           <ul className="list-disc space-y-2 pl-4">
@@ -189,7 +189,7 @@ function FutureImpactPage() {
             </ul>
           </ul>
         </section>
-        <hr className="my-4 border-t-2 border-border" />
+        <hr />
         <section>
           <h2>Check out these product videos:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -235,7 +235,7 @@ function FutureImpactPage() {
             </div>
           </div>
         </section>
-        <hr className="my-4 border-t-2 border-border" />
+        <hr />
         <h2>Product support</h2>
       </div>
     </>
