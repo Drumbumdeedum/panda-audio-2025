@@ -322,6 +322,36 @@ function FutureImpactV4Page() {
                 </div>
                 <h4>Downloads</h4>
                 <DownloadsTable downloads={FIV4_DOWNLOADS} />
+                <div className="space-y-4">
+                  <h4>Sound library database</h4>
+                  <p>
+                    We opened a web application where you can share, upload and
+                    download your favourite user patches. Just click{" "}
+                    <a href="https://auraplug.com/fidatabase2/" target="_blank">
+                      here
+                    </a>{" "}
+                    to register and start browsing hundreds of additional
+                    patches! Should you ever have any problem on using the
+                    service{" "}
+                    <a
+                      href="/downloads/future_impact_v4/FI_program database_guide.pdf"
+                      target="_blank"
+                    >
+                      here
+                    </a>{" "}
+                    is a short manual how to use it!
+                  </p>
+                  <p>
+                    You can also check{" "}
+                    <a
+                      href="https://youtu.be/fxbbgeUfoIA?si=6DatCSdypBS9WeR_&t=114"
+                      target="_blank"
+                    >
+                      this video
+                    </a>{" "}
+                    to enjoy a live demo of the FI V4 with actual sounds.
+                  </p>
+                </div>
               </section>
             </AccordionContent>
           </AccordionItem>
@@ -379,6 +409,52 @@ function FutureImpactV4Page() {
                 </div>
                 <h4>Downloads</h4>
                 <DownloadsTable downloads={FIV1_TO_V3_DOWNLOADS} />
+                <div className="space-y-4">
+                  <h4>Sound library database</h4>
+                  <p>
+                    We opened a web application where you can share, upload and
+                    download your favourite user patches. Just click{" "}
+                    <a href="https://auraplug.com/fidatabase2/" target="_blank">
+                      here
+                    </a>{" "}
+                    to register and start browsing hundreds of additional
+                    patches! Should you ever have any problem on using the
+                    service{" "}
+                    <a
+                      href="/downloads/future_impact_v4/FI_program database_guide.pdf"
+                      target="_blank"
+                    >
+                      here
+                    </a>{" "}
+                    is a short manual how to use it!
+                  </p>
+                  <p>
+                    You can also check{" "}
+                    <a
+                      href="https://youtu.be/uMddCxSDACY?si=yxpfkXDvUrmrN3JL"
+                      target="_blank"
+                    >
+                      this video
+                    </a>{" "}
+                    to enjoy a live demo of v3.50 with actual sounds.
+                  </p>
+                  <p>
+                    If during the update process you choose rewriting the whole
+                    sound set you will find ten new programs in v3.50 and v3.60
+                    tailored to showcase some new features found in v3.50.
+                  </p>
+                  <p>
+                    For those who just want to test the new programs they are
+                    downloadable separately{" "}
+                    <a
+                      href="https://auraplug.com/fidatabase2/downloads/the-10-new-v3-5-factory-programs/"
+                      target="_blank"
+                    >
+                      here
+                    </a>
+                    .
+                  </p>
+                </div>
               </section>
             </AccordionContent>
           </AccordionItem>
