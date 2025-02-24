@@ -5,6 +5,8 @@ import future_impact_v4_top from "@/public/images/products/future-impact/future_
 import future_impact_v4_back from "@/public/images/products/future-impact/future_impact_v4_back.webp";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import PageContent from "@/components/layout/page-content";
+import DownloadsTable from "@/app/downloads/components/DownloadsTable";
+import { FIV4_AND_VIP_DOWNLOADS } from "@/app/downloads/lib/downloads-data";
 
 function FutureImpactV4Page() {
   return (
@@ -246,6 +248,10 @@ function FutureImpactV4Page() {
         </section>
         <hr />
         <h2>Product support</h2>
+        <DownloadsTable
+          title="Future Impact vI - v3.61"
+          downloads={FIV4_AND_VIP_DOWNLOADS}
+        />
       </PageContent>
       <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8"></div>
     </>
