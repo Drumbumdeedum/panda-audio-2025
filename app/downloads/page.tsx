@@ -21,7 +21,7 @@ function DownloadsPage() {
         <Accordion type="single" collapsible>
           <AccordionItem value="future_impact_v4">
             <AccordionTrigger>
-              <h3 className="mb-0">Future Impact V4</h3>
+              <h4 className="mb-0">Future Impact V4</h4>
             </AccordionTrigger>
             <AccordionContent>
               <DownloadsTable downloads={FIV4_DOWNLOADS} />
@@ -29,7 +29,7 @@ function DownloadsPage() {
           </AccordionItem>
           <AccordionItem value="future_impact_v1_v3">
             <AccordionTrigger>
-              <h3 className="mb-0">Future Impact V1 - V3.61</h3>
+              <h4 className="mb-0">Future Impact V1 - V3.61</h4>
             </AccordionTrigger>
             <AccordionContent>
               <DownloadsTable downloads={FIV1_TO_V3_DOWNLOADS} />
