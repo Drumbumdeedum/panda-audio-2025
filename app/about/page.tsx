@@ -63,7 +63,7 @@ function AboutPage() {
         <hr />
         <div className="space-y-16">
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col justify-start align-baseline space-y-4">
+            <div className="flex flex-col justify-center items-start space-y-4">
               <h1>András Szalay</h1>
               <p>
                 András Szalay, has an M.Sc. in Physics from Kossuth University,
@@ -88,7 +88,7 @@ function AboutPage() {
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col justify-start align-baseline space-y-4">
+            <div className="flex flex-col justify-center items-start space-y-4">
               <h4>Engineering & Innovation Journey</h4>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
@@ -125,7 +125,7 @@ function AboutPage() {
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col justify-start align-baseline space-y-4">
+            <div className="flex flex-col justify-center items-start space-y-4">
               <p>
                 He has been the inventor and principal designer of the Sinclair
                 ZX81-based MUZIX 81 sequencer and digital audio processor
@@ -152,7 +152,7 @@ function AboutPage() {
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col justify-start align-baseline space-y-4">
+            <div className="flex flex-col justify-center items-start space-y-4">
               <p>
                 At Wersi he was responsible for the design of ASICs and the
                 development of system software for Wersi&apos;s CFP-1 digital
@@ -179,7 +179,7 @@ function AboutPage() {
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="flex flex-col justify-start align-baseline space-y-4">
+            <div className="flex flex-col justify-center items-start space-y-4">
               <p>
                 He has invented the &quot;Acoustic Imaging Technology&quot;,
                 currently used in the Aura product line of Fishman Transducers.
