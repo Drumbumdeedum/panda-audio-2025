@@ -19,7 +19,7 @@ function FutureImpactV4VipPage() {
             className=" object-cover"
           />
           <div className="flex flex-col justify-center items-start space-y-4">
-            <h3>The power of Future Impact - minified</h3>
+            <h3>Significantly smaller, equally powerful </h3>
             <p>
               Introducing the <strong>Future Impact V4 - VIP</strong>, the
               latest evolution in Panda Audio&apos;s renowned line of bass
