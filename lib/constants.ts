@@ -1,5 +1,5 @@
 import future_impact_v4 from "@/public/images/products/future-impact/future_impact_v4.jpg";
-import future_impact_vip from "@/public/images/products/future_impact_vip.webp";
+import future_impact_v4_vip from "@/public/images/products/future-impact-v4-vip/future_impact_v4_vip.webp";
 import midibeam_v2 from "@/public/images/products/midiBeam_v2_wireless.jpg";
 import midibeam_4control from "@/public/images/products/midiBeam_4Control.jpg";
 import { Product } from "@/types/product";
@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
     href: "/future-impact-v4-vip",
     name: "Future Impact V4 - VIP",
     description: "Bass guitar synthesizer and MIDI expander - minified",
-    image: future_impact_vip,
+    image: future_impact_v4_vip,
     prices: [
       { amount: 101, currency: "eur" },
       { amount: 101, currency: "usd" },
