@@ -4,6 +4,7 @@ export type DownloadData = {
   version?: string;
   subtitle?: string;
   href: string;
+  tooltip?: string;
 };
 
 export const FIV4_DOWNLOADS: DownloadData[] = [
@@ -13,6 +14,8 @@ export const FIV4_DOWNLOADS: DownloadData[] = [
     version: "v4.11",
     subtitle: "mac OS",
     href: "/downloads/future_impact_v4/FI_editor_v4.11_macOS.zip",
+    tooltip:
+      "<p>macOS uses <strong>Gatekeeper</strong> to ensure only trusted software runs on your Mac. If you download an app from the internet, macOS may classify it as untrusted. To proceed, go to <strong>System Settings > Privacy & Security</strong>, scroll to <strong>Security</strong>, and click <strong>Open Anyway</strong>. Then, right-click <strong>FIEditor411.dmg</strong>, select <strong>Open With > Disk Image Mounter</strong>, and wait for it to open. Drag <strong>FIEditor4</strong> to the <strong>Applications</strong> folder, right-click the app, and open it. After the first launch, it will work as usual.</p>",
   },
   {
     id: 2,
