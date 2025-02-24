@@ -49,4 +49,21 @@ export const FIV4_AND_VIP_DOWNLOADS: DownloadData[] = [
     title: "v3.50 Factory default sounds list",
     href: "/downloads/future_impact_v1-v3/FI_v3.5_Factory_Default_Sounds.pdf",
   },
+  {
+    id: 9,
+    title: "Quick start guide",
+    href: "/downloads/future_impact_v1-v3/FI_quickstart-V300b.pdf",
+  },
+  {
+    id: 10,
+    title: "User guide",
+    subtitle: "v3.60",
+    href: "/downloads/future_impact_v1-v3/FI_User_Guide_v3.60.pdf",
+  },
+  {
+    id: 11,
+    title: "Version history",
+    subtitle: "v3.61",
+    href: "/downloads/future_impact_v1-v3/FI_version361.pdf",
+  },
 ];
