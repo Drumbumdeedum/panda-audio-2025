@@ -39,7 +39,6 @@ function FutureImpactV4Page() {
             </p>
           </div>
         </section>
-        <hr />
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_top}
@@ -61,7 +60,6 @@ function FutureImpactV4Page() {
             </p>
           </div>
         </section>
-        <hr />
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_back}
