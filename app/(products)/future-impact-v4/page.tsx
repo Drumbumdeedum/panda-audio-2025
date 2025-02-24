@@ -6,7 +6,10 @@ import future_impact_v4_back from "@/public/images/products/future-impact/future
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import PageContent from "@/components/layout/page-content";
 import DownloadsTable from "@/app/downloads/components/DownloadsTable";
-import { FIV4_AND_VIP_DOWNLOADS } from "@/app/downloads/lib/downloads-data";
+import {
+  FIV1_TO_V3_DOWNLOADS,
+  FIV4_DOWNLOADS,
+} from "@/app/downloads/lib/downloads-data";
 
 function FutureImpactV4Page() {
   return (
@@ -16,7 +19,7 @@ function FutureImpactV4Page() {
         subtitle="Bass guitar synthesizer and MIDI expander"
       />
       <PageContent type="narrow">
-        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4}
             alt="Future impact"
@@ -37,7 +40,7 @@ function FutureImpactV4Page() {
           </div>
         </section>
         <hr />
-        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_top}
             alt="Future impact"
@@ -59,7 +62,7 @@ function FutureImpactV4Page() {
           </div>
         </section>
         <hr />
-        <section className="flex flex-col space-y-4 lg:flex-row py-4 rounded-lg justify-center items-center">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_back}
             alt="Future impact"
@@ -248,9 +251,10 @@ function FutureImpactV4Page() {
         </section>
         <hr />
         <h2>Product support</h2>
+        <DownloadsTable title="Future Impact v4" downloads={FIV4_DOWNLOADS} />
         <DownloadsTable
           title="Future Impact vI - v3.61"
-          downloads={FIV4_AND_VIP_DOWNLOADS}
+          downloads={FIV1_TO_V3_DOWNLOADS}
         />
       </PageContent>
       <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8"></div>

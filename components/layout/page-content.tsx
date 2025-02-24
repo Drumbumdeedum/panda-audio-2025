@@ -13,7 +13,7 @@ function PageContent({ type = "default", children }: PageContentProps) {
         `${
           type === "default"
             ? "p-4 md:p-8 lg:p-16 space-y-8"
-            : "px-4 md:px-24 xl:px-64 2xl:px-72 py-4 md:py-16 space-y-8"
+            : "px-4 md:px-24 xl:px-64 2xl:px-72 py-4 md:py-16 space-y-8 max-w-[1400] mx-auto"
         } `
       )}
     >

@@ -31,6 +31,9 @@ function DownloadsTable({ title, downloads }: DownloadsTableProps) {
             <TableCell className="font-medium">
               <h4 className="mb-0 text-base">
                 {download.title}
+                <span className="font-normal text-base italic text-foreground/70">
+                  {download.version && ` - ${download.version}`}
+                </span>
                 <span className="font-normal text-base text-foreground/70">
                   {download.subtitle && ` - ${download.subtitle}`}
                 </span>
