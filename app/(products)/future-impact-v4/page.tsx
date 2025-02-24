@@ -28,7 +28,7 @@ function FutureImpactV4Page() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4}
-            alt="Future impact"
+            alt="Future impact v4"
             className=" object-cover"
           />
           <div className="flex flex-col justify-center align-baseline">
@@ -48,7 +48,7 @@ function FutureImpactV4Page() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_top}
-            alt="Future impact"
+            alt="Future impact v4 top"
             className="object-cover px-8"
           />
           <div className="flex flex-col justify-center align-baseline lg:order-first">
@@ -69,7 +69,7 @@ function FutureImpactV4Page() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
           <Image
             src={future_impact_v4_back}
-            alt="Future impact"
+            alt="Future impact v4 back"
             className="object-cover px-8 py-24"
           />
           <div className="flex flex-col justify-center align-baseline">

@@ -1,7 +1,7 @@
 import future_impact_v4 from "@/public/images/products/future-impact/future_impact_v4.jpg";
 import future_impact_v4_vip from "@/public/images/products/future-impact-v4-vip/future_impact_v4_vip.webp";
-import midibeam_v2 from "@/public/images/products/midiBeam_v2_wireless.jpg";
-import midibeam_4control from "@/public/images/products/midiBeam_4Control.jpg";
+import midibeam_v2 from "@/public/images/products/midibeam-v2-wireless/midiBeam_v2_wireless.jpg";
+import midibeam_4control from "@/public/images/products/midibeam-4Control/midiBeam_4Control.jpg";
 import { Product } from "@/types/product";
 
 export const PRODUCTS: Product[] = [

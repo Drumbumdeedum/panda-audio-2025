@@ -118,7 +118,7 @@ function AboutPage() {
               <AspectRatio ratio={3 / 2}>
                 <Image
                   src={placeholder}
-                  alt="Future impact"
+                  alt="Placeholder"
                   className="object-cover h-full w-full"
                 />
               </AspectRatio>
@@ -145,7 +145,7 @@ function AboutPage() {
               <AspectRatio ratio={3 / 2}>
                 <Image
                   src={placeholder}
-                  alt="Future impact"
+                  alt="Placeholder"
                   className="object-cover h-full w-full"
                 />
               </AspectRatio>
@@ -172,7 +172,7 @@ function AboutPage() {
               <AspectRatio ratio={3 / 2}>
                 <Image
                   src={placeholder}
-                  alt="Future impact"
+                  alt="Placeholder"
                   className="object-cover h-full w-full"
                 />
               </AspectRatio>
@@ -193,7 +193,7 @@ function AboutPage() {
               <AspectRatio ratio={3 / 2}>
                 <Image
                   src={placeholder}
-                  alt="Future impact"
+                  alt="Placeholder"
                   className="object-cover h-full w-full"
                 />
               </AspectRatio>
