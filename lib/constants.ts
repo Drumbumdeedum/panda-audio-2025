@@ -14,8 +14,8 @@ export const PRODUCTS: Product[] = [
     description: "Bass guitar synthesizer and MIDI expander - minified",
     image: future_impact_v4_vip,
     prices: [
-      { amount: 101, currency: "eur" },
-      { amount: 101, currency: "usd" },
+      { amount: 34900, currency: "eur" },
+      { amount: 28900, currency: "usd" },
     ],
   },
   {
