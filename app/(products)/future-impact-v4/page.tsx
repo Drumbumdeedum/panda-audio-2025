@@ -271,7 +271,7 @@ function FutureImpactV4Page() {
               <section className="space-y-8">
                 <div className="space-y-4">
                   <div>
-                    <p className="text-foreground/60">
+                    <p>
                       <strong>
                         Make sure you always refresh your firmware to our latest
                         release.
