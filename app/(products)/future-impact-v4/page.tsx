@@ -263,7 +263,7 @@ function FutureImpactV4Page() {
         </div>
 
         <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
+          <AccordionItem value="future_impact_v4">
             <AccordionTrigger>
               <h3 className="mb-0">Future Impact V4</h3>
             </AccordionTrigger>
@@ -320,11 +320,12 @@ function FutureImpactV4Page() {
                     </p>
                   </div>
                 </div>
-                <DownloadsTable title="Downloads" downloads={FIV4_DOWNLOADS} />
+                <h4>Downloads</h4>
+                <DownloadsTable downloads={FIV4_DOWNLOADS} />
               </section>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-2">
+          <AccordionItem value="future_impact_v1_v3">
             <AccordionTrigger>
               <h3>Future Impact V1 - V3.61</h3>
             </AccordionTrigger>
@@ -376,10 +377,8 @@ function FutureImpactV4Page() {
                     </p>
                   </div>
                 </div>
-                <DownloadsTable
-                  title="Downloads"
-                  downloads={FIV1_TO_V3_DOWNLOADS}
-                />
+                <h4>Downloads</h4>
+                <DownloadsTable downloads={FIV1_TO_V3_DOWNLOADS} />
               </section>
             </AccordionContent>
           </AccordionItem>

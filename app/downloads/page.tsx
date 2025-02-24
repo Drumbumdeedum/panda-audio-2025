@@ -3,6 +3,12 @@ import PageHeader from "@/components/layout/page-header";
 import React from "react";
 import { FIV1_TO_V3_DOWNLOADS, FIV4_DOWNLOADS } from "./lib/downloads-data";
 import DownloadsTable from "./components/DownloadsTable";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function DownloadsPage() {
   return (
@@ -12,11 +18,24 @@ function DownloadsPage() {
         subtitle="Firmware, software, and manuals for all Panda Audio products"
       />
       <PageContent type="narrow">
-        <DownloadsTable title="Future Impact v4" downloads={FIV4_DOWNLOADS} />
-        <DownloadsTable
-          title="Future Impact v1 - v3.61"
-          downloads={FIV1_TO_V3_DOWNLOADS}
-        />
+        <Accordion type="single" collapsible>
+          <AccordionItem value="future_impact_v4">
+            <AccordionTrigger>
+              <h3 className="mb-0">Future Impact V4</h3>
+            </AccordionTrigger>
+            <AccordionContent>
+              <DownloadsTable downloads={FIV4_DOWNLOADS} />
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="future_impact_v1_v3">
+            <AccordionTrigger>
+              <h3 className="mb-0">Future Impact v1 - v3.61</h3>
+            </AccordionTrigger>
+            <AccordionContent>
+              <DownloadsTable downloads={FIV1_TO_V3_DOWNLOADS} />
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </PageContent>
     </>
   );

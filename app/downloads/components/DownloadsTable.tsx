@@ -1,30 +1,15 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { DownloadData } from "../lib/downloads-data";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
 type DownloadsTableProps = {
-  title: string;
   downloads: DownloadData[];
 };
 
-function DownloadsTable({ title, downloads }: DownloadsTableProps) {
+function DownloadsTable({ downloads }: DownloadsTableProps) {
   return (
     <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>
-            <h3>{title}</h3>
-          </TableHead>
-        </TableRow>
-      </TableHeader>
       <TableBody>
         {downloads.map((download) => (
           <TableRow key={download.id}>
