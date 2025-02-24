@@ -61,7 +61,7 @@ function AboutPage() {
           </p>
         </section>
         <hr />
-        <div className="space-y-8">
+        <div className="space-y-16">
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col justify-start align-baseline space-y-4">
               <h1>András Szalay</h1>
