@@ -2,6 +2,7 @@ import PageContent from "@/components/layout/page-content";
 import PageHeader from "@/components/layout/page-header";
 import future_impact_v4_vip from "@/public/images/products/future-impact-v4-vip/future_impact_v4_vip.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 function FutureImpactV4VipPage() {
   return (
@@ -26,8 +27,9 @@ function FutureImpactV4VipPage() {
             </p>
             <p>
               Responding to popular demand, the VIP model retains all the
-              groundbreaking features of the Future Impact V4 but in a more
-              compact and pedalboard-friendly design.
+              groundbreaking features of the{" "}
+              <Link href="/future-impact-v4">Future Impact V4</Link> but in a
+              more compact and pedalboard-friendly design.
             </p>
           </div>
         </section>

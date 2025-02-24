@@ -8,6 +8,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 1,
     featured: true,
+    newTag: true,
     href: "/future-impact-v4-vip",
     name: "Future Impact V4 - VIP",
     description: "Bass guitar synthesizer and MIDI expander - minified",
@@ -20,6 +21,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 2,
     featured: true,
+    newTag: false,
     href: "/future-impact-v4",
     name: "Future Impact V4",
     description: "Bass guitar synthesizer and MIDI expander",
@@ -32,6 +34,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 3,
     featured: false,
+    newTag: false,
     href: "/midibeam-4control",
     name: "midiBeam 4Control",
     description: "Advanced MIDI control system",
@@ -44,6 +47,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 4,
     featured: false,
+    newTag: false,
     href: "/midibeam-v2-wireless",
     name: "midiBeam v2 Wireless",
     description: "Professional wireless MIDI interface",

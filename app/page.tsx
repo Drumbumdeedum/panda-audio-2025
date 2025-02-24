@@ -7,6 +7,7 @@ import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Hero from "@/components/layout/hero";
 import PageContent from "@/components/layout/page-content";
+import { Badge } from "@/components/ui/badge";
 
 export default function Home() {
   return (
@@ -75,8 +76,9 @@ export default function Home() {
                 (product, index) => (
                   <Card
                     key={index}
-                    className="group border border-border/30 rounded-lg overflow-hidden flex flex-col"
+                    className="relative group border border-border/30 rounded-lg overflow-hidden flex flex-col"
                   >
+                    {product.newTag && <Badge variant="new">New</Badge>}
                     <div className="w-full">
                       <AspectRatio ratio={5 / 4}>
                         <Image

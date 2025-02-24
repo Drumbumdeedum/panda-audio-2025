@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
 
 type ProductCardProps = {
   product: Product;
@@ -48,7 +49,8 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
 
   return (
     <>
-      <Card className="group overflow-hidden  flex flex-col">
+      <Card className="relative group overflow-hidden flex flex-col">
+        {product.newTag && <Badge variant="new">New</Badge>}
         <div className="w-full">
           <AspectRatio ratio={5 / 4}>
             <Image
