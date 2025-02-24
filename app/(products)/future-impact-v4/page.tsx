@@ -312,7 +312,7 @@ function FutureImpactV4Page() {
                         Click here
                       </a>{" "}
                       to run our browser app to refresh your FI4 firmware
-                      (Google Chrome only)
+                      (Google Chrome only).
                     </p>
                     <p>
                       After upgrading your FI4, please check if you have the
@@ -398,7 +398,7 @@ function FutureImpactV4Page() {
                         Click here
                       </a>{" "}
                       to run our browser app to refresh your firmware to v3.61
-                      (Google Chrome only)
+                      (Google Chrome only).
                     </p>
                     <p>
                       After updating to 3.61 you will need our new Editor
