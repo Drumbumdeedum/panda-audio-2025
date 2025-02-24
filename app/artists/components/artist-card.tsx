@@ -28,6 +28,7 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
             src={artistData.image}
             alt={artistData.name}
             fill
+            sizes="(max-width: 700px) 100vw, 700px"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           />
         </AspectRatio>

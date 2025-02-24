@@ -82,6 +82,7 @@ export default function Home() {
                         <Image
                           src={product.image}
                           alt={product.name}
+                          sizes="(max-width: 700px) 100vw, 700px"
                           fill
                           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                         />
