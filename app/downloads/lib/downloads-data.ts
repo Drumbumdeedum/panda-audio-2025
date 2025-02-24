@@ -134,6 +134,6 @@ export const FIV1_TO_V3_DOWNLOADS: DownloadData[] = [
     id: 11,
     title: "Version history",
     version: "v3.61",
-    href: "/downloads/future_impact_v1-v3/FI_version361.pdf",
+    href: "/downloads/future_impact_v1-v3/FI_version_history_361.pdf",
   },
 ];

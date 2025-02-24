@@ -10,6 +10,12 @@ import {
   FIV1_TO_V3_DOWNLOADS,
   FIV4_DOWNLOADS,
 } from "@/app/downloads/lib/downloads-data";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function FutureImpactV4Page() {
   return (
@@ -248,14 +254,137 @@ function FutureImpactV4Page() {
           </div>
         </section>
         <hr />
-        <h2>Product support</h2>
-        <DownloadsTable title="Future Impact v4" downloads={FIV4_DOWNLOADS} />
-        <DownloadsTable
-          title="Future Impact vI - v3.61"
-          downloads={FIV1_TO_V3_DOWNLOADS}
-        />
+        <div>
+          <h1 className="mb-0">Product support</h1>
+          <p className="text-foreground/60">
+            Firmware updates, user manuals, presets, and other useful downloads
+            and links
+          </p>
+        </div>
+
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              <h3 className="mb-0">Future Impact V4</h3>
+            </AccordionTrigger>
+            <AccordionContent>
+              <section className="space-y-8">
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-foreground/60">
+                      <strong>
+                        Make sure you always refresh your firmware to our latest
+                        release.
+                      </strong>
+                    </p>
+                  </div>
+                  <div className="space-y-4">
+                    <p>
+                      We are constantly developing / improving the Future Impact
+                      V4 synth pedal. Before updating, you can check what
+                      happened in our{" "}
+                      <a
+                        href="/downloads/future_impact_v4/FI_4_version_history_v4.11.pdf"
+                        target="_blank"
+                      >
+                        Version history.
+                      </a>
+                    </p>
+                    <p>
+                      <strong>Important note:</strong> if you use a midiBeam
+                      4Control to edit your sounds and to upgrade your FI4, then
+                      your 4Control must be upgraded to version 1.4 or higher!
+                      You can do the upgrade either with the Chrome browser
+                      based updater, or with the PC/MAC Editor, then use{" "}
+                      <a
+                        href="/downloads/midibeam_4_control/midibeam_4_control_14.bin"
+                        target="_blank"
+                      >
+                        this firmware update file
+                      </a>
+                      .
+                    </p>
+                    <p>
+                      <a
+                        href="https://auraplug.com/panda/fiupdate411/start.html"
+                        target="_blank"
+                      >
+                        Click here
+                      </a>{" "}
+                      to run our browser app to refresh your FI4 firmware
+                      (Google Chrome only)
+                    </p>
+                    <p>
+                      After upgrading your FI4, please check if you have the
+                      most recent Editor, and if not then please refresh it too.
+                    </p>
+                  </div>
+                </div>
+                <DownloadsTable title="Downloads" downloads={FIV4_DOWNLOADS} />
+              </section>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              <h3>Future Impact V1 - V3.61</h3>
+            </AccordionTrigger>
+            <AccordionContent>
+              <section className="space-y-8">
+                <div className="space-y-4">
+                  <div className="space-y-4">
+                    <p>
+                      We have been constantly developing / improving the Future
+                      Impact synth pedal from version I. to the current, last
+                      version that is labeled 3.61. Before updating, you can
+                      check what happened in our{" "}
+                      <a
+                        href="/downloads/future_impact_v4/FI_version_history_361.pdf"
+                        target="_blank"
+                      >
+                        Version history
+                      </a>{" "}
+                      or in our{" "}
+                      <a
+                        href="/downloads/future_impact_v1-v3/FI_new_features_v360.pdf"
+                        target="_blank"
+                      >
+                        What&apos;s new
+                      </a>{" "}
+                      file you can check what&apos;s happened.
+                    </p>
+                    <p>
+                      <strong>Important note:</strong> if you update your
+                      firmware from version earlier than 3.00 you must upgrade
+                      your sound set during the process. If you upgrade from
+                      3.xx you don&apos;t need to rewrite all your patches,
+                      everything will work fine with your existing presets.
+                    </p>
+                    <p>
+                      <a
+                        href="https://auraplug.com/panda/fiupdate411/start.html"
+                        target="_blank"
+                      >
+                        Click here
+                      </a>{" "}
+                      to run our browser app to refresh your firmware to v3.61
+                      (Google Chrome only)
+                    </p>
+                    <p>
+                      After updating to 3.61 you will need our new Editor
+                      version 3.60 to manage your Future Impact so please
+                      download it as well.
+                    </p>
+                  </div>
+                </div>
+                <DownloadsTable
+                  title="Downloads"
+                  downloads={FIV1_TO_V3_DOWNLOADS}
+                />
+              </section>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </PageContent>
-      <div className="py-8 px-4 md:px-24 xl:px-64 2xl:px-72 space-y-8"></div>
     </>
   );
 }
