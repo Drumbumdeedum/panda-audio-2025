@@ -19,6 +19,7 @@ function Midibeam4ControlPage() {
             src={midibeam_4control}
             alt="midibeam 4Control"
             className=" object-cover"
+            priority
           />
           <div className="flex flex-col justify-center align-baseline">
             <h3>Compact, versatile, affordable</h3>

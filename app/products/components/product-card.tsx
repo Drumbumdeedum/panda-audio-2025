@@ -23,10 +23,9 @@ import { Badge } from "@/components/ui/badge";
 
 type ProductCardProps = {
   product: Product;
-  priority: boolean;
 };
 
-export default function ProductCard({ product, priority }: ProductCardProps) {
+export default function ProductCard({ product }: ProductCardProps) {
   const { currency } = useCurrencyStore();
   const { addProduct } = useProductCartStore();
   const router = useRouter();
@@ -58,7 +57,6 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
               alt={product.name}
               sizes="(max-width: 576px) 100vw, 576px"
               fill
-              priority={priority}
               className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             />
           </AspectRatio>

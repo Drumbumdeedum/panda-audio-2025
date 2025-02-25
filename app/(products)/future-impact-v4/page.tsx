@@ -30,6 +30,7 @@ function FutureImpactV4Page() {
             src={future_impact_v4}
             alt="Future impact v4"
             className=" object-cover"
+            priority
           />
           <div className="flex flex-col justify-center align-baseline">
             <h3>How it began</h3>

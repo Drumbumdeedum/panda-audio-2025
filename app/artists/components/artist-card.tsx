@@ -12,6 +12,7 @@ import { ArtistData } from "../lib/artist-data";
 import Image from "next/image";
 import Link from "next/link";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import clsx from "clsx";
 
 type ArtistCardProps = {
   artistData: ArtistData;
@@ -57,8 +58,17 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
       </CardHeader>
       <CardContent className="flex flex-col flex-1">
         <div className="flex flex-1 gap-4">
-          <Quote className="h-5 w-5 shrink-0 text-muted-foreground" />
-          <p className="text-sm text-muted-foreground">{artistData.quote}</p>
+          {artistData.quote && (
+            <Quote className="h-5 w-5 shrink-0 text-muted-foreground" />
+          )}
+          <p
+            className={clsx(
+              "text-sm text-muted-foreground",
+              artistData.quote && "italic"
+            )}
+          >
+            {artistData.description}
+          </p>
         </div>
         <div className="mt-4">
           <Link href={artistData.productHref}>

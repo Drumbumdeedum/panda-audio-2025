@@ -20,6 +20,7 @@ function MidibeamV2WirelessPage() {
             src={midibeam_v2}
             alt="midiBeam v2 wireless"
             className=" object-cover"
+            priority
           />
           <div className="flex flex-col justify-center align-baseline">
             <h3>Wireless MIDI Interface</h3>

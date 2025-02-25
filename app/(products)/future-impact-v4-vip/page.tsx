@@ -17,6 +17,7 @@ function FutureImpactV4VipPage() {
             src={future_impact_v4_vip}
             alt="Future impact"
             className=" object-cover"
+            priority
           />
           <div className="flex flex-col justify-center items-start space-y-4">
             <h3>Significantly smaller, equally powerful </h3>

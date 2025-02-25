@@ -18,7 +18,8 @@ export type ArtistData = {
   name: string;
   role: string;
   image: StaticImageData;
-  quote: string;
+  description: string;
+  quote: boolean;
   link?: string | undefined;
   product: string;
   productHref: string;
@@ -29,7 +30,8 @@ export const artists: ArtistData[] = [
     name: "Chick Corea",
     role: "Jazz Legend",
     image: chickCorea,
-    quote: "His legendary KX-5 is midiBeamised already.",
+    description: "His legendary KX-5 is midiBeamised already.",
+    quote: false,
     link: "https://chickcorea.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
@@ -38,8 +40,9 @@ export const artists: ArtistData[] = [
     name: "Chick and András",
     role: "Musical Collaboration",
     image: chickAndAndras,
-    quote:
+    description:
       "Chick receiving his midiBeam wireless MIDI interface from András personally.",
+    quote: false,
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
   },
@@ -47,8 +50,9 @@ export const artists: ArtistData[] = [
     name: "Herbie Hancock",
     role: "Jazz Pioneer",
     image: herbie,
-    quote:
+    description:
       "Herbie opening his brand new midiBeam wireless MIDI interface at NAMM.",
+    quote: false,
     link: "https://herbiehancock.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
@@ -57,8 +61,9 @@ export const artists: ArtistData[] = [
     name: "Chris Wolstenholme",
     role: "Bassist of Muse",
     image: chrisWolstenholme,
-    quote:
+    description:
       "The pedal is just as good as the original, which is what I was hoping for. The new presets and bank space are a bonus too.",
+    quote: true,
     link: "https://muse.mu",
     product: "Future Impact",
     productHref: "/future-impact-v4",
@@ -67,8 +72,9 @@ export const artists: ArtistData[] = [
     name: "Mohini Dey",
     role: "Bass Virtuoso",
     image: mohiniDey,
-    quote:
+    description:
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
+    quote: true,
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -76,7 +82,8 @@ export const artists: ArtistData[] = [
     name: "John McLaughlin",
     role: "Guitar Maestro",
     image: johnMcLauglin,
-    quote: "Yes, he also uses midiBeam.",
+    description: "Yes, he also uses midiBeam.",
+    quote: false,
     link: "https://www.johnmclaughlin.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
@@ -85,7 +92,8 @@ export const artists: ArtistData[] = [
     name: "Étienne M'Bappé",
     role: "Jazz Funk Artist",
     image: etienneMbappe,
-    quote: "Jazz funk never sounded this hard!",
+    description: "Jazz funk never sounded this hard!",
+    quote: false,
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -93,8 +101,9 @@ export const artists: ArtistData[] = [
     name: "Bootsy Collins",
     role: "Funk Bassist",
     image: bootsyCollins,
-    quote:
+    description:
       "The best Bass Synthesizer pedal hands up or down. The Future Impact, Built to Blast! Now, where'd u get yr Funk from? Bootsy baby!!!",
+    quote: true,
     link: "https://www.bootsycollins.com",
     product: "Future Impact",
     productHref: "/future-impact-v4",
@@ -103,8 +112,9 @@ export const artists: ArtistData[] = [
     name: "Robert Harper",
     role: "Bassist",
     image: robertHarper,
-    quote:
+    description:
       "The tracking on this Future Impact Bass Synth Pedal is very accurate.",
+    quote: true,
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -112,7 +122,8 @@ export const artists: ArtistData[] = [
     name: "Reinhard Rietsch",
     role: "Camo & Krooked",
     image: reinHardRietsch,
-    quote: "Reinhard from Camo & Krooked celebrates his new midiBeam.",
+    description: "Reinhard from Camo & Krooked celebrates his new midiBeam.",
+    quote: false,
     link: "https://www.camoandkrooked.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
@@ -121,7 +132,8 @@ export const artists: ArtistData[] = [
     name: "Alissia Benveniste",
     role: "Funk Bassist",
     image: alissiaBenveniste,
-    quote: "The greatest female bassist of the funk world has chosen us.",
+    description: "The greatest female bassist of the funk world has chosen us.",
+    quote: false,
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -129,8 +141,9 @@ export const artists: ArtistData[] = [
     name: "Howard Jones",
     role: "Synth Pop Artist",
     image: howardJones,
-    quote:
+    description:
       "Howard Jones on stage with his Yamaha KX5, equipped with midiBeam. Total freedom.",
+    quote: false,
     link: "http://www.howardjones.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
@@ -139,8 +152,9 @@ export const artists: ArtistData[] = [
     name: "Lasse Raelahti",
     role: "Keyboardist (Fear of Domination)",
     image: lasse,
-    quote:
+    description:
       "MidiBeam in action. Lasse Raelahti playing his keytar in Fear of Domination.",
+    quote: false,
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
   },
@@ -148,7 +162,8 @@ export const artists: ArtistData[] = [
     name: "Waldemar Gołębski",
     role: "Musician",
     image: waldemar_golebski,
-    quote: "MidiBeam in action in Gdansk, Shakespeare Theatre, Poland.",
+    description: "MidiBeam in action in Gdansk, Shakespeare Theatre, Poland.",
+    quote: false,
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
   },
