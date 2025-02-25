@@ -140,3 +140,40 @@ export const FIV1_TO_V3_DOWNLOADS: DownloadData[] = [
     href: "/downloads/future_impact_v1-v3/FI_version_history_361.pdf",
   },
 ];
+
+export const MIDIBEAM_4CONTROL_DOWNLOADS: DownloadData[] = [
+  {
+    id: 1,
+    title: "midiBeam 4Control system software update",
+    version: "v1.20",
+    href: "/downloads/midibeam_4_control/4control_12a.bin",
+  },
+  {
+    id: 2,
+    title: "midiBeam 4Control administration tool",
+    version: "v1.00",
+    subtitle: "mac OS",
+    href: "/downloads/midibeam_4_control/midiBeam4Control_v1.0_macOS.zip",
+    tooltip:
+      "<p>macOS includes a technology called <strong>Gatekeeper</strong>, designed to ensure that only trusted software runs on your Mac. If you download an app from the internet or directly from a developer, macOS may classify it as untrusted. To proceed, go to <strong>System Settings > Privacy & Security</strong>, scroll to <strong>Security</strong>, and click <strong>Open Anyway</strong> to confirm your intent to open or install the app. After the first launch, you can use the app as usual.</p>",
+  },
+  {
+    id: 3,
+    title: "midiBeam 4Control administration tool",
+    version: "v1.00",
+    subtitle: "Windows 64 bit",
+    href: "/downloads/midibeam_4_control/midiBeam4Control_v1.0_Win64.zip",
+  },
+  {
+    id: 4,
+    title: "Quick start guide",
+    version: "v1.00",
+    href: "/downloads/midibeam_4_control/4control_quick_start.pdf",
+  },
+  {
+    id: 5,
+    title: "User guide",
+    version: "v1.00",
+    href: "/downloads/midibeam_4_control/4control_user_manual_v1.00.pdf",
+  },
+];

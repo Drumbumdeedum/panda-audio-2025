@@ -29,7 +29,7 @@ function DownloadsTable({ downloads }: DownloadsTableProps) {
                 )}
                 {download.subtitle && (
                   <span className="font-normal text-base text-foreground/70">
-                    {`- ${download.subtitle}`}
+                    {` - ${download.subtitle}`}
                   </span>
                 )}
                 {download.tooltip && (

@@ -1,7 +1,11 @@
 import PageContent from "@/components/layout/page-content";
 import PageHeader from "@/components/layout/page-header";
 import React from "react";
-import { FIV1_TO_V3_DOWNLOADS, FIV4_DOWNLOADS } from "./lib/downloads-data";
+import {
+  FIV1_TO_V3_DOWNLOADS,
+  FIV4_DOWNLOADS,
+  MIDIBEAM_4CONTROL_DOWNLOADS,
+} from "./lib/downloads-data";
 import DownloadsTable from "./components/DownloadsTable";
 import {
   Accordion,
@@ -33,6 +37,14 @@ function DownloadsPage() {
             </AccordionTrigger>
             <AccordionContent>
               <DownloadsTable downloads={FIV1_TO_V3_DOWNLOADS} />
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="midiBeam_4Control">
+            <AccordionTrigger>
+              <h4 className="mb-0">midiBeam 4Control</h4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <DownloadsTable downloads={MIDIBEAM_4CONTROL_DOWNLOADS} />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
