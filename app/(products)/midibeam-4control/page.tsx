@@ -3,6 +3,8 @@ import PageHeader from "@/components/layout/page-header";
 import Image from "next/image";
 import midibeam_4control from "@/public/images/products/midibeam-4Control/midiBeam_4Control.jpg";
 import midibeam_4control_connected from "@/public/images/products/midibeam-4Control/midibeam_4control_connected.webp";
+import DownloadsTable from "@/app/downloads/components/DownloadsTable";
+import { MIDIBEAM_4CONTROL_DOWNLOADS } from "@/app/downloads/lib/downloads-data";
 
 function Midibeam4ControlPage() {
   return (
@@ -78,6 +80,15 @@ function Midibeam4ControlPage() {
             MIDI-related performance features.
           </p>
         </section>
+        <hr />
+        <div>
+          <h1 className="mb-0">Product support</h1>
+          <p className="text-foreground/60">
+            Firmware updates, user manuals, presets, and other useful downloads
+            and links
+          </p>
+        </div>
+        <DownloadsTable downloads={MIDIBEAM_4CONTROL_DOWNLOADS} />
       </PageContent>
     </>
   );
