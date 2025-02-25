@@ -20,16 +20,16 @@ function FutureImpactV4VipPage() {
           />
           <div className="flex flex-col justify-center items-start space-y-4">
             <h3>Significantly smaller, equally powerful </h3>
+
             <p>
               Introducing the <strong>Future Impact V4 - VIP</strong>, the
-              latest evolution in Panda Audio&apos;s renowned line of bass
-              synthesizer pedals.
-            </p>
-            <p>
-              Responding to popular demand, the VIP model retains all the
-              groundbreaking features of the{" "}
-              <Link href="/future-impact-v4">Future Impact V4</Link> but in a
-              more compact and pedalboard-friendly design.
+              latest evolution in Panda Audio&apos;s renowned bass synthesizer
+              pedals. Designed in response to popular demand, the VIP model
+              retains all the powerful features of the{" "}
+              <Link href="/future-impact-v4">Future Impact V4</Link> in a more
+              compact, pedalboard-friendly form. With dimensions of 125 x 85 x
+              60 mm (4.9 x 3.3 x 2.4 in) and a weight of 330g, it seamlessly
+              integrates into any setup.
             </p>
           </div>
         </section>
