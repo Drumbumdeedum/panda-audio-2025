@@ -20,7 +20,7 @@ function DownloadsTable({ downloads }: DownloadsTableProps) {
         {downloads.map((download) => (
           <TableRow key={download.id}>
             <TableCell className="font-medium">
-              <h4 className="mb-0 text-base flex">
+              <h4 className="mb-0 text-base flex gap-1">
                 {download.title}
                 {download.version && (
                   <span className="font-normal text-base italic text-foreground/70">
@@ -36,7 +36,7 @@ function DownloadsTable({ downloads }: DownloadsTableProps) {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger className="self-start">
-                        <Info className="ml-1" size={12} />
+                        <Info size={12} />
                       </TooltipTrigger>
                       <TooltipContent side="top">
                         <p
