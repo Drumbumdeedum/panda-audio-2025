@@ -88,7 +88,28 @@ function Midibeam4ControlPage() {
             and links
           </p>
         </div>
-        <DownloadsTable downloads={MIDIBEAM_4CONTROL_DOWNLOADS} />
+        <div>
+          <h4 className="mb-0">Effortless Updates & Configuration</h4>
+          <p>
+            Our web-based tool seamlessly upgrades your midiBeam 4Control to the
+            latest version (1.4) and manages all operational settings.
+          </p>
+          <p>
+            {" "}
+            <a
+              href="https://auraplug.com/panda/4controlupdate/start.html"
+              target="_blank"
+            >
+              Click here
+            </a>{" "}
+            to launch the application. (Supported browsers: Chrome on
+            macOS/Windows).
+          </p>
+        </div>
+        <div>
+          <h4>Downloads</h4>
+          <DownloadsTable downloads={MIDIBEAM_4CONTROL_DOWNLOADS} />
+        </div>
       </PageContent>
     </>
   );

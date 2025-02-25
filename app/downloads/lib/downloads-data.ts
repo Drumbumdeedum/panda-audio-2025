@@ -155,7 +155,7 @@ export const MIDIBEAM_4CONTROL_DOWNLOADS: DownloadData[] = [
     subtitle: "mac OS",
     href: "/downloads/midibeam_4_control/midiBeam4Control_v1.0_macOS.zip",
     tooltip:
-      "<p>macOS includes a technology called <strong>Gatekeeper</strong>, designed to ensure that only trusted software runs on your Mac. If you download an app from the internet or directly from a developer, macOS may classify it as untrusted. To proceed, go to <strong>System Settings > Privacy & Security</strong>, scroll to <strong>Security</strong>, and click <strong>Open Anyway</strong> to confirm your intent to open or install the app. After the first launch, you can use the app as usual.</p>",
+      '<p style="margin-bottom: 8px;">This software is compatible with macOS 10.9 or newer. (Mavericks, Yosemite, El Capitan, Sierra, High Sierra, Mojave, Catalina, Big Sur) When you first start the software, open the file midiBeam4Control.app by right-clicking it and choosing Open from the pop-up menu.</p><p>macOS includes a technology called <strong>Gatekeeper</strong>, designed to ensure that only trusted software runs on your Mac. If you download an app from the internet or directly from a developer, macOS may classify it as untrusted. To proceed, go to <strong>System Settings > Privacy & Security</strong>, scroll to <strong>Security</strong>, and click <strong>Open Anyway</strong> to confirm your intent to open or install the app. After the first launch, you can use the app as usual.</p>',
   },
   {
     id: 3,
