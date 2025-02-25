@@ -86,15 +86,50 @@ function MidibeamV2WirelessPage() {
             </p>
           </div>
         </section>
-        <hr />
-        <div>
-          <h1 className="mb-0">Product support</h1>
-          <p className="text-foreground/60">
-            Firmware updates, user manuals, presets, and other useful downloads
-            and links
+        <section>
+          <p>
+            Radio connection is established between a pair of devices
+            automatically on one of 76 radio channels by using the pairing
+            buttons on both units. This means that up to 76 systems can coexist
+            at one location. The radio transmission is using the 2.4 GHz band
+            that is free for public use all over the world. Radio power is
+            programmable in four increments. The transmitter can power off
+            automatically, if it is not used for a certain time. Programmable
+            options are 10, 30, 60 minutes or no power off.
           </p>
+        </section>
+        <hr />
+        <div className="space-y-8">
+          <div>
+            <h1 className="mb-0">Product support</h1>
+            <p className="text-foreground/60">
+              Firmware updates, user manuals, presets, and other useful
+              downloads and links
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-0">Effortless Updates & Configuration</h4>
+            <p>
+              Our web-based tool seamlessly upgrades your midiBeam v2 Wireless
+              to the latest version (2.0) and manages all operational settings.
+            </p>
+            <p>
+              {" "}
+              <a
+                href="https://auraplug.com/mbupdate/start.html"
+                target="_blank"
+              >
+                Click here
+              </a>{" "}
+              to launch the application. (Supported browsers: Chrome on
+              macOS/Windows).
+            </p>
+          </div>
         </div>
-        <DownloadsTable downloads={MIDIBEAM_V2_WIRELESS_DOWNLOADS} />
+        <div>
+          <h4>Downloads</h4>
+          <DownloadsTable downloads={MIDIBEAM_V2_WIRELESS_DOWNLOADS} />
+        </div>
       </PageContent>
     </>
   );

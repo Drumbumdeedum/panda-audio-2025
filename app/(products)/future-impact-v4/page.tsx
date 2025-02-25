@@ -261,7 +261,6 @@ function FutureImpactV4Page() {
             and links
           </p>
         </div>
-
         <Accordion type="single" collapsible>
           <AccordionItem value="future_impact_v4">
             <AccordionTrigger>
