@@ -211,8 +211,7 @@ function FutureImpactV4Page() {
                 ></iframe>
               </AspectRatio>
             </div>
-
-            <div className="w-full">
+            {/* <div className="w-full">
               <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
@@ -221,7 +220,7 @@ function FutureImpactV4Page() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </AspectRatio>
-            </div>
+            </div> */}
             <div className="w-full">
               <AspectRatio ratio={16 / 9}>
                 <iframe
@@ -242,7 +241,7 @@ function FutureImpactV4Page() {
                 ></iframe>
               </AspectRatio>
             </div>
-            {/* <div className="w-full">
+            <div className="w-full">
               <AspectRatio ratio={16 / 9}>
                 <iframe
                   className="h-full w-full"
@@ -251,7 +250,7 @@ function FutureImpactV4Page() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </AspectRatio>
-            </div> */}
+            </div>
           </div>
         </section>
         <hr />
