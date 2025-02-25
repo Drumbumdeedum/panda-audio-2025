@@ -177,3 +177,34 @@ export const MIDIBEAM_4CONTROL_DOWNLOADS: DownloadData[] = [
     href: "/downloads/midibeam_4_control/4control_user_manual_v1.00.pdf",
   },
 ];
+
+export const MIDIBEAM_V2_WIRELESS_DOWNLOADS: DownloadData[] = [
+  {
+    id: 1,
+    title: "midiBeam v2 Wireless system software update",
+    version: "v2.00",
+    href: "/downloads/midibeam_v2_wireless/midiBeam_v2.00.zip",
+  },
+  {
+    id: 2,
+    title: "midiBeam v2 Wireless administration tool",
+    subtitle: "Windows",
+    href: "/downloads/midibeam_v2_wireless/midiBeam_windows_admin_tool.zip",
+  },
+  {
+    id: 3,
+    title: "Quick start guide",
+    href: "/downloads/midibeam_v2_wireless/midiBeam_quickstart.pdf",
+  },
+  {
+    id: 4,
+    title: "User guide",
+    version: "v2.00",
+    href: "/downloads/midibeam_v2_wireless/midiBeam_user_guide_v2.00.pdf",
+  },
+  {
+    id: 5,
+    title: "midiBeam v2 Wireless MIDI System Exclusive specification",
+    href: "/downloads/midibeam_v2_wireless/midiBeam_TX_RX_sysex.doc",
+  },
+];

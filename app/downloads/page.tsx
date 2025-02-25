@@ -5,6 +5,7 @@ import {
   FIV1_TO_V3_DOWNLOADS,
   FIV4_DOWNLOADS,
   MIDIBEAM_4CONTROL_DOWNLOADS,
+  MIDIBEAM_V2_WIRELESS_DOWNLOADS,
 } from "./lib/downloads-data";
 import DownloadsTable from "./components/DownloadsTable";
 import {
@@ -45,6 +46,14 @@ function DownloadsPage() {
             </AccordionTrigger>
             <AccordionContent>
               <DownloadsTable downloads={MIDIBEAM_4CONTROL_DOWNLOADS} />
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="midiBeam_v2_wireless">
+            <AccordionTrigger>
+              <h4 className="mb-0">midiBeam v2 wireless</h4>
+            </AccordionTrigger>
+            <AccordionContent>
+              <DownloadsTable downloads={MIDIBEAM_V2_WIRELESS_DOWNLOADS} />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
