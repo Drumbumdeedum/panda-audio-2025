@@ -15,6 +15,7 @@ import { formatAmount, formatCurrency } from "@/lib/utils";
 import { useProductCartStore } from "@/store/cart";
 import { useCurrencyStore } from "@/store/currency";
 import { ChevronRightIcon, MinusIcon, PlusIcon } from "lucide-react";
+import Link from "next/link";
 
 function ProductsTable() {
   const { products, decreaseProductAmount, increaseProductAmount } =
@@ -40,7 +41,8 @@ function ProductsTable() {
       <Table>
         {products.length === 0 && (
           <TableCaption className="text-center">
-            You have no products in your cart.
+            Your cart is empty. Visit our{" "}
+            <Link href="products">products page</Link> to start shopping.
           </TableCaption>
         )}
 
