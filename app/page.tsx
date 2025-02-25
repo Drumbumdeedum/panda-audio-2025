@@ -78,7 +78,7 @@ export default function Home() {
                     key={index}
                     className="relative group border border-border/30 rounded-lg overflow-hidden flex flex-col"
                   >
-                    {product.newTag && <Badge variant="new">New</Badge>}
+                    {product.newTag && <Badge variant="new">New!</Badge>}
                     <div className="w-full">
                       <AspectRatio ratio={5 / 4}>
                         <Image

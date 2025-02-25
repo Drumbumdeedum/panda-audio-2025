@@ -110,7 +110,7 @@ export const artists: ArtistData[] = [
   },
   {
     name: "Reinhard Rietsch",
-    role: "Producer (Camo & Krooked)",
+    role: "Camo & Krooked",
     image: reinHardRietsch,
     quote: "Reinhard from Camo & Krooked celebrates his new midiBeam.",
     link: "https://www.camoandkrooked.com",

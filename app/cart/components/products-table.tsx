@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import CurrencySelect from "@/components/ui/currency-select";
 import {
   Table,
   TableBody,
@@ -31,12 +32,7 @@ function ProductsTable() {
     <>
       <div className="flex justify-between items-center">
         <h3>Confirm your order</h3>
-        {products.length > 0 && (
-          <Button className="group">
-            Continue
-            <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
-          </Button>
-        )}
+        <CurrencySelect />
       </div>
       <Table>
         {products.length === 0 && (
@@ -104,6 +100,14 @@ function ProductsTable() {
           </TableRow>
         </TableFooter>
       </Table>
+      {products.length > 0 && (
+        <div className="flex justify-end">
+          <Button className="group">
+            Continue
+            <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
+          </Button>
+        </div>
+      )}
     </>
   );
 }

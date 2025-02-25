@@ -8,14 +8,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Info } from "lucide-react";
 
 function CurrencySelect() {
   const { currency, setCurrency } = useCurrencyStore();
-  const tooltip =
-    currency === "EUR" ? "* EU residents only" : "* for non-EU residents";
-
   return (
-    <div className="space-y-2">
+    <div className="flex gap-2 items-center">
       <div className="w-24">
         <Select defaultValue="EUR" onValueChange={setCurrency}>
           <SelectTrigger className="w-full">
@@ -27,7 +31,19 @@ function CurrencySelect() {
           </SelectContent>
         </Select>
       </div>
-      <p className="text-xs leading-none text-foreground/70">{tooltip}</p>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger>
+            <Info size={16} />
+          </TooltipTrigger>
+          <TooltipContent side="top">
+            <p className="p-1 text-xs font-normal">
+              We process payments in EUR for EU residents and in USD for
+              international orders.
+            </p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 }
