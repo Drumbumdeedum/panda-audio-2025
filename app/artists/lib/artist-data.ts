@@ -75,7 +75,7 @@ export const artists: ArtistData[] = [
     description:
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
     quote: true,
-    link: "https://mohinideybass.in/",
+    link: "https://mohinideybass.in",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -95,7 +95,7 @@ export const artists: ArtistData[] = [
     image: etienneMbappe,
     description: "Jazz funk never sounded this hard!",
     quote: false,
-    link: "https://etiennembappe.com/",
+    link: "https://etiennembappe.com",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
