@@ -188,6 +188,10 @@ function AboutPage() {
                 He developed the Future Impact bass guitar synthesizer and the
                 midiBeam 4Control MIDI Interface for analog controllers.
               </p>
+              <p>
+                For a full list of all of Anrdás&apos;s designs over the years{" "}
+                <Link href="/designs">click here</Link>.
+              </p>
             </div>
             <div className="w-full">
               <AspectRatio ratio={3 / 2}>
@@ -241,7 +245,7 @@ function AboutPage() {
         <section>
           <h1>Zsolt Rammer</h1>
           <p>
-            Zsolt Rammer joined Panda-Audio early 2015. He has a very wide
+            Zsolt Rammer joined Panda Audio early 2015. He has a very wide
             spectrum of activities covering practically everything in connection
             with the development of musical instruments, especially guitar
             effects. He can do hardware design, PCB design, building his own
@@ -259,11 +263,11 @@ function AboutPage() {
         <section>
           <h1>George Peng</h1>
           <p>
-            George Peng joined Panda-Audio formally in 2016, but he did the PCB
+            George Peng joined Panda Audio formally in 2016, but he did the PCB
             and 3D mechanical design of all products and prototypes since 2010.
             Beyond these activities he has experience in hardware and software
             development and web programming. He is responsible for the
-            production management of Panda-Audio&apos;s own products.
+            production management of Panda Audio&apos;s own products.
           </p>
         </section>
       </PageContent>

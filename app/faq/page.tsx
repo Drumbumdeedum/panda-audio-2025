@@ -23,7 +23,7 @@ function FaqPage() {
             until the Fishman Triple Play today. Over this period I answered
             thousands of questions from users who had some difficulties to
             understand certain features or behavior of their devices. Now, as I
-            have here a web page of my company, Panda-Audio, I want to take the
+            have here a web page of my company, Panda Audio, I want to take the
             opportunity to summarize this information in the form of an FAQ. I
             hope I can help users of guitar synthesizers a better understanding
             of their devices with this information. While these answers are
