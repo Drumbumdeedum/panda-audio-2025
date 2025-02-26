@@ -75,6 +75,7 @@ export const artists: ArtistData[] = [
     description:
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
     quote: true,
+    link: "https://mohinideybass.in/",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -94,6 +95,7 @@ export const artists: ArtistData[] = [
     image: etienneMbappe,
     description: "Jazz funk never sounded this hard!",
     quote: false,
+    link: "https://etiennembappe.com/",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -110,11 +112,12 @@ export const artists: ArtistData[] = [
   },
   {
     name: "Robert Harper",
-    role: "Bassist",
+    role: "Funk Bassist",
     image: robertHarper,
     description:
       "The tracking on this Future Impact Bass Synth Pedal is very accurate.",
     quote: true,
+    link: "https://www.robertharperbass.com",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
@@ -134,12 +137,13 @@ export const artists: ArtistData[] = [
     image: alissiaBenveniste,
     description: "The greatest female bassist of the funk world has chosen us.",
     quote: false,
+    link: "https://www.instagram.com/alissia",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
   {
     name: "Howard Jones",
-    role: "Synth Pop Artist",
+    role: "Musician, singer, songwriter",
     image: howardJones,
     description:
       "Howard Jones on stage with his Yamaha KX5, equipped with midiBeam. Total freedom.",
@@ -155,15 +159,17 @@ export const artists: ArtistData[] = [
     description:
       "MidiBeam in action. Lasse Raelahti playing his keytar in Fear of Domination.",
     quote: false,
+    link: "https://www.instagram.com/fearofkeytarnation",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
   },
   {
     name: "Waldemar Gołębski",
-    role: "Musician",
+    role: "Musician, composer",
     image: waldemar_golebski,
     description: "MidiBeam in action in Gdansk, Shakespeare Theatre, Poland.",
     quote: false,
+    link: "https://nitelinejazz.com",
     product: "midiBeam v2 wireless",
     productHref: "/midibeam-v2-wireless",
   },
