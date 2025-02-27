@@ -6,12 +6,12 @@ function CheckoutPage() {
   return (
     <>
       <PageContent type="narrow">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <section className="col-span-1">
-            <ShippingDetails />
-          </section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <section className="col-span-1">
             <OrderSummary />
+          </section>
+          <section className="col-span-1 lg:order-first">
+            <ShippingDetails />
           </section>
         </div>
       </PageContent>
