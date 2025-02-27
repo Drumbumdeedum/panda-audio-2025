@@ -33,7 +33,7 @@ function DesignsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
                 >
-                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                  <ExternalLink className="ml-1 w-4 h-4" />
                 </Link>
               </li>
               <li>
@@ -44,7 +44,7 @@ function DesignsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
                 >
-                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                  <ExternalLink className="ml-1 w-4 h-4" />
                 </Link>
               </li>
               <li>
@@ -88,7 +88,7 @@ function DesignsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
                 >
-                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                  <ExternalLink className="ml-1 w-4 h-4" />
                 </Link>
               </li>
             </ul>
@@ -97,18 +97,74 @@ function DesignsPage() {
           <section>
             <h3>AKAI pro/AKAI professional</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Deep Impact Synthbass pedal</li>
-              <li>Unibass Harmonised Bass Distortion pedal</li>
+              <li>
+                Deep Impact Synthbass pedal{" "}
+                <Link
+                  href="https://youtu.be/LoD5wOdlCK8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
+              <li>
+                Unibass Harmonised Bass Distortion pedal{" "}
+                <Link
+                  href="https://www.gearbug.com/product_info/akai_unibass_ub1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
               <li>
                 DPS16 Hard disk Recorder (FX section control and a number of
-                audio effects)
+                audio effects){" "}
+                <Link
+                  href="https://www.soundonsound.com/reviews/akai-dps16"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
               <li>
-                Z4/8 Sampler (FX section control and a number of audio effects)
+                Z4/8 Sampler (FX section control and a number of audio effects){" "}
+                <Link
+                  href="http://www.planet-groove.com/akai/z4.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
-              <li>HV1 DuoBuddy and HV10 DecaBuddy Vocal Harmonizers</li>
+              <li>
+                HV1 DuoBuddy and HV10 DecaBuddy Vocal Harmonizers{" "}
+                <Link
+                  href="https://www.zikinf.com/manuels/akai-duobuddy-hv1-manuel-utilisateur-en-26000.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
               <li>Rotator / PitchRight / DecaBuddy / QuadComp VST plugins</li>
-              <li>EWI4000s Electronic Wind Synthesizer</li>
+              <li>
+                EWI4000s Electronic Wind Synthesizer{" "}
+                <Link
+                  href="http://www.akaipro.com/ewi4000s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
               <li>EWI USB Electronic Wind Controller</li>
               <li>MP3 player module based on a standard ASIC</li>
               <li>
@@ -120,14 +176,43 @@ function DesignsPage() {
           <section>
             <h3>Panda Audio label</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>midiBeam v2 Wireless MIDI interface</li>
+              <li>
+                midiBeam v2 Wireless MIDI interface{" "}
+                <Link
+                  href="/midibeam-v2-wireless"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
               <li>
                 Future Impact bass guitar synthesizer and analog modeling MIDI
-                expander
+                expander{" "}
+                <Link
+                  href="/future-impact-v4"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
               <li>
                 midiBeam 4Control MIDI interface for footswitches and expression
-                pedals
+                pedals{" "}
+                <Link
+                  href="/midibeam-4control"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
+              <li>
+                Future Impact V4 - VIP{" "}
+                <Link
+                  href="/future-impact-v4-vip"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
             </ul>
           </section>
