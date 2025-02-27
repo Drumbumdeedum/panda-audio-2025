@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import CurrencySelect from "@/components/ui/currency-select";
+import CurrencySelect from "@/components/ui/currency-selector";
 import {
   Table,
   TableBody,
@@ -102,10 +102,12 @@ function ProductsTable() {
       </Table>
       {products.length > 0 && (
         <div className="flex justify-end">
-          <Button className="group">
-            Continue
-            <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href="/cart/checkout">
+            <Button className="group" variant="cta" size="lg">
+              Continue
+              <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       )}
     </>
