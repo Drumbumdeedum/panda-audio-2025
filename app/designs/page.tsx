@@ -1,5 +1,7 @@
 import PageContent from "@/components/layout/page-content";
 import PageHeader from "@/components/layout/page-header";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 function DesignsPage() {
@@ -24,13 +26,71 @@ function DesignsPage() {
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 Aura Acoustic Imaging product line (Ellipse, Onboard, Pro,
-                Imaging Blender, Imaging Pedal, Sixteen, Spectrum DI)
+                Imaging Blender, Imaging Pedal, Sixteen, Spectrum DI){" "}
+                <Link
+                  href="http://www.fishman.com/products/series/aura/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
-              <li>Triple Play Wireless Guitar Controller</li>
               <li>
-                AFX Acoustic Effect Pedal product line (Reverb, Chorus, Delay)
+                Triple Play Wireless Guitar Controller{" "}
+                <Link
+                  href="http://www.fishman.com/tripleplay"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
               </li>
-              <li>Fission Bass Powerchord Effect Pedal</li>
+              <li>
+                AFX Acoustic Effect Pedal product line (
+                <Link
+                  href="https://youtu.be/n5WcaqafOXo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Reverb
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://youtu.be/sTUHbnulN7g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Chorous
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://youtu.be/hvZMnk0DVqI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Delay
+                  <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+                )
+              </li>
+              <li>
+                Fission Bass Powerchord Effect Pedal{" "}
+                <Link
+                  href="https://youtu.be/I2XKZNMR2Pc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                >
+                  Link <ExternalLink className="ml-1 w-4 h-4" />
+                </Link>
+              </li>
             </ul>
           </section>
           <hr />

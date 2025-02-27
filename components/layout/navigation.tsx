@@ -36,7 +36,7 @@ function Navigation() {
     0
   );
   return (
-    <header className="sticky top-0 z-50 w-full bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 w-full bg-background backdrop-blur-lg supports-[backdrop-filter]:bg-background/85">
       <div className="flex h-16 justify-between sm:space-x-0 px-4 md:px-8 lg:px-16">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-3">

@@ -9,10 +9,10 @@ function Hero() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-background leading-tight mb-0">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-indigo-500 to-yellow-600 bg-clip-text leading-tight mb-0">
               Professional Audio Innovation
             </h1>
-            <p className="text-background/70 text-lg md:text-xl">
+            <p className="text-background/85 text-lg md:text-xl">
               Independent R&D company specializing in digital signal processing
               and embedded systems for professional audio applications.
             </p>
