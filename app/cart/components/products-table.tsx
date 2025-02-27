@@ -15,7 +15,7 @@ import {
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import { useProductCartStore } from "@/store/cart";
 import { useCurrencyStore } from "@/store/currency";
-import { ChevronRightIcon, MinusIcon, PlusIcon } from "lucide-react";
+import { ArrowRightIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 
 function ProductsTable() {
@@ -58,7 +58,9 @@ function ProductsTable() {
               <TableRow key={product.id}>
                 <TableCell className="flex-grow">
                   <>
-                    <h3 className="font-semibold text-lg">{product.name}</h3>
+                    <h3 className="font-semibold text-lg mb-0">
+                      {product.name}
+                    </h3>
                     <p className="text-foreground/70">
                       {formatCurrency(price.currency)}
                       {formatAmount(price.amount)}
@@ -103,9 +105,9 @@ function ProductsTable() {
       {products.length > 0 && (
         <div className="flex justify-end">
           <Link href="/cart/checkout">
-            <Button className="group" variant="cta" size="lg">
-              Continue
-              <ChevronRightIcon className="transition-transform group-hover:translate-x-1" />
+            <Button className="group font-bold" variant="cta" size="lg">
+              To checkout
+              <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>

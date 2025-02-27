@@ -217,12 +217,12 @@ const countries = [
 ];
 
 type CountrySelectorProps = {
+  value: string;
   onSelect: (value: string) => void;
 };
 
-export function CountrySelector({ onSelect }: CountrySelectorProps) {
+export function CountrySelector({ value, onSelect }: CountrySelectorProps) {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -231,7 +231,7 @@ export function CountrySelector({ onSelect }: CountrySelectorProps) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-64 justify-between"
+          className="justify-between flex w-full"
         >
           {value
             ? countries.find((country) =>
@@ -252,7 +252,6 @@ export function CountrySelector({ onSelect }: CountrySelectorProps) {
                   key={country.value}
                   value={country.label}
                   onSelect={(currentValue) => {
-                    setValue(currentValue);
                     onSelect(currentValue);
                     setOpen(false);
                   }}
