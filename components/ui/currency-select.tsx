@@ -20,17 +20,6 @@ function CurrencySelect() {
   const { currency, setCurrency } = useCurrencyStore();
   return (
     <div className="flex gap-2 items-center">
-      <div className="w-24">
-        <Select defaultValue="EUR" onValueChange={setCurrency}>
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder={currency} />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="EUR">EUR (€)</SelectItem>
-            <SelectItem value="USD">USD ($)</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
@@ -44,6 +33,17 @@ function CurrencySelect() {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
+      <div className="w-24">
+        <Select defaultValue="EUR" onValueChange={setCurrency}>
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder={currency} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="EUR">EUR (€)</SelectItem>
+            <SelectItem value="USD">USD ($)</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
     </div>
   );
 }
