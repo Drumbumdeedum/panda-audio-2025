@@ -1,7 +1,6 @@
 import React from "react";
 import ProductGrid from "./components/product-grid";
 import CurrencySelect from "@/components/ui/currency-select";
-import PageContent from "@/components/layout/page-content";
 
 async function ProductsPage() {
   return (
@@ -12,9 +11,11 @@ async function ProductsPage() {
           <CurrencySelect />
         </div>
       </header>
-      <PageContent>
+      <div
+        className={"max-w-[1440] mx-auto p-4 md:p-8 lg:px-16 lg:py-8 space-y-8"}
+      >
         <ProductGrid />
-      </PageContent>
+      </div>
     </>
   );
 }
