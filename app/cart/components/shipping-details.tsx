@@ -8,7 +8,7 @@ function ShippingDetails() {
     <Card>
       <CardHeader>
         <CardTitle>
-          <h3>Shipping address</h3>
+          <h3 className="mb-0">Shipping address</h3>
         </CardTitle>
       </CardHeader>
       <CardContent>
