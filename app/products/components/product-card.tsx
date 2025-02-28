@@ -84,8 +84,17 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
         >
           {product.href && (
-            <Link href={product.href}>
-              <Button variant="secondary">More Info</Button>
+            <Link
+              href={product.href}
+              tabIndex={-1}
+              className="focus:outline-none focus-visible:outline-none"
+            >
+              <Button
+                variant="secondary"
+                aria-label={`More info about ${product.name}`}
+              >
+                More Info
+              </Button>
             </Link>
           )}
           <Button onClick={handleAddProduct}>
