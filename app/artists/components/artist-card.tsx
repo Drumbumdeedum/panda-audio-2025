@@ -41,18 +41,20 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
             <CardDescription>{artistData.role}</CardDescription>
           </div>
           {artistData.link && (
-            <Button variant="ghost" size="icon" asChild>
-              <Link
-                href={artistData.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="h-4 w-4" />
-                <span className="sr-only">
-                  Visit {artistData.name}&apos;s website
-                </span>
-              </Link>
-            </Button>
+            <Link
+              href={artistData.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" asChild>
+                <>
+                  <ExternalLink className="h-4 w-4" />
+                  <span className="sr-only">
+                    Visit {artistData.name}&apos;s website
+                  </span>
+                </>
+              </Button>
+            </Link>
           )}
         </div>
       </CardHeader>
@@ -71,8 +73,16 @@ function ArtistCard({ artistData, priority = false }: ArtistCardProps) {
           </p>
         </div>
         <div className="mt-4">
-          <Link href={artistData.productHref}>
-            <Button variant="secondary" size="sm">
+          <Link
+            href={artistData.productHref}
+            tabIndex={-1}
+            className="focus:outline-none focus-visible:outline-none"
+          >
+            <Button
+              variant="secondary"
+              size="sm"
+              aria-label={`More info about ${artistData.product}`}
+            >
               Using {artistData.product}
             </Button>
           </Link>
