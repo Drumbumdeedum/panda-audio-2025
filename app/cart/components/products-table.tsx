@@ -104,7 +104,11 @@ function ProductsTable() {
       </Table>
       {products.length > 0 && (
         <div className="flex justify-end">
-          <Link href="/cart/checkout">
+          <Link
+            href="/cart/checkout"
+            tabIndex={-1}
+            className="focus:outline-none focus-visible:outline-none"
+          >
             <Button className="group font-bold" variant="cta" size="lg">
               To checkout
               <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
