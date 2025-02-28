@@ -14,9 +14,16 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { CountrySelector } from "@/components/ui/country-selector";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { ArrowLeftIcon, ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
+import { countries } from "@/lib/countries";
 
 const formSchema = z.object({
   firstName: z.string().min(1, {
@@ -72,9 +79,9 @@ function ShippingDetailsForm() {
             name="firstName"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>First name</FormLabel>
+                <FormLabel hasValue={!!field.value}>First name</FormLabel>
                 <FormControl>
-                  <Input placeholder="First name" {...field} />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,9 +92,9 @@ function ShippingDetailsForm() {
             name="lastName"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Last name</FormLabel>
+                <FormLabel hasValue={!!field.value}>Last name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Last name" {...field} />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -98,15 +105,22 @@ function ShippingDetailsForm() {
           control={form.control}
           name="country"
           render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel>Country</FormLabel>
-              <FormControl>
-                <CountrySelector
-                  {...field}
-                  onSelect={(value) => field.onChange(value)}
-                  value={field.value}
-                />
-              </FormControl>
+            <FormItem>
+              <FormLabel hasValue={!!field.value}>Country</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {countries.map((country) => (
+                    <SelectItem key={country.label} value={country.label}>
+                      {country.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
@@ -116,9 +130,9 @@ function ShippingDetailsForm() {
           name="city"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>City</FormLabel>
+              <FormLabel hasValue={!!field.value}>City</FormLabel>
               <FormControl>
-                <Input placeholder="City" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -129,9 +143,9 @@ function ShippingDetailsForm() {
           name="postalCode"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>Postal code</FormLabel>
+              <FormLabel hasValue={!!field.value}>Postal code</FormLabel>
               <FormControl>
-                <Input placeholder="Postal code" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -142,9 +156,9 @@ function ShippingDetailsForm() {
           name="streetAndNumber"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>Address Line 1</FormLabel>
+              <FormLabel hasValue={!!field.value}>Address Line 1</FormLabel>
               <FormControl>
-                <Input placeholder="Street and number" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -155,12 +169,12 @@ function ShippingDetailsForm() {
           name="addressLine2"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>
+              <FormLabel hasValue={!!field.value}>
                 Address Line 2{" "}
                 <span className="text-foreground/60">(optional)</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Apartment, Suite, Unit, etc." {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -171,9 +185,9 @@ function ShippingDetailsForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>Email</FormLabel>
+              <FormLabel hasValue={!!field.value}>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -184,25 +198,29 @@ function ShippingDetailsForm() {
           name="phone"
           render={({ field }) => (
             <FormItem className="flex-1">
-              <FormLabel>
+              <FormLabel hasValue={!!field.value}>
                 Phone number{" "}
                 <span className="text-foreground/60">(optional)</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Phone number" {...field} />
+                <Input {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
         <div className="flex gap-4 justify-between items-center">
-          <Link href="/cart">
+          <Link
+            href="/cart"
+            tabIndex={-1}
+            className="focus:outline-none focus-visible:outline-none"
+          >
             <Button
               size="lg"
               variant="secondary"
-              className="py-6 hover:scale-105 transform transition duration-200 ease-in-out"
+              className="py-6 transform transition duration-200 ease-in-out group"
             >
-              <ArrowLeftIcon />
+              <ArrowLeftIcon className="transition-transform group-hover:-translate-x-1" />
               Back to cart
             </Button>
           </Link>

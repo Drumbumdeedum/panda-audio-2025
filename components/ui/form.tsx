@@ -77,10 +77,9 @@ const FormItem = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const id = React.useId();
-
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn(className)} {...props} />
+      <div ref={ref} className={cn("relative group", className)} {...props} />
     </FormItemContext.Provider>
   );
 });
@@ -88,14 +87,23 @@ FormItem.displayName = "FormItem";
 
 const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
->(({ className, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & {
+    hasValue?: boolean;
+  }
+>(({ className, hasValue, ...props }, ref) => {
   const { error, formItemId } = useFormField();
 
   return (
     <Label
       ref={ref}
-      className={cn(error && "text-destructive", className)}
+      className={cn(
+        "cursor-text transition-all ease-in-out absolute top-0 left-0 transform translate-y-1.5 translate-x-2 bg-white px-1 text-[1rem] font-medium z-10",
+        "group-focus-within:-translate-y-2.5 group-focus-within:translate-x-2 group-focus-within:text-[0.8rem] group-focus-within:cursor-default",
+        hasValue &&
+          "-translate-y-2.5 translate-x-2 text-[0.8rem] cursor-default",
+        error && "text-destructive",
+        className
+      )}
       htmlFor={formItemId}
       {...props}
     />
