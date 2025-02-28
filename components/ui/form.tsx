@@ -97,10 +97,9 @@ const FormLabel = React.forwardRef<
     <Label
       ref={ref}
       className={cn(
-        "cursor-text rounded-lg transition-all ease-in-out absolute top-0 left-0 transform translate-y-1.5 translate-x-2 bg-white px-2 text-[1rem] font-medium z-10",
-        "group-focus-within:-translate-y-2.5 group-focus-within:translate-x-2 group-focus-within:text-[0.8rem] group-focus-within:cursor-default",
-        hasValue &&
-          "-translate-y-2.5 translate-x-2 text-[0.8rem] cursor-default",
+        "cursor-text rounded-lg transition-all ease-in-out absolute top-0 left-0 transform translate-y-1.5 translate-x-2 bg-white px-1 text-[1rem] font-medium z-10",
+        "group-focus-within:-translate-y-2 group-focus-within:translate-x-2 group-focus-within:text-[0.7rem] group-focus-within:cursor-default",
+        hasValue && "-translate-y-2 translate-x-2 text-[0.7rem] cursor-default",
         error && "text-destructive",
         className
       )}
