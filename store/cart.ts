@@ -11,6 +11,7 @@ interface ProductCartStore {
   addProduct: (newProduct: Product) => void;
   decreaseProductAmount: (productId: number) => void;
   increaseProductAmount: (productId: number) => void;
+  clearCart: () => void;
 }
 
 export const useProductCartStore = create<ProductCartStore>()(
@@ -66,6 +67,9 @@ export const useProductCartStore = create<ProductCartStore>()(
           }
           return state;
         });
+      },
+      clearCart: () => {
+        set({ products: [] });
       },
     }),
     {

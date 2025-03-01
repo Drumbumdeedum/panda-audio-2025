@@ -21,9 +21,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowLeftIcon, ShoppingCartIcon } from "lucide-react";
+import { ArrowLeftIcon, LoaderCircle, ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 import { countries } from "@/lib/countries";
+import { useState } from "react";
+import { useProductCartStore } from "@/store/cart";
+import { toast } from "sonner";
+import OrderSuccess from "./order-success";
+
+const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL!;
 
 const formSchema = z.object({
   firstName: z.string().min(1, {
@@ -52,6 +58,10 @@ const formSchema = z.object({
 });
 
 function ShippingDetailsForm() {
+  const { products, clearCart } = useProductCartStore();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [orderSuccessful, setOrderSuccessful] = useState<boolean>(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -67,175 +77,239 @@ function ShippingDetailsForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (loading) return;
+    setLoading(true);
+
+    setTimeout(() => {}, 3000);
+    const orderDetails = products.map((product) => {
+      return { name: product.name, quantity: product.amount };
+    });
+    const requestBody = {
+      shippingDetails: values,
+      orderDetails,
+    };
+    console.log(JSON.stringify(requestBody));
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (response.ok) {
+        setOrderSuccessful(true);
+        clearCart();
+        form.reset();
+      } else {
+        toast.error(
+          "Something went wrong. Please try again later, or contact us at info@panda-audio.com."
+        );
+      }
+    } catch (error) {
+      toast.error(
+        "Something went wrong. Please try again later, or contact us at info@panda-audio.com."
+      );
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   }
+
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <div className="flex justify-between gap-8">
-          <FormField
-            control={form.control}
-            name="firstName"
-            render={({ field }) => (
-              <FormItem className="flex-1">
-                <FormLabel hasValue={!!field.value}>First name</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="lastName"
-            render={({ field }) => (
-              <FormItem className="flex-1">
-                <FormLabel hasValue={!!field.value}>Last name</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <FormField
-          control={form.control}
-          name="country"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel hasValue={!!field.value}>Country</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {countries.map((country) => (
-                    <SelectItem key={country.label} value={country.label}>
-                      {country.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="city"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>City</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="postalCode"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>Postal code</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="streetAndNumber"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>Address Line 1</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="addressLine2"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>
-                Address Line 2{" "}
-                <span className="text-foreground/60">(optional)</span>
-              </FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>Email</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem className="flex-1">
-              <FormLabel hasValue={!!field.value}>
-                Phone number{" "}
-                <span className="text-foreground/60">(optional)</span>
-              </FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="flex gap-4 justify-between items-center">
-          <Link
-            href="/cart"
-            tabIndex={-1}
-            className="focus:outline-none focus-visible:outline-none"
-          >
-            <Button
-              size="lg"
-              variant="secondary"
-              className="py-6 transform transition duration-200 ease-in-out group"
-            >
-              <ArrowLeftIcon className="transition-transform group-hover:-translate-x-1" />
-              Back to cart
-            </Button>
-          </Link>
-          <Button
-            type="submit"
-            variant="cta"
-            size="lg"
-            className="w-full font-bold"
-          >
-            <ShoppingCartIcon className="mr-1 h-4 w-4" />
-            Place order
-          </Button>
-        </div>
-      </form>
-    </Form>
+    <>
+      {orderSuccessful && <OrderSuccess />}
+      {!orderSuccessful && (
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="flex justify-between gap-8">
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel hasValue={!!field.value}>First name</FormLabel>
+                    <FormControl>
+                      <Input {...field} disabled={loading} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel hasValue={!!field.value}>Last name</FormLabel>
+                    <FormControl>
+                      <Input {...field} disabled={loading} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <FormField
+              control={form.control}
+              name="country"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel hasValue={!!field.value}>Country</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    disabled={loading}
+                  >
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {countries.map((country) => (
+                        <SelectItem key={country.label} value={country.label}>
+                          {country.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="city"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>City</FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="postalCode"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>Postal code</FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="streetAndNumber"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>Address Line 1</FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="addressLine2"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>
+                    Address Line 2{" "}
+                    <span className="text-foreground/60 text-xs">
+                      (optional)
+                    </span>
+                  </FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>Email</FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem className="flex-1">
+                  <FormLabel hasValue={!!field.value}>
+                    Phone number{" "}
+                    <span className="text-foreground/60 text-xs">
+                      (optional)
+                    </span>
+                  </FormLabel>
+                  <FormControl>
+                    <Input {...field} disabled={loading} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="flex gap-4 justify-between items-center">
+              <Link
+                href="/cart"
+                tabIndex={-1}
+                className="focus:outline-none focus-visible:outline-none"
+              >
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="py-6 transform transition duration-200 ease-in-out group"
+                  disabled={loading}
+                >
+                  <ArrowLeftIcon className="transition-transform group-hover:-translate-x-1" />
+                  Back to cart
+                </Button>
+              </Link>
+              <Button
+                type="submit"
+                variant="cta"
+                size="lg"
+                className="w-full font-bold"
+                disabled={loading}
+              >
+                {!loading && (
+                  <>
+                    <ShoppingCartIcon className="mr-1 h-4 w-4" />
+                    Place order
+                  </>
+                )}
+                {loading && (
+                  <>
+                    <LoaderCircle
+                      size={32}
+                      className="h-12 w-12 transition-transform animate-spin"
+                    />
+                    <small>Processing...</small>
+                  </>
+                )}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      )}
+    </>
   );
 }
 

@@ -1,16 +1,27 @@
 "use client";
 
-import { useProductCartStore } from "@/store/cart";
+import { ProductWithAmount, useProductCartStore } from "@/store/cart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useCurrencyStore } from "@/store/currency";
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function OrderSummary() {
   const { products } = useProductCartStore();
+  const [currentProducts, setCurrentProducts] = useState<ProductWithAmount[]>(
+    []
+  );
   const { currency } = useCurrencyStore();
   const shippingCost = currency === "EUR" ? 5000 : 6500;
+
+  useEffect(() => {
+    if (currentProducts.length === 0) {
+      setCurrentProducts(products);
+    }
+  }, [products, currentProducts]);
 
   return (
     <Card>
@@ -21,13 +32,15 @@ function OrderSummary() {
       </CardHeader>
       <CardContent>
         <ul>
-          {products.length === 0 && (
+          {currentProducts.length === 0 && (
             <div className="text-center py-6 text-muted-foreground">
-              Your cart is empty
+              Your cart is empty.
+              <br /> Visit our <Link href="/products">products page</Link> to
+              start shopping.
             </div>
           )}
-          {products.length !== 0 &&
-            products.map((product) => {
+          {currentProducts.length !== 0 &&
+            currentProducts.map((product) => {
               const price = product.prices.find(
                 (p) => p.currency.toLowerCase() === currency.toLowerCase()
               )!;
@@ -64,7 +77,7 @@ function OrderSummary() {
             <span>
               {formatCurrency(currency.toLowerCase())}
               {formatAmount(
-                products.reduce((acc, product) => {
+                currentProducts.reduce((acc, product) => {
                   const price = product.prices.find(
                     (p) => p.currency.toLowerCase() === currency.toLowerCase()
                   )!;
@@ -88,7 +101,7 @@ function OrderSummary() {
             <strong>
               {formatCurrency(currency.toLowerCase())}
               {formatAmount(
-                products.reduce((acc, product) => {
+                currentProducts.reduce((acc, product) => {
                   const price = product.prices.find(
                     (p) => p.currency.toLowerCase() === currency.toLowerCase()
                   )!;
