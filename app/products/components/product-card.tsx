@@ -30,9 +30,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { addProduct } = useProductCartStore();
   const router = useRouter();
 
-  const price = product.prices.find(
-    (p) => p.currency.toLowerCase() === currency.toLowerCase()
-  );
+  const price = currency === "USD" ? product.prices.usd : product.prices.eur;
 
   const handleAddProduct = () => {
     addProduct(product);
@@ -68,8 +66,8 @@ export default function ProductCard({ product }: ProductCardProps) {
           <CardDescription>
             {price && (
               <>
-                {formatCurrency(price.currency)}
-                {formatAmount(price.amount)}
+                {formatCurrency(currency)}
+                {formatAmount(price)}
               </>
             )}
           </CardDescription>

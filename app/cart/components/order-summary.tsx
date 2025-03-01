@@ -19,7 +19,9 @@ function OrderSummary() {
 
   useEffect(() => {
     if (currentProducts.length === 0) {
-      setCurrentProducts(products);
+      setCurrentProducts(
+        products.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
+      );
     }
   }, [products, currentProducts]);
 
@@ -43,9 +45,8 @@ function OrderSummary() {
           <>
             <ul className="space-y-4">
               {currentProducts.map((product) => {
-                const price = product.prices.find(
-                  (p) => p.currency.toLowerCase() === currency.toLowerCase()
-                )!;
+                const price =
+                  currency === "USD" ? product.prices.usd : product.prices.eur;
                 return (
                   <li key={product.id} className="flex gap-2 items-center">
                     {product.image && (
@@ -60,14 +61,14 @@ function OrderSummary() {
                         <strong>{product.name}</strong>
                       </p>
                       <p className="text-foreground/60">
-                        {formatCurrency(price.currency)}
-                        {formatAmount(price.amount)} x {product.amount}
+                        {formatCurrency(currency)}
+                        {formatAmount(price)} x {product.amount}
                       </p>
                     </div>
                     <div className="flex flex-col justify-center">
                       <p>
-                        {formatCurrency(price.currency)}
-                        {formatAmount(price.amount * product.amount)}
+                        {formatCurrency(currency)}
+                        {formatAmount(price * product.amount)}
                       </p>
                     </div>
                   </li>
@@ -79,14 +80,14 @@ function OrderSummary() {
               <p className="flex justify-between">
                 <span className="text-foreground/60">Subtotal</span>
                 <span>
-                  {formatCurrency(currency.toLowerCase())}
+                  {formatCurrency(currency)}
                   {formatAmount(
                     currentProducts.reduce((acc, product) => {
-                      const price = product.prices.find(
-                        (p) =>
-                          p.currency.toLowerCase() === currency.toLowerCase()
-                      )!;
-                      return acc + product.amount * price.amount;
+                      const price =
+                        currency === "USD"
+                          ? product.prices.usd
+                          : product.prices.eur;
+                      return acc + product.amount * price;
                     }, 0)
                   )}
                 </span>
@@ -94,7 +95,7 @@ function OrderSummary() {
               <p className="flex justify-between">
                 <span className="text-foreground/60">Shipping</span>
                 <span>
-                  {formatCurrency(currency.toLowerCase())}
+                  {formatCurrency(currency)}
                   {formatAmount(shippingCost)}
                 </span>
               </p>
@@ -104,14 +105,14 @@ function OrderSummary() {
               <p className="flex justify-between">
                 <strong>Total</strong>
                 <strong>
-                  {formatCurrency(currency.toLowerCase())}
+                  {formatCurrency(currency)}
                   {formatAmount(
                     currentProducts.reduce((acc, product) => {
-                      const price = product.prices.find(
-                        (p) =>
-                          p.currency.toLowerCase() === currency.toLowerCase()
-                      )!;
-                      return acc + product.amount * price.amount;
+                      const price =
+                        currency === "USD"
+                          ? product.prices.usd
+                          : product.prices.eur;
+                      return acc + product.amount * price;
                     }, shippingCost)
                   )}
                 </strong>

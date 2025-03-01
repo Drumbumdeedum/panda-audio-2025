@@ -13,10 +13,10 @@ export const PRODUCTS: Product[] = [
     name: "Future Impact V4 - VIP",
     description: "Bass guitar synthesizer and MIDI expander - minified",
     image: future_impact_v4_vip,
-    prices: [
-      { amount: 34900, currency: "eur" },
-      { amount: 28900, currency: "usd" },
-    ],
+    prices: {
+      eur: 34900,
+      usd: 28900,
+    },
   },
   {
     id: 2,
@@ -26,10 +26,10 @@ export const PRODUCTS: Product[] = [
     name: "Future Impact V4",
     description: "Bass guitar synthesizer and MIDI expander",
     image: future_impact_v4,
-    prices: [
-      { amount: 29900, currency: "eur" },
-      { amount: 24500, currency: "usd" },
-    ],
+    prices: {
+      eur: 29900,
+      usd: 24500,
+    },
   },
   {
     id: 3,
@@ -39,10 +39,10 @@ export const PRODUCTS: Product[] = [
     name: "midiBeam 4Control",
     description: "Advanced MIDI control system",
     image: midibeam_4control,
-    prices: [
-      { amount: 6900, currency: "eur" },
-      { amount: 5900, currency: "usd" },
-    ],
+    prices: {
+      eur: 6900,
+      usd: 5900,
+    },
   },
   {
     id: 4,
@@ -52,10 +52,10 @@ export const PRODUCTS: Product[] = [
     name: "midiBeam v2 Wireless",
     description: "Professional wireless MIDI interface",
     image: midibeam_v2,
-    prices: [
-      { amount: 16900, currency: "eur" },
-      { amount: 14000, currency: "usd" },
-    ],
+    prices: {
+      eur: 16900,
+      usd: 14000,
+    },
   },
 ];
 
@@ -65,100 +65,100 @@ export const ACCESSORIES: Product[] = [
     name: "Future Impact power supply",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1300, currency: "eur" },
-      { amount: 0, currency: "usd" },
-    ],
+    prices: {
+      eur: 1300,
+      usd: 0,
+    },
   },
   {
     id: 2,
     name: "VM16L expression pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 2500, currency: "eur" },
-      { amount: 2200, currency: "usd" },
-    ],
+    prices: {
+      eur: 2500,
+      usd: 2200,
+    },
   },
   {
     id: 3,
     name: "VM20 momentary switch pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1400, currency: "eur" },
-      { amount: 1300, currency: "usd" },
-    ],
+    prices: {
+      eur: 1400,
+      usd: 1300,
+    },
   },
   {
     id: 4,
     name: "VM24 momentary switch pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1700, currency: "eur" },
-      { amount: 1500, currency: "usd" },
-    ],
+    prices: {
+      eur: 1700,
+      usd: 1500,
+    },
   },
   {
     id: 5,
     name: "VM22 latching pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1400, currency: "eur" },
-      { amount: 0, currency: "usd" },
-    ],
+    prices: {
+      eur: 1400,
+      usd: 0,
+    },
   },
   {
     id: 6,
     name: "SLYS2J180 1*stereo jack -> 2 * mono jack cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 900, currency: "eur" },
-      { amount: 800, currency: "usd" },
-    ],
+    prices: {
+      eur: 900,
+      usd: 800,
+    },
   },
   {
     id: 7,
     name: "Future Impact V4 CV/Gate cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1400, currency: "eur" },
-      { amount: 1300, currency: "usd" },
-    ],
+    prices: {
+      eur: 1400,
+      usd: 1300,
+    },
   },
   {
     id: 8,
     name: "Wall-wart USB supply for 4Control",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1300, currency: "eur" },
-      { amount: 0, currency: "usd" },
-    ],
+    prices: {
+      eur: 1300,
+      usd: 0,
+    },
   },
   {
     id: 9,
     name: "MIDI cable, 120 cm",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 600, currency: "eur" },
-      { amount: 500, currency: "usd" },
-    ],
+    prices: {
+      eur: 600,
+      usd: 500,
+    },
   },
   {
     id: 10,
     name: "VM26 latching pedal with cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [
-      { amount: 1700, currency: "eur" },
-      { amount: 1500, currency: "usd" },
-    ],
+    prices: {
+      eur: 1700,
+      usd: 1500,
+    },
   },
 ];
 

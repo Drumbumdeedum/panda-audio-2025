@@ -17,16 +17,15 @@ import { useProductCartStore } from "@/store/cart";
 import { useCurrencyStore } from "@/store/currency";
 import { ArrowRightIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 function ProductsTable() {
   const { products, decreaseProductAmount, increaseProductAmount } =
     useProductCartStore();
   const { currency } = useCurrencyStore();
   const total = products.reduce((acc, product) => {
-    const price = product.prices.find(
-      (p) => p.currency.toLowerCase() === currency.toLowerCase()
-    )!;
-    return acc + product.amount * price.amount;
+    const price = currency === "USD" ? product.prices.usd : product.prices.eur;
+    return acc + product.amount * price;
   }, 0);
   return (
     <>
@@ -44,53 +43,61 @@ function ProductsTable() {
 
         <TableHeader>
           <TableRow>
-            <TableHead className="flex-grow">Product name</TableHead>
+            <TableHead className="flex-grow">Product</TableHead>
             <TableHead className="text-center w-32">Amount</TableHead>
             <TableHead className="text-right w-32">Total</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {products.map((product) => {
-            const price = product.prices.find(
-              (p) => p.currency.toLowerCase() === currency.toLowerCase()
-            )!;
-            return (
-              <TableRow key={product.id}>
-                <TableCell className="flex-grow">
-                  <>
-                    <h3 className="font-semibold text-lg mb-0">
-                      {product.name}
-                    </h3>
-                    <p className="text-foreground/70">
-                      {formatCurrency(price.currency)}
-                      {formatAmount(price.amount)}
-                    </p>
-                  </>
-                </TableCell>
-                <TableCell className="text-center">
-                  <div className="flex justify-center items-center ">
-                    <Button
-                      className="h-6 w-6 p-0"
-                      onClick={() => decreaseProductAmount(product.id)}
-                    >
-                      <MinusIcon className="w-4 h-4" />
-                    </Button>
-                    <p className="px-3">{product.amount}</p>
-                    <Button
-                      className="h-6 w-6 p-0"
-                      onClick={() => increaseProductAmount(product.id)}
-                    >
-                      <PlusIcon className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </TableCell>
-                <TableCell className="text-right">
-                  {formatCurrency(price.currency)}
-                  {formatAmount(product.amount * price.amount)}
-                </TableCell>
-              </TableRow>
-            );
-          })}
+          {products
+            .sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
+            .map((product) => {
+              const price =
+                currency === "USD" ? product.prices.usd : product.prices.eur;
+              return (
+                <TableRow key={product.id}>
+                  <TableCell className="flex-grow flex gap-2 items-center">
+                    {product.image && (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        className="h-[40px] w-[60px] object-cover transition duration-500 group-hover:scale-105"
+                      />
+                    )}
+                    <div>
+                      <h3 className="font-semibold text-lg mb-0">
+                        {product.name}
+                      </h3>
+                      <p className="text-foreground/70">
+                        {formatCurrency(currency)}
+                        {formatAmount(price)}
+                      </p>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-center">
+                    <div className="flex justify-center items-center ">
+                      <Button
+                        className="h-6 w-6 p-0"
+                        onClick={() => decreaseProductAmount(product.id)}
+                      >
+                        <MinusIcon className="w-4 h-4" />
+                      </Button>
+                      <p className="px-3">{product.amount}</p>
+                      <Button
+                        className="h-6 w-6 p-0"
+                        onClick={() => increaseProductAmount(product.id)}
+                      >
+                        <PlusIcon className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    {formatCurrency(currency)}
+                    {formatAmount(product.amount * price)}
+                  </TableCell>
+                </TableRow>
+              );
+            })}
         </TableBody>
         <TableFooter>
           <TableRow>

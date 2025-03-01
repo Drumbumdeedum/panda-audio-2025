@@ -8,10 +8,8 @@ export type Product = {
   name: string;
   description: string;
   image?: StaticImageData;
-  prices: Price[];
-};
-
-export type Price = {
-  amount: number;
-  currency: string;
+  prices: {
+    eur: number;
+    usd: number;
+  };
 };

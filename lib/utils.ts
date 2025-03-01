@@ -10,7 +10,7 @@ export function formatAmount(amountInCents: number): string {
 }
 
 export function formatCurrency(currency: string): string {
-  if (currency === "usd") return "$";
-  if (currency === "eur") return "€";
+  if (currency.toLowerCase() === "usd") return "$";
+  if (currency.toLowerCase() === "eur") return "€";
   return "Unknown";
 }
