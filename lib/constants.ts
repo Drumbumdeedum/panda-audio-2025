@@ -59,4 +59,107 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
+export const ACCESSORIES: Product[] = [
+  {
+    id: 1,
+    name: "Future Impact power supply",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1300, currency: "eur" },
+      { amount: 0, currency: "usd" },
+    ],
+  },
+  {
+    id: 2,
+    name: "VM16L expression pedal",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 2500, currency: "eur" },
+      { amount: 2200, currency: "usd" },
+    ],
+  },
+  {
+    id: 3,
+    name: "VM20 momentary switch pedal",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1400, currency: "eur" },
+      { amount: 1300, currency: "usd" },
+    ],
+  },
+  {
+    id: 4,
+    name: "VM24 momentary switch pedal",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1700, currency: "eur" },
+      { amount: 1500, currency: "usd" },
+    ],
+  },
+  {
+    id: 5,
+    name: "VM22 latching pedal",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1400, currency: "eur" },
+      { amount: 0, currency: "usd" },
+    ],
+  },
+  {
+    id: 6,
+    name: "SLYS2J180 1*stereo jack -> 2 * mono jack cable",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 900, currency: "eur" },
+      { amount: 800, currency: "usd" },
+    ],
+  },
+  {
+    id: 7,
+    name: "Future Impact V4 CV/Gate cable",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1400, currency: "eur" },
+      { amount: 1300, currency: "usd" },
+    ],
+  },
+  {
+    id: 8,
+    name: "Wall-wart USB supply for 4Control",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1300, currency: "eur" },
+      { amount: 0, currency: "usd" },
+    ],
+  },
+  {
+    id: 9,
+    name: "MIDI cable, 120 cm",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 600, currency: "eur" },
+      { amount: 500, currency: "usd" },
+    ],
+  },
+  {
+    id: 10,
+    name: "VM26 latching pedal with cable",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    prices: [
+      { amount: 1700, currency: "eur" },
+      { amount: 1500, currency: "usd" },
+    ],
+  },
+];
+
 export const PANDA_AUDIO_MAILTO_ADDRESS = "info@panda-audio.com";
