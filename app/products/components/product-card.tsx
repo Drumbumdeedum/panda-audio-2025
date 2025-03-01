@@ -50,17 +50,19 @@ export default function ProductCard({ product }: ProductCardProps) {
     <>
       <Card className="relative group overflow-hidden flex flex-col">
         {product.newTag && <Badge variant="new">New!</Badge>}
-        <div className="w-full">
-          <AspectRatio ratio={5 / 4}>
-            <Image
-              src={product.image}
-              alt={product.name}
-              sizes="(max-width: 576px) 100vw, 576px"
-              fill
-              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
-          </AspectRatio>
-        </div>
+        {product.image && (
+          <div className="w-full">
+            <AspectRatio ratio={5 / 4}>
+              <Image
+                src={product.image}
+                alt={product.name}
+                sizes="(max-width: 576px) 100vw, 576px"
+                fill
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+            </AspectRatio>
+          </div>
+        )}
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
           <CardDescription>
