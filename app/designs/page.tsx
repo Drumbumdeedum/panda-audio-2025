@@ -2,7 +2,6 @@ import PageContent from "@/components/layout/page-content";
 import PageHeader from "@/components/layout/page-header";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
 function DesignsPage() {
   return (

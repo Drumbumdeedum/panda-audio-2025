@@ -1,6 +1,5 @@
 import PageContent from "@/components/layout/page-content";
 import PageHeader from "@/components/layout/page-header";
-import React from "react";
 import {
   FIV1_TO_V3_DOWNLOADS,
   FIV4_DOWNLOADS,

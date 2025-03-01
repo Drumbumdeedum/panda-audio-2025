@@ -1,5 +1,5 @@
+import { PANDA_AUDIO_MAILTO_ADDRESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
-import React from "react";
 
 const OrderSuccess = () => {
   return (
@@ -17,7 +17,7 @@ const OrderSuccess = () => {
           If you would like to modify your order or have any questions, please
           contact us at{" "}
           <a
-            href="mailto:info@panda-audio.com"
+            href={`mailto:${PANDA_AUDIO_MAILTO_ADDRESS}`}
             className="hover:text-primary transition-colors"
           >
             info@panda-audio.com

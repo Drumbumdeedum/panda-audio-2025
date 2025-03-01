@@ -7,7 +7,6 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { ExternalLink, Quote } from "lucide-react";
-import React from "react";
 import { ArtistData } from "../lib/artist-data";
 import Image from "next/image";
 import Link from "next/link";

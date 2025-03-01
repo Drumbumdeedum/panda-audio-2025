@@ -1,7 +1,7 @@
 import PageHeader from "@/components/layout/page-header";
 import { Card, CardContent } from "@/components/ui/card";
+import { PANDA_AUDIO_MAILTO_ADDRESS } from "@/lib/constants";
 import { MapPin, Phone, Mail } from "lucide-react";
-import React from "react";
 
 function ContactPage() {
   return (
@@ -36,7 +36,7 @@ function ContactPage() {
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 mr-3 text-primary" />
                   <a
-                    href="mailto:info@panda-audio.com"
+                    href={`mailto:${PANDA_AUDIO_MAILTO_ADDRESS}`}
                     className="hover:text-primary transition-colors"
                   >
                     info@panda-audio.com

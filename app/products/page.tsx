@@ -1,4 +1,3 @@
-import React from "react";
 import ProductGrid from "./components/product-grid";
 import CurrencySelect from "@/components/ui/currency-selector";
 
