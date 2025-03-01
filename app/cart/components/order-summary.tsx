@@ -1,6 +1,6 @@
 "use client";
 
-import { ProductWithAmount, useProductCartStore } from "@/store/cart";
+import { ProductWithAmount } from "@/store/cart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { useCurrencyStore } from "@/store/currency";
@@ -8,9 +8,10 @@ import { formatAmount, formatCurrency } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
 
 function OrderSummary() {
-  const { products } = useProductCartStore();
+  const products = useFilteredAndSortedProductsInCart();
   const [currentProducts, setCurrentProducts] = useState<ProductWithAmount[]>(
     []
   );
@@ -19,15 +20,9 @@ function OrderSummary() {
 
   useEffect(() => {
     if (currentProducts.length === 0) {
-      const filteredProducts =
-        currency === "USD"
-          ? products.filter((p) => p.prices.usd !== 0)
-          : products;
-      setCurrentProducts(
-        filteredProducts.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
-      );
+      setCurrentProducts(products);
     }
-  }, [products, currentProducts, currency]);
+  }, [products, currentProducts]);
 
   return (
     <Card>

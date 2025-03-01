@@ -34,7 +34,7 @@ function CurrencySelect() {
         </Tooltip>
       </TooltipProvider>
       <div className="w-24">
-        <Select defaultValue="EUR" onValueChange={setCurrency}>
+        <Select defaultValue={currency} onValueChange={setCurrency}>
           <SelectTrigger className="w-full">
             <SelectValue placeholder={currency} />
           </SelectTrigger>
