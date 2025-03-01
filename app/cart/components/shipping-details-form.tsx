@@ -81,7 +81,6 @@ function ShippingDetailsForm() {
     if (loading) return;
     setLoading(true);
 
-    setTimeout(() => {}, 3000);
     const orderDetails = products.map((product) => {
       return { name: product.name, quantity: product.amount };
     });
