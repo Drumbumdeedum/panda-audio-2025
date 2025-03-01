@@ -3,13 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
-
 import panda_logo from "@/public/images/panda_logo.webp";
 import { Button } from "../ui/button";
 import { Menu, ShoppingCart } from "lucide-react";
-import { useProductCartStore } from "@/store/cart";
-
 import {
   Sheet,
   SheetClose,
@@ -19,6 +15,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
+import clsx from "clsx";
 
 const links = [
   { name: "Products", href: "/products" },
@@ -29,7 +27,7 @@ const links = [
 
 function Navigation() {
   const pathname = usePathname();
-  const { products } = useProductCartStore();
+  const products = useFilteredAndSortedProductsInCart();
   const productsCount = products.reduce(
     (acc, product) => acc + product.amount,
     0
