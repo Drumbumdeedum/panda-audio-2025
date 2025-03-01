@@ -54,7 +54,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address",
   }),
-  phone: z.string().optional(),
+  phone: z.string().trim().min(1, {
+    message: "Please enter a phone number",
+  }),
 });
 
 function ShippingDetailsForm() {
@@ -252,12 +254,7 @@ function ShippingDetailsForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem className="flex-1">
-                  <FormLabel hasValue={!!field.value}>
-                    Phone number{" "}
-                    <span className="text-foreground/60 text-xs">
-                      (optional)
-                    </span>
-                  </FormLabel>
+                  <FormLabel hasValue={!!field.value}>Phone number</FormLabel>
                   <FormControl>
                     <Input {...field} disabled={loading} />
                   </FormControl>
