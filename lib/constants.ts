@@ -58,26 +58,42 @@ export const PRODUCTS: Product[] = [
 export const ACCESSORIES: Product[] = [
   {
     name: "Future Impact power supply",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    description: "Compatible with EU power outlets only.",
     prices: {
       eur: 1300,
       usd: 0,
     },
   },
   {
-    name: "VM16L expression pedal",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Wall-wart USB supply for 4Control",
+    description: "Compatible with EU power outlets only.",
     prices: {
-      eur: 2500,
-      usd: 2200,
+      eur: 1300,
+      usd: 0,
+    },
+  },
+  {
+    name: "Future Impact V4 CV/Gate cable",
+    description:
+      "Provides seamless integration between your analog synthesizers and modern MIDI controllers.",
+    prices: {
+      eur: 1400,
+      usd: 1300,
+    },
+  },
+  {
+    name: "MIDI cable, 120 cm",
+    description:
+      "Reliable digital connectivity between your music production devices.",
+    prices: {
+      eur: 600,
+      usd: 500,
     },
   },
   {
     name: "VM20 momentary switch pedal",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together",
     prices: {
       eur: 1400,
       usd: 1300,
@@ -86,7 +102,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM24 momentary switch pedal",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Momentary / Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together",
     prices: {
       eur: 1700,
       usd: 1500,
@@ -95,55 +111,37 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM22 latching pedal",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: {
-      eur: 1400,
-      usd: 0,
-    },
-  },
-  {
-    name: "SLYS2J180 1*stereo jack -> 2 * mono jack cable",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: {
-      eur: 900,
-      usd: 800,
-    },
-  },
-  {
-    name: "Future Impact V4 CV/Gate cable",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "ON/OFF “latch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
       eur: 1400,
       usd: 1300,
     },
   },
   {
-    name: "Wall-wart USB supply for 4Control",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: {
-      eur: 1300,
-      usd: 0,
-    },
-  },
-  {
-    name: "MIDI cable, 120 cm",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: {
-      eur: 600,
-      usd: 500,
-    },
-  },
-  {
     name: "VM26 latching pedal with cable",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Features robust construction with a positive click mechanism that provides reliable on/off functionality for your music gear. Equipped with a high-quality cable, this durable foot switch offers plug-and-play convenience for controlling amplifier channels, effects loops, or any device requiring momentary latching control.",
     prices: {
       eur: 1700,
       usd: 1500,
+    },
+  },
+  {
+    name: "SLYS2J180 1 x stereo jack to 2 x mono jack cable",
+    description:
+      "For splitting headphone outputs to dual mono channels or connecting stereo sources to separate inputs.",
+    prices: {
+      eur: 900,
+      usd: 800,
+    },
+  },
+  {
+    name: "VM16L expression pedal",
+    description:
+      "Smooth, precise control over your effects parameters with a rugged die-cast aluminum construction. Non-slip rubber base ensures stability on any surface, while the standard TRS output guarantees compatibility with most major brands of effects pedals and amplifiers",
+    prices: {
+      eur: 2500,
+      usd: 2200,
     },
   },
 ];
