@@ -79,17 +79,19 @@ export default function Home() {
                     className="relative group border border-border/30 rounded-lg overflow-hidden flex flex-col"
                   >
                     {product.newTag && <Badge variant="new">New!</Badge>}
-                    <div className="w-full">
-                      <AspectRatio ratio={5 / 4}>
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          sizes="(max-width: 700px) 100vw, 700px"
-                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                          fill
-                        />
-                      </AspectRatio>
-                    </div>
+                    {product.image && (
+                      <div className="w-full">
+                        <AspectRatio ratio={5 / 4}>
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            sizes="(max-width: 700px) 100vw, 700px"
+                            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                            fill
+                          />
+                        </AspectRatio>
+                      </div>
+                    )}
                     <CardHeader>
                       <CardTitle>{product.name}</CardTitle>
                     </CardHeader>
@@ -97,11 +99,13 @@ export default function Home() {
                       <p className="text-muted-foreground mb-4 flex-1">
                         {product.description}
                       </p>
-                      <Link href={product.href}>
-                        <Button className="w-full py-6 text-lg">
-                          Learn more
-                        </Button>
-                      </Link>
+                      {product.href && (
+                        <Link href={product.href}>
+                          <Button className="w-full py-6 text-lg">
+                            Learn more
+                          </Button>
+                        </Link>
+                      )}
                     </CardContent>
                   </Card>
                 )
