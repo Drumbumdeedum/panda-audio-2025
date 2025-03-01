@@ -2,12 +2,12 @@ import { StaticImageData } from "next/image";
 
 export type Product = {
   id: number;
-  featured: boolean;
-  newTag: boolean;
-  href: string;
+  featured?: boolean;
+  newTag?: boolean;
+  href?: string;
   name: string;
   description: string;
-  image: StaticImageData;
+  image?: StaticImageData;
   prices: Price[];
 };
 
