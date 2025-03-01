@@ -2,8 +2,11 @@ import PageHeader from "@/components/layout/page-header";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
 import Image from "next/image";
-import placeholder from "@/public/placeholder.svg";
 import PageContent from "@/components/layout/page-content";
+import muzix from "@/public/images/about/muzix.webp";
+import ewi from "@/public/images/about/ewi.webp";
+import andras_workshop from "@/public/images/about/andras_workshop.webp";
+import future_impact from "@/public/images/products/future-impact/future_impact_v4.jpg";
 
 function AboutPage() {
   return (
@@ -79,12 +82,15 @@ function AboutPage() {
             <div className="w-full">
               <AspectRatio ratio={9 / 6}>
                 <iframe
-                  className="h-full w-full"
+                  className="h-full w-full shadow-lg"
                   src="https://www.youtube.com/embed/videoseries?si=SZCTbiRnTmFg4dJR&amp;list=PLyC150g2B7Z6djMUbyfhDIbzEKHDchLN2"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </AspectRatio>
+              <small className="text-center block pt-2 italic">
+                Panta Rhei in concert - 2022
+              </small>
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -117,11 +123,14 @@ function AboutPage() {
             <div className="w-full lg:order-first">
               <AspectRatio ratio={3 / 2}>
                 <Image
-                  src={placeholder}
-                  alt="Placeholder"
-                  className="object-cover h-full w-full"
+                  src={andras_workshop}
+                  alt="András Szalay in his workshop"
+                  className="object-cover h-full w-full shadow-lg"
                 />
               </AspectRatio>
+              <small className="text-center block pt-2 italic">
+                András in his workshop
+              </small>
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -144,11 +153,14 @@ function AboutPage() {
             <div className="w-full">
               <AspectRatio ratio={3 / 2}>
                 <Image
-                  src={placeholder}
-                  alt="Placeholder"
-                  className="object-cover h-full w-full"
+                  src={muzix}
+                  alt="Muzix81"
+                  className="object-cover h-full w-full shadow-lg"
                 />
               </AspectRatio>
+              <small className="text-center block pt-2 italic">
+                The MUZIX 81 sequencer
+              </small>
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -171,11 +183,14 @@ function AboutPage() {
             <div className="w-full lg:order-first">
               <AspectRatio ratio={3 / 2}>
                 <Image
-                  src={placeholder}
-                  alt="Placeholder"
-                  className="object-cover h-full w-full"
+                  src={ewi}
+                  alt="AKAI EWI wind instrument"
+                  className="object-cover h-full w-full shadow-lg"
                 />
               </AspectRatio>
+              <small className="text-center block pt-2 italic">
+                András and the AKAI EWI wind instrument
+              </small>
             </div>
           </section>
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -189,18 +204,21 @@ function AboutPage() {
                 midiBeam 4Control MIDI Interface for analog controllers.
               </p>
               <p>
-                For a full list of all of Anrdás&apos;s designs over the years{" "}
+                For a full list of all of András&apos;s designs over the years{" "}
                 <Link href="/designs">click here</Link>.
               </p>
             </div>
             <div className="w-full">
               <AspectRatio ratio={3 / 2}>
                 <Image
-                  src={placeholder}
-                  alt="Placeholder"
+                  src={future_impact}
+                  alt="Future Impact V4"
                   className="object-cover h-full w-full"
                 />
               </AspectRatio>
+              <small className="text-center block pt-2 italic">
+                The Future Impact V4 bass guitar synthesizer and MIDI expander
+              </small>
             </div>
           </section>
         </div>
