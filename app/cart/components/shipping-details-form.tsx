@@ -28,6 +28,7 @@ import { useState } from "react";
 import { useProductCartStore } from "@/store/cart";
 import { toast } from "sonner";
 import OrderSuccess from "./order-success";
+import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
 
 const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL!;
 
@@ -60,7 +61,8 @@ const formSchema = z.object({
 });
 
 function ShippingDetailsForm() {
-  const { products, clearCart } = useProductCartStore();
+  const { clearCart } = useProductCartStore();
+  const products = useFilteredAndSortedProductsInCart();
   const [loading, setLoading] = useState<boolean>(false);
   const [orderSuccessful, setOrderSuccessful] = useState<boolean>(false);
 
