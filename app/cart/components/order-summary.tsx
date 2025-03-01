@@ -19,11 +19,15 @@ function OrderSummary() {
 
   useEffect(() => {
     if (currentProducts.length === 0) {
+      const filteredProducts =
+        currency === "USD"
+          ? products.filter((p) => p.prices.usd !== 0)
+          : products;
       setCurrentProducts(
-        products.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
+        filteredProducts.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
       );
     }
-  }, [products, currentProducts]);
+  }, [products, currentProducts, currency]);
 
   return (
     <Card>
@@ -48,7 +52,7 @@ function OrderSummary() {
                 const price =
                   currency === "USD" ? product.prices.usd : product.prices.eur;
                 return (
-                  <li key={product.id} className="flex gap-2 items-center">
+                  <li key={product.name} className="flex gap-2 items-center">
                     {product.image && (
                       <Image
                         src={product.image}

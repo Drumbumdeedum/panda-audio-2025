@@ -6,7 +6,6 @@ import { Product } from "@/types/product";
 
 export const PRODUCTS: Product[] = [
   {
-    id: 1,
     featured: true,
     newTag: true,
     href: "/future-impact-v4-vip",
@@ -19,7 +18,6 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
-    id: 2,
     featured: true,
     newTag: false,
     href: "/future-impact-v4",
@@ -32,7 +30,6 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
-    id: 3,
     featured: false,
     newTag: false,
     href: "/midibeam-4control",
@@ -45,7 +42,6 @@ export const PRODUCTS: Product[] = [
     },
   },
   {
-    id: 4,
     featured: false,
     newTag: false,
     href: "/midibeam-v2-wireless",
@@ -61,7 +57,6 @@ export const PRODUCTS: Product[] = [
 
 export const ACCESSORIES: Product[] = [
   {
-    id: 1,
     name: "Future Impact power supply",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -71,7 +66,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 2,
     name: "VM16L expression pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -81,7 +75,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 3,
     name: "VM20 momentary switch pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -91,7 +84,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 4,
     name: "VM24 momentary switch pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -101,7 +93,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 5,
     name: "VM22 latching pedal",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -111,7 +102,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 6,
     name: "SLYS2J180 1*stereo jack -> 2 * mono jack cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -121,7 +111,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 7,
     name: "Future Impact V4 CV/Gate cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -131,7 +120,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 8,
     name: "Wall-wart USB supply for 4Control",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -141,7 +129,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 9,
     name: "MIDI cable, 120 cm",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -151,7 +138,6 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    id: 10,
     name: "VM26 latching pedal with cable",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

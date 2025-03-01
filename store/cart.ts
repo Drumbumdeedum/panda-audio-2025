@@ -9,8 +9,8 @@ export type ProductWithAmount = Product & {
 interface ProductCartStore {
   products: ProductWithAmount[];
   addProduct: (newProduct: Product) => void;
-  decreaseProductAmount: (productId: number) => void;
-  increaseProductAmount: (productId: number) => void;
+  decreaseProductAmount: (productName: string) => void;
+  increaseProductAmount: (productName: string) => void;
   clearCart: () => void;
 }
 
@@ -21,7 +21,7 @@ export const useProductCartStore = create<ProductCartStore>()(
       addProduct: (newProduct: Product) => {
         set((state) => {
           const productIndex = state.products.findIndex(
-            (p) => p.id === newProduct.id
+            (p) => p.name === newProduct.name
           );
           if (productIndex !== -1) {
             const updatedProducts = state.products.map((p, index) =>
@@ -35,10 +35,10 @@ export const useProductCartStore = create<ProductCartStore>()(
           }
         });
       },
-      decreaseProductAmount: (productId: number) => {
+      decreaseProductAmount: (productName: string) => {
         set((state) => {
           const productIndex = state.products.findIndex(
-            (p) => p.id === productId
+            (p) => p.name === productName
           );
           const currentAmount = state.products[productIndex].amount;
           if (currentAmount > 1) {
@@ -48,16 +48,16 @@ export const useProductCartStore = create<ProductCartStore>()(
             return { products: updatedProducts };
           } else {
             const updatedProducts = state.products.filter(
-              (p) => p.id !== productId
+              (p) => p.name !== productName
             );
             return { products: updatedProducts };
           }
         });
       },
-      increaseProductAmount: (productId: number) => {
+      increaseProductAmount: (productName: string) => {
         set((state) => {
           const productIndex = state.products.findIndex(
-            (p) => p.id === productId
+            (p) => p.name === productName
           );
           if (productIndex !== -1) {
             const updatedProducts = state.products.map((p, index) =>

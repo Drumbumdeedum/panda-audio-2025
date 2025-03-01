@@ -27,6 +27,8 @@ function ProductsTable() {
     const price = currency === "USD" ? product.prices.usd : product.prices.eur;
     return acc + product.amount * price;
   }, 0);
+  const filteredProducts =
+    currency === "USD" ? products.filter((p) => p.prices.usd !== 0) : products;
   return (
     <>
       <div className="flex justify-between items-center">
@@ -34,7 +36,7 @@ function ProductsTable() {
         <CurrencySelect />
       </div>
       <Table>
-        {products.length === 0 && (
+        {filteredProducts.length === 0 && (
           <TableCaption className="text-center">
             Your cart is empty. Visit our{" "}
             <Link href="products">products page</Link> to start shopping.
@@ -49,13 +51,13 @@ function ProductsTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {products
+          {filteredProducts
             .sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0))
             .map((product) => {
               const price =
                 currency === "USD" ? product.prices.usd : product.prices.eur;
               return (
-                <TableRow key={product.id}>
+                <TableRow key={product.name}>
                   <TableCell className="flex-grow flex gap-2 items-center">
                     {product.image && (
                       <Image
@@ -78,14 +80,14 @@ function ProductsTable() {
                     <div className="flex justify-center items-center ">
                       <Button
                         className="h-6 w-6 p-0"
-                        onClick={() => decreaseProductAmount(product.id)}
+                        onClick={() => decreaseProductAmount(product.name)}
                       >
                         <MinusIcon className="w-4 h-4" />
                       </Button>
                       <p className="px-3">{product.amount}</p>
                       <Button
                         className="h-6 w-6 p-0"
-                        onClick={() => increaseProductAmount(product.id)}
+                        onClick={() => increaseProductAmount(product.name)}
                       >
                         <PlusIcon className="w-4 h-4" />
                       </Button>
@@ -109,7 +111,7 @@ function ProductsTable() {
           </TableRow>
         </TableFooter>
       </Table>
-      {products.length > 0 && (
+      {filteredProducts.length > 0 && (
         <div className="flex justify-end">
           <Link
             href="/cart/checkout"
