@@ -16,8 +16,6 @@ function OrderSummary() {
     []
   );
   const { currency } = useCurrencyStore();
-  const shippingCost = currency === "EUR" ? 5000 : 6500;
-
   useEffect(() => {
     if (currentProducts.length === 0) {
       setCurrentProducts(products);
@@ -77,31 +75,6 @@ function OrderSummary() {
             <Separator className="my-4" />
             <div>
               <p className="flex justify-between">
-                <span className="text-foreground/60">Subtotal</span>
-                <span>
-                  {formatCurrency(currency)}
-                  {formatAmount(
-                    currentProducts.reduce((acc, product) => {
-                      const price =
-                        currency === "USD"
-                          ? product.prices.usd
-                          : product.prices.eur;
-                      return acc + product.amount * price;
-                    }, 0)
-                  )}
-                </span>
-              </p>
-              <p className="flex justify-between">
-                <span className="text-foreground/60">Shipping</span>
-                <span>
-                  {formatCurrency(currency)}
-                  {formatAmount(shippingCost)}
-                </span>
-              </p>
-            </div>
-            <Separator className="my-4" />
-            <div>
-              <p className="flex justify-between">
                 <strong>Total</strong>
                 <strong>
                   {formatCurrency(currency)}
@@ -112,10 +85,15 @@ function OrderSummary() {
                           ? product.prices.usd
                           : product.prices.eur;
                       return acc + product.amount * price;
-                    }, shippingCost)
+                    }, 0)
                   )}
+                  *
                 </strong>
               </p>
+            </div>
+            <div className="text-xs text-muted-foreground text-center mt-4">
+              * additional shipping cost will be calculated based <br />
+              on size/weight of package, and shipping location
             </div>
           </>
         )}
