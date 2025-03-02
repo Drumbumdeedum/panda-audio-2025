@@ -93,7 +93,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM20 momentary switch pedal",
     description:
-      "Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together",
+      "Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
       eur: 1400,
       usd: 1300,
@@ -102,7 +102,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM24 momentary switch pedal",
     description:
-      "Momentary / Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together",
+      "Momentary / Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
       eur: 1700,
       usd: 1500,
@@ -120,7 +120,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM26 latching pedal with cable",
     description:
-      "Features robust construction with a positive click mechanism that provides reliable on/off functionality for your music gear. Equipped with a high-quality cable, this durable foot switch offers plug-and-play convenience for controlling amplifier channels, effects loops, or any device requiring momentary latching control.",
+      "Durable footswitch with positive click for reliable on/off control. Includes high-quality cable for amps, effects, or latching devices.",
     prices: {
       eur: 1700,
       usd: 1500,
@@ -138,7 +138,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM16L expression pedal",
     description:
-      "Smooth, precise control over your effects parameters with a rugged die-cast aluminum construction. Non-slip rubber base ensures stability on any surface, while the standard TRS output guarantees compatibility with most major brands of effects pedals and amplifiers",
+      "Smooth, precise effects control with rugged aluminum body. Non-slip base ensures stability, TRS output compatible with most pedals.",
     prices: {
       eur: 2500,
       usd: 2200,
