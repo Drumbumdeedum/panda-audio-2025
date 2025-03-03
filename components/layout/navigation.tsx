@@ -35,8 +35,8 @@ function Navigation() {
   );
   return (
     <header className="sticky top-0 z-50 w-full bg-background backdrop-blur-lg supports-[backdrop-filter]:bg-background/85">
-      <div className="flex h-16 justify-between sm:space-x-0 px-4 md:px-8 lg:px-16">
-        <div className="flex items-center space-x-4">
+      <nav className="flex space-x-6 h-16 sm:space-x-0 px-4 md:px-8 lg:px-16">
+        <div className="flex flex-1 items-center space-x-4">
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src={panda_logo}
@@ -50,24 +50,24 @@ function Navigation() {
             </span>
           </Link>
         </div>
-        <nav className="flex items-center space-x-6">
-          <div className="hidden md:flex space-x-6 items-center ">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={clsx(
-                  "transition-all text-foreground hover:text-foreground",
-                  pathname === link.href
-                    ? "text-foreground underline underline-offset-4"
-                    : " text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <Link href={"/cart"} className="flex gap-2">
+        <div className="hidden md:flex space-x-6 items-center ">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={clsx(
+                "transition-all text-foreground hover:text-foreground",
+                pathname === link.href
+                  ? "text-foreground underline underline-offset-4"
+                  : " text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+        <div className="flex flex-1 justify-end items-center space-x-6">
+          <Link href={"/cart"}>
             <Button className="relative">
               <span className="hidden sm:block">View Cart</span>
               <ShoppingCart />
@@ -95,7 +95,9 @@ function Navigation() {
                           alt="Panda Audio Logo"
                           className="rounded-full "
                         />
-                        <span className="text-xl font-bold">Panda Audio</span>
+                        <span className="text-xl font-bold text-foreground">
+                          Panda Audio
+                        </span>
                       </Link>
                     </SheetClose>
                   </SheetTitle>
@@ -120,8 +122,8 @@ function Navigation() {
               </SheetContent>
             </Sheet>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
   );
 }
