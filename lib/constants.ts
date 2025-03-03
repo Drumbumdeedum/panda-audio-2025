@@ -93,7 +93,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM20 momentary switch pedal",
     description:
-      "Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
+      "Momentary / Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
       eur: 1400,
       usd: 1300,
