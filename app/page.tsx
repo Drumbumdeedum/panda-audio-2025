@@ -24,7 +24,7 @@ export default function Home() {
                 processing.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Headphones className="h-8 w-8" />,
@@ -41,11 +41,6 @@ export default function Home() {
                   icon: <Cpu className="h-8 w-8" />,
                   title: "Embedded Systems",
                   description: "Custom hardware and firmware development",
-                },
-                {
-                  icon: <Radio className="h-8 w-8" />,
-                  title: "Wireless Technology",
-                  description: "Advanced wireless audio applications",
                 },
               ].map((feature, index) => (
                 <div

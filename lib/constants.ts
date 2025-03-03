@@ -100,7 +100,7 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    name: "VM24 momentary switch pedal",
+    name: "VM24 momentary switch pedal with cable",
     description:
       "Momentary / Sustain “unlatch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
@@ -129,7 +129,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "SLYS2J180 1 x stereo jack to 2 x mono jack cable",
     description:
-      "For splitting headphone outputs to dual mono channels or connecting stereo sources to separate inputs.",
+      "Recommended for connecting one expression pedal and two switch pedals.",
     prices: {
       eur: 900,
       usd: 800,

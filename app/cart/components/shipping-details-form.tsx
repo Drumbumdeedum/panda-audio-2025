@@ -125,7 +125,7 @@ function ShippingDetailsForm() {
       {!orderSuccessful && (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex justify-between gap-8">
+            <div className="flex justify-between gap-2 sm:gap-8">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -264,16 +264,16 @@ function ShippingDetailsForm() {
                 </FormItem>
               )}
             />
-            <div className="flex gap-4 justify-between items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
               <Link
                 href="/cart"
                 tabIndex={-1}
-                className="focus:outline-none focus-visible:outline-none"
+                className="focus:outline-none focus-visible:outline-none w-full"
               >
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="py-6 transform transition duration-200 ease-in-out group"
+                  className="py-6 transform transition duration-200 ease-in-out group w-full"
                   disabled={loading}
                 >
                   <ArrowLeftIcon className="transition-transform group-hover:-translate-x-1" />

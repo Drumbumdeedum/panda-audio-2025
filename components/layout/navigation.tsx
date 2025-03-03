@@ -19,6 +19,7 @@ import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProd
 import clsx from "clsx";
 
 const links = [
+  { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
   { name: "Artists", href: "/artists" },
   { name: "Downloads", href: "/downloads" },
