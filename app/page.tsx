@@ -24,7 +24,7 @@ export default function Home() {
                 processing.
               </p>
             </div>
-            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {[
                 {
                   icon: <Headphones className="h-8 w-8" />,
@@ -45,7 +45,7 @@ export default function Home() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-lg bg-primary border border-border/30 text-center"
+                  className="p-6 rounded-lg bg-primary border border-border/30 text-center max-w-72 mx-auto"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 mb-4">
                     {feature.icon}
