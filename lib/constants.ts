@@ -120,7 +120,7 @@ export const ACCESSORIES: Product[] = [
   {
     name: "VM26 latching pedal with cable",
     description:
-      "Durable footswitch with positive click for reliable on/off control. Includes high-quality cable for amps, effects, or latching devices.",
+      "ON/OFF “latch” pedal with ABS base and rubber feet. Metal body that allows to couple pedals together.",
     prices: {
       eur: 1700,
       usd: 1500,
