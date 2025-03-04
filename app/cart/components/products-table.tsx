@@ -48,7 +48,7 @@ function ProductsTable() {
           <TableRow>
             <TableHead className="flex-grow">Product</TableHead>
             <TableHead className="text-center w-32">Amount</TableHead>
-            <TableHead className="text-right w-32">Total</TableHead>
+            <TableHead className="text-right sm:w-32">Total</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
