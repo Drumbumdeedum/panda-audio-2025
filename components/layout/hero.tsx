@@ -1,6 +1,7 @@
 import { ChevronRightIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { russoOne } from "@/lib/fonts";
 
 function Hero() {
   return (
@@ -8,7 +9,9 @@ function Hero() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-indigo-500 to-yellow-600 bg-clip-text leading-tight mb-0">
+            <h1
+              className={`${russoOne.className} text-4xl font-russo md:text-6xl font-bold text-transparent bg-gradient-to-r from-indigo-500 to-yellow-600 bg-clip-text leading-tight mb-0`}
+            >
               Professional Audio Innovation
             </h1>
             <p className="text-background/85 text-lg md:text-xl">
