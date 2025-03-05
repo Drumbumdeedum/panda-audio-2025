@@ -125,7 +125,7 @@ function ShippingDetailsForm() {
       {!orderSuccessful && (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex justify-between gap-2 sm:gap-8">
+            <div className="flex justify-between gap-2 sm:gap-4">
               <FormField
                 control={form.control}
                 name="firstName"
