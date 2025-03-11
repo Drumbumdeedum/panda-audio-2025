@@ -29,6 +29,7 @@ import { useProductCartStore } from "@/store/cart";
 import { toast } from "sonner";
 import OrderSuccess from "./order-success";
 import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
+import { useCurrencyStore } from "@/store/currency";
 
 const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL!;
 
@@ -62,6 +63,7 @@ const formSchema = z.object({
 
 function ShippingDetailsForm() {
   const { clearCart } = useProductCartStore();
+  const { currency } = useCurrencyStore();
   const products = useFilteredAndSortedProductsInCart();
   const [loading, setLoading] = useState<boolean>(false);
   const [orderSuccessful, setOrderSuccessful] = useState<boolean>(false);
@@ -86,13 +88,21 @@ function ShippingDetailsForm() {
     setLoading(true);
 
     const orderDetails = products.map((product) => {
-      return { name: product.name, quantity: product.amount };
+      const price =
+        currency === "EUR" ? product.prices.eur : product.prices.usd;
+      return {
+        name: product.name,
+        quantity: product.amount,
+        unitPrice: `${price / 100} ${currency}`,
+        totalPrice: `${(price / 100) * product.amount} ${currency}`,
+      };
     });
+
     const requestBody = {
       shippingDetails: values,
       orderDetails,
     };
-    console.log(JSON.stringify(requestBody));
+
     try {
       const response = await fetch(FORMSPREE_URL, {
         method: "POST",

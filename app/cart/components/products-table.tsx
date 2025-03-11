@@ -29,7 +29,6 @@ function ProductsTable() {
     const price = currency === "USD" ? product.prices.usd : product.prices.eur;
     return acc + product.amount * price;
   }, 0);
-  console.log(products);
   return (
     <>
       <div className="flex justify-between items-center">
