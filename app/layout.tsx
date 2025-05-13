@@ -27,10 +27,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
+  /* const headersList = await headers();
   const country = headersList.get("x-vercel-ip-country") || "unknown";
   console.log("headersList: ", headersList);
-  console.log("COUNTRY: ", country);
+  console.log("COUNTRY: ", country); */
 
   return (
     <html lang="en">
