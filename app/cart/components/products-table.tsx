@@ -104,23 +104,32 @@ function ProductsTable() {
             <TableCell colSpan={2}>Total</TableCell>
             <TableCell className="text-right font-bold">
               {formatCurrency(currency.toLowerCase())}
-              {formatAmount(total)}
+              {formatAmount(total)}*
             </TableCell>
           </TableRow>
         </TableFooter>
       </Table>
       {products.length > 0 && (
-        <div className="flex justify-end">
-          <Link
-            href="/cart/checkout"
-            tabIndex={-1}
-            className="focus:outline-none focus-visible:outline-none"
-          >
-            <Button className="group font-bold" variant="cta" size="lg">
-              To checkout
-              <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+        <div className="space-y-8">
+          <div>
+            <small>
+              * We process payments in EUR for EU residents and in USD for
+              international orders. Please make sure you have the correct
+              currency selected before proceeding.
+            </small>
+          </div>
+          <div className="flex justify-end">
+            <Link
+              href="/cart/checkout"
+              tabIndex={-1}
+              className="focus:outline-none focus-visible:outline-none"
+            >
+              <Button className="group font-bold" variant="cta" size="lg">
+                To checkout
+                <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       )}
     </>
