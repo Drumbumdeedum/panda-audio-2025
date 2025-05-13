@@ -1,21 +1,21 @@
 "use client";
 
 import { useEffect } from "react";
-import Cookies from "js-cookie";
-import { useCurrencyStore } from "@/store/currency";
 
 export default function CurrencyInitializer() {
-  const { setCurrency } = useCurrencyStore();
-
   useEffect(() => {
-    const storedCurrency = Cookies.get("currency") as "EUR" | "USD" | null;
-    console.log("CurrencyInitializer CC DETECTED: ", storedCurrency);
-    if (storedCurrency) {
-      setCurrency(storedCurrency);
-    } else {
-      setCurrency("EUR");
-    }
-  }, [setCurrency]);
+    const fetchGeo = async () => {
+      try {
+        const res = await fetch("/api/geo");
+        if (!res.ok) throw new Error("Failed to fetch");
+        const data = await res.json();
+        console.log(data);
+      } catch (error) {
+        console.error("Error fetching geo:", error);
+      }
+    };
+    fetchGeo();
+  }, []);
 
   return null;
 }
