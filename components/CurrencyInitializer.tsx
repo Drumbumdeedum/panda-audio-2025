@@ -1,8 +1,11 @@
 "use client";
 
+import { useCurrencyStore } from "@/store/currency";
 import { useEffect } from "react";
 
 export default function CurrencyInitializer() {
+  const { setCurrency } = useCurrencyStore();
+
   useEffect(() => {
     const fetchGeo = async () => {
       try {
@@ -10,12 +13,13 @@ export default function CurrencyInitializer() {
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         console.log(data);
+        setCurrency(data.currency);
       } catch (error) {
-        console.error("Error fetching geo:", error);
+        console.error("Error fetching geolocation:", error);
       }
     };
     fetchGeo();
-  }, []);
+  }, [setCurrency]);
 
   return null;
 }
