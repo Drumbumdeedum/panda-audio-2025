@@ -41,6 +41,7 @@ const euCountries = new Set([
 export function middleware(request: NextRequest) {
   const geoRequest = request as GeoRequest;
   const countryCode = geoRequest.geo?.country;
+  console.log("MIDDLEWARE CC DETECTED: ", countryCode);
   const currency = countryCode
     ? euCountries.has(countryCode)
       ? "EUR"

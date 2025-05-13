@@ -9,7 +9,7 @@ export default function CurrencyInitializer() {
 
   useEffect(() => {
     const storedCurrency = Cookies.get("currency") as "EUR" | "USD" | null;
-    console.log(storedCurrency);
+    console.log("CurrencyInitializer CC DETECTED: ", storedCurrency);
     if (storedCurrency) {
       setCurrency(storedCurrency);
     } else {
