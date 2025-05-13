@@ -4,6 +4,7 @@ import Navigation from "@/components/layout/navigation";
 import "./globals.css";
 import { Toaster } from "sonner";
 import Footer from "@/components/layout/footer";
+import CurrencyInitializer from "@/components/CurrencyInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CurrencyInitializer />
         <main>
           <Navigation />
           <div className="min-h-screen">{children}</div>
