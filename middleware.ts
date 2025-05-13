@@ -41,9 +41,6 @@ const euCountries = new Set([
 export function middleware(request: NextRequest) {
   const geoRequest = request as GeoRequest;
   const country = geoRequest.geo?.country;
-  console.log("MIDDLEWARE GEO REQUEST: ", geoRequest.geo);
-  console.log("MIDDLEWARE COUNTRY DETECTED: ", country);
-
   const currency = country ? (euCountries.has(country) ? "EUR" : "USD") : "EUR";
   const response = NextResponse.next();
   const currentCurrency = request.cookies.get("currency");
@@ -54,5 +51,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|favicon.ico).*)"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

@@ -5,6 +5,8 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import Footer from "@/components/layout/footer";
 import CurrencyInitializer from "@/components/CurrencyInitializer";
+import { headers } from "next/headers";
+import { count } from "console";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,11 +23,16 @@ export const metadata: Metadata = {
   description: "Panda Audio",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const country = headersList.get("x-vercel-ip-country") || "unknown";
+  console.log("headersList: ", headersList);
+  console.log("COUNTRY: ", country);
+
   return (
     <html lang="en">
       <body
