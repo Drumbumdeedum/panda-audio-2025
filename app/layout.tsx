@@ -6,7 +6,6 @@ import { Toaster } from "sonner";
 import Footer from "@/components/layout/footer";
 import CurrencyInitializer from "@/components/CurrencyInitializer";
 import { headers } from "next/headers";
-import { count } from "console";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
