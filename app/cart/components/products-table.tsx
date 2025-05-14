@@ -112,10 +112,11 @@ function ProductsTable() {
       {products.length > 0 && (
         <div className="space-y-8">
           <div>
-            <small>
-              * We process payments in EUR for EU residents and in USD for
-              international orders. Please make sure you have the correct
-              currency selected before proceeding.
+            <small className="text-foreground/70">
+              * We process payments in <strong>EUR</strong> for residents of the{" "}
+              <strong>EU</strong> and in <strong>USD</strong> for{" "}
+              <strong>international</strong> orders. Please ensure that the
+              correct currency is selected before proceeding.
             </small>
           </div>
           <div className="flex justify-end">
