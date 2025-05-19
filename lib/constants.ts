@@ -14,7 +14,7 @@ export const PRODUCTS: Product[] = [
     image: future_impact_v4_vip,
     prices: {
       eur: 34900,
-      usd: 28900,
+      usd: 29900,
     },
   },
   {
@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     image: future_impact_v4,
     prices: {
       eur: 29900,
-      usd: 24500,
+      usd: 25900,
     },
   },
   {
@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     image: midibeam_v2,
     prices: {
       eur: 16900,
-      usd: 14000,
+      usd: 14900,
     },
   },
 ];
