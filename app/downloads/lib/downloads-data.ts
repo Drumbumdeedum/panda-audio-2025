@@ -40,8 +40,8 @@ export const FIV4_DOWNLOADS: DownloadData[] = [
   {
     id: 5,
     title: "Firmware file",
-    version: "v4.11",
-    href: "/downloads/future_impact_v4/FI_4_firmware.fi4",
+    version: "v4.12",
+    href: "/downloads/future_impact_v4/FI_4_version_412.fi4",
   },
   {
     id: 6,
@@ -64,8 +64,8 @@ export const FIV4_DOWNLOADS: DownloadData[] = [
   {
     id: 9,
     title: "Version history",
-    version: "v4.11",
-    href: "/downloads/future_impact_v4/FI_4_version_history_v4.11.pdf",
+    version: "v4.12",
+    href: "/downloads/future_impact_v4/FI_4_version_history_v4.12.pdf",
   },
 ];
 

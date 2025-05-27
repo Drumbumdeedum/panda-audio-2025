@@ -283,7 +283,7 @@ function FutureImpactV4Page() {
                       V4 synth pedal. Before updating, you can check what
                       happened in our{" "}
                       <a
-                        href="/downloads/future_impact_v4/FI_4_version_history_v4.11.pdf"
+                        href="/downloads/future_impact_v4/FI_4_version_history_v4.12.pdf"
                         target="_blank"
                       >
                         Version history.
