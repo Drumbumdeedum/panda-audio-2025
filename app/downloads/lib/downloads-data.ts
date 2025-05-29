@@ -11,25 +11,25 @@ export const FIV4_DOWNLOADS: DownloadData[] = [
   {
     id: 1,
     title: "Future Impact Editor",
-    version: "v4.11",
+    version: "v4.13",
     subtitle: "mac OS",
-    href: "/downloads/future_impact_v4/FI_editor_v4.11_macOS.zip",
+    href: "/downloads/future_impact_v4/FIEditor_v4.13_macOS.zip",
     tooltip:
       "<p>macOS uses <strong>Gatekeeper</strong> to ensure only trusted software runs on your Mac. If you download an app from the internet, macOS may classify it as untrusted. To proceed, go to <strong>System Settings > Privacy & Security</strong>, scroll to <strong>Security</strong>, and click <strong>Open Anyway</strong>. Then, right-click <strong>FIEditor411.dmg</strong>, select <strong>Open With > Disk Image Mounter</strong>, and wait for it to open. Drag <strong>FIEditor4</strong> to the <strong>Applications</strong> folder, right-click the app, and open it. After the first launch, it will work as usual.</p>",
   },
   {
     id: 2,
     title: "Future Impact Editor",
-    version: "v4.11",
+    version: "v4.12",
     subtitle: "Windows 32 bit",
-    href: "/downloads/future_impact_v4/FI_editor_v4.11_Windows_32bit.zip",
+    href: "/downloads/future_impact_v4/FIEditor_v4.12_Windows_32bit.zip",
   },
   {
     id: 3,
     title: "Future Impact Editor",
-    version: "v4.11",
+    version: "v4.12",
     subtitle: "Windows 64 bit",
-    href: "/downloads/future_impact_v4/FI_editor_v4.11_Windows_64bit.zip",
+    href: "/downloads/future_impact_v4/FIEditor_v4.12_Windows_64bit.zip",
   },
   {
     id: 4,
