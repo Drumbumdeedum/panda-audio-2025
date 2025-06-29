@@ -49,6 +49,7 @@ const formSchema = z.object({
   postalCode: z.string().min(1, {
     message: "Please enter a valid postal code",
   }),
+  state: z.string().optional(),
   streetAndNumber: z.string().min(1, {
     message: "Please enter a street name and a street number",
   }),
@@ -76,6 +77,7 @@ function ShippingDetailsForm() {
       country: "",
       city: "",
       postalCode: "",
+      state: "",
       streetAndNumber: "",
       addressLine2: "",
       email: "",
@@ -191,25 +193,40 @@ function ShippingDetailsForm() {
                 </FormItem>
               )}
             />
+            <div className="flex justify-between gap-2 sm:gap-4">
+              <FormField
+                control={form.control}
+                name="postalCode"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel hasValue={!!field.value}>Postal code</FormLabel>
+                    <FormControl>
+                      <Input {...field} disabled={loading} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="state"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel hasValue={!!field.value}>State</FormLabel>
+                    <FormControl>
+                      <Input {...field} disabled={loading} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
               name="city"
               render={({ field }) => (
                 <FormItem className="flex-1">
                   <FormLabel hasValue={!!field.value}>City</FormLabel>
-                  <FormControl>
-                    <Input {...field} disabled={loading} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="postalCode"
-              render={({ field }) => (
-                <FormItem className="flex-1">
-                  <FormLabel hasValue={!!field.value}>Postal code</FormLabel>
                   <FormControl>
                     <Input {...field} disabled={loading} />
                   </FormControl>
