@@ -35,7 +35,7 @@ function AboutPage() {
             and{" "}
             <a href="http://tascam.com/" target="_blank">
               Tascam
-            </a>{" "}
+            </a>
             . Our tasks usually include hardware/software system design,
             hardware/software prototype development and production firmware
             development.
