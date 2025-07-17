@@ -82,12 +82,30 @@ export const ACCESSORIES: Product[] = [
     },
   },
   {
-    name: "MIDI cable, 120 cm",
+    name: "MIDI cable, 0.3 m",
     description:
       "Reliable digital connectivity between your music production devices.",
     prices: {
-      eur: 600,
-      usd: 500,
+      eur: 400,
+      usd: 300,
+    },
+  },
+  {
+    name: "MIDI cable, 2 m",
+    description:
+      "Reliable digital connectivity between your music production devices.",
+    prices: {
+      eur: 700,
+      usd: 600,
+    },
+  },
+  {
+    name: "MIDI cable, 3 m",
+    description:
+      "Reliable digital connectivity between your music production devices.",
+    prices: {
+      eur: 800,
+      usd: 700,
     },
   },
   {
