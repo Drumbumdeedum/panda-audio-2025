@@ -49,8 +49,8 @@ export const PRODUCTS: Product[] = [
     description: "Professional wireless MIDI interface",
     image: midibeam_v2,
     prices: {
-      eur: 16900,
-      usd: 15900,
+      eur: 18900,
+      usd: 17900,
     },
   },
 ];
