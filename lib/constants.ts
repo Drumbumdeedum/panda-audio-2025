@@ -165,3 +165,25 @@ export const ACCESSORIES: Product[] = [
 ];
 
 export const PANDA_AUDIO_MAILTO_ADDRESS = "info@panda-audio.com";
+
+export const FEDEX_CSV_HEADER = [
+  "Nickname","FullName","FirstName","LastName","Title","Company","Department",
+  "AddressOne","AddressTwo","City","State","Zip","PhoneNumber","ExtensionNumber",
+  "FAXNumber","PagerNumber","MobilePhoneNumber","CountryCode","EmailAddress",
+  "VerifiedFlag","AcceptedFlag","ValidFlag","ResidentialFlag","CustomsIDEIN",
+  "ReferenceDescription","ServiceTypeCode","PackageTypeCode","CollectionMethodCode",
+  "BillCode","BillAccountNumber","DutyBillCode","DutyBillAccountNumber",
+  "CurrencyTypeCode","InsightIDNumber","GroundReferenceDescription",
+  "ShipmentNotificationRecipientEmail","RecipientEmailLanguage",
+  "RecipientEmailShipmentnotification","RecipientEmailExceptionnotification",
+  "RecipientEmailDeliverynotification","PartnerTypeCodes","NetReturnBillAccountNumber",
+  "CustomsIDTypeCode","AddressTypeCode","ShipmentNotificationSenderEmail",
+  "SenderEmailLanguage","SenderEmailShipmentnotification",
+  "SenderEmailExceptionnotification","SenderEmailDeliverynotification",
+  "RecipientEmailPickupnotification","SenderEmailPickupnotification","OpCoTypeCd",
+  "BrokerAccounttID","BrokerTaxID","DefaultBrokerID","RecipientEmailTenderednotification",
+  "SenderEmailTenderednotification","UserAccountNumber","DeliveryInstructions",
+  "EstimatedDeliveryFlag","SenderEstimatedDeliveryFlag",
+  "ShipmentNotificationSenderDeliveryChannel","ShipmentNotificationSenderMobileNo",
+  "ShipmentNotificationSenderMobileNoCountry","ShipmentNotificationSenderMobileNoLanguage"
+];
