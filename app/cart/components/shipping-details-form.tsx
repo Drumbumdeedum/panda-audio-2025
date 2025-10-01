@@ -30,6 +30,7 @@ import { toast } from "sonner";
 import OrderSuccess from "./order-success";
 import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
 import { useCurrencyStore } from "@/store/currency";
+import { FEDEX_CSV_HEADER } from "@/lib/constants";
 
 const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_URL!;
 
@@ -100,9 +101,25 @@ function ShippingDetailsForm() {
       };
     });
 
+    const row: Record<string, string> = {};
+    row.FullName = `${values.firstName} ${values.lastName}`
+    row.FirstName = values.firstName;
+    row.LastName = values.lastName;
+    row.AddressOne = values.streetAndNumber;
+    row.AddressTwo = values.addressLine2 ? values.addressLine2 : "";
+    row.City = values.city;
+    row.State = values.state ? values.state : "";
+    row.Zip = values.postalCode;
+    row.CountryCode = values.country;
+    row.EmailAddress = values.email;
+    row.PhoneNumber = values.phone;
+
+    const dataRow = FEDEX_CSV_HEADER.map((col) => row[col] ?? "").join(",");
+
     const requestBody = {
       shippingDetails: values,
       orderDetails,
+      csv: `${FEDEX_CSV_HEADER}\n ${dataRow}`
     };
 
     try {
@@ -117,6 +134,7 @@ function ShippingDetailsForm() {
         clearCart();
         form.reset();
       } else {
+        console.error(response);
         toast.error(
           "Something went wrong. Please try again later, or contact us at info@panda-audio.com."
         );
