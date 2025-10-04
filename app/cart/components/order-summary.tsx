@@ -91,9 +91,8 @@ function OrderSummary() {
                 </strong>
               </p>
             </div>
-            <div className="text-xs text-muted-foreground text-center mt-4">
-              * additional shipping cost will be calculated based <br />
-              on size/weight of package, and shipping location
+            <div className="text-xs text-muted-foreground mt-4">
+              * Additional shipping costs are based on package size, weight, and location. After ordering, you&apos;ll receive an email with the cost. Once confirmed, an invoice will be sent for credit card payment.
             </div>
           </>
         )}
