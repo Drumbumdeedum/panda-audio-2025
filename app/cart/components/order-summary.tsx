@@ -24,7 +24,7 @@ function OrderSummary() {
 
   const [saleIsVisible, setSaleIsVisible] = useState(false);
   useEffect(() => {
-    const endCET = new Date("2025-12-25T00:00:00");
+    const endCET = new Date("2025-12-20T00:00:00");
     const checkTime = () => {
       const nowCET = new Date(
         new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" })
@@ -117,7 +117,7 @@ function OrderSummary() {
                     Free Shipping on orders above <span className="font-bold text-yellow-200">{formatCurrency(currency)}{formatAmount(15000)}</span>
                   </p>
                   <p className="mt-3 text-sm text-white/80">
-                    * Sale lasts until <span className="font-semibold">December 24, 2025 at 00:00 CET</span>
+                    * Sale lasts until <span className="font-semibold">December 20, 2025 at 00:00 CET</span>
                   </p>
                 </div>
               </section>
