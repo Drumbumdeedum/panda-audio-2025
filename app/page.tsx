@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { PRODUCTS } from "@/lib/constants";
 import { AudioLines, Cpu, Headphones } from "lucide-react";
@@ -8,8 +10,27 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Hero from "@/components/layout/hero";
 import PageContent from "@/components/layout/page-content";
 import { Badge } from "@/components/ui/badge";
+import { useCurrencyStore } from "@/store/currency";
+import { formatAmount, formatCurrency } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const { currency } = useCurrencyStore();
+
+  const [saleIsVisible, setSaleIsVisible] = useState(false);
+    useEffect(() => {
+    const endCET = new Date("2025-12-25T00:00:00");
+    const checkTime = () => {
+      const nowCET = new Date(
+        new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" })
+      );
+      setSaleIsVisible(nowCET < endCET);
+    };
+    checkTime();
+    const interval = setInterval(checkTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  
   return (
     <>
       <Hero />
@@ -59,6 +80,20 @@ export default function Home() {
             </div>
           </section>
 
+          { saleIsVisible &&
+            <section className="px-4 md:px-16 lg:px-44">
+              <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-8 text-center shadow-lg">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">🎄 Christmas Sale 🎄</h2>
+                <p className="text-white text-lg">
+                  Free Shipping on orders above <span className="font-bold text-yellow-200">{formatCurrency(currency)}{formatAmount(20000)}</span>
+                </p>
+                <p className="mt-3 text-sm text-white/80">
+                  * Sale lasts until <span className="font-semibold">December 24, 2025 at 00:00 CET</span>
+                </p>
+              </div>
+            </section>
+          }
+         
           <section>
             <div className="text-center mb-4">
               <h1 className="mb-0">Featured Products</h1>

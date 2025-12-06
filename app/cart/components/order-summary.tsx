@@ -22,6 +22,20 @@ function OrderSummary() {
     }
   }, [products, currentProducts]);
 
+  const [saleIsVisible, setSaleIsVisible] = useState(false);
+  useEffect(() => {
+    const endCET = new Date("2025-12-25T00:00:00");
+    const checkTime = () => {
+      const nowCET = new Date(
+        new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" })
+      );
+      setSaleIsVisible(nowCET < endCET);
+    };
+    checkTime();
+    const interval = setInterval(checkTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Card>
       <CardHeader>
@@ -94,6 +108,20 @@ function OrderSummary() {
             <div className="text-xs text-muted-foreground mt-4">
               * Additional shipping costs are based on package size, weight, and location. After ordering, you&apos;ll receive an email with the cost. Once confirmed, an invoice will be sent for credit card payment.
             </div>
+
+            { saleIsVisible &&
+              <section className="mt-4">
+                <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-8 text-center shadow-lg">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">🎄 Christmas Sale 🎄</h2>
+                  <p className="text-white text-lg">
+                    Free Shipping on orders above <span className="font-bold text-yellow-200">{formatCurrency(currency)}{formatAmount(20000)}</span>
+                  </p>
+                  <p className="mt-3 text-sm text-white/80">
+                    * Sale lasts until <span className="font-semibold">December 24, 2025 at 00:00 CET</span>
+                  </p>
+                </div>
+              </section>
+            }
           </>
         )}
       </CardContent>
