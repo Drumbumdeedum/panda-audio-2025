@@ -114,7 +114,7 @@ function OrderSummary() {
                 <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-8 text-center shadow-lg">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">🎄 Christmas Sale 🎄</h2>
                   <p className="text-white text-lg">
-                    Free Shipping on orders above <span className="font-bold text-yellow-200">{formatCurrency(currency)}{formatAmount(20000)}</span>
+                    Free Shipping on orders above <span className="font-bold text-yellow-200">{formatCurrency(currency)}{formatAmount(15000)}</span>
                   </p>
                   <p className="mt-3 text-sm text-white/80">
                     * Sale lasts until <span className="font-semibold">December 24, 2025 at 00:00 CET</span>
