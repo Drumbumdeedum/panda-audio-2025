@@ -121,19 +121,18 @@ function OrderSummary() {
                     <Info size={12} />
                   </TooltipTrigger>
                   <TooltipContent side="top">
-                    <p
+                    <div
                       className="p-2 w-[300px] text-xs font-normal"
                       
                     >
                       An estimated shipping cost per shipment can be found below. Please note, <strong>this is not an official offer</strong>—these figures represent an average of previous shipping costs based on historical invoices:
-                      <ul className="mt-1">
-                        <li><p>Europe: €17.00</p></li>
-                        <li><p>North America: $36.00</p></li>
-                        <li><p>Asia: $23.00</p></li>
-                        <li><p>Middle East: $22.00</p></li>
-
+                      <ul className="mt-1 w-[150px]">
+                        <li className="flex w-full"><p className="flex-1">Europe:</p><p>€17.00</p></li>
+                        <li className="flex w-full"><p className="flex-1">North America:</p><p>$36.00</p></li>
+                        <li className="flex w-full"><p className="flex-1">Asia:</p><p>$23.00</p></li>
+                        <li className="flex w-full"><p className="flex-1">Middle East:</p><p> $22.00</p></li>
                       </ul>
-                    </p>
+                    </div>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
