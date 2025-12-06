@@ -7,6 +7,14 @@ import { useCurrencyStore } from "@/store/currency";
 import { formatAmount, formatCurrency } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { useEffect, useState } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Info } from "lucide-react";
+
 import Link from "next/link";
 import useFilteredAndSortedProductsInCart from "@/hooks/useFilteredAndSortedProductsInCart";
 
@@ -107,6 +115,28 @@ function OrderSummary() {
             </div>
             <div className="text-xs text-muted-foreground mt-4">
               * Additional shipping costs are based on package size, weight, and location. After ordering, you&apos;ll receive an email with the cost. Once confirmed, an invoice will be sent for credit card payment.
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="self-start">
+                    <Info size={12} />
+                  </TooltipTrigger>
+                  <TooltipContent side="top">
+                    <p
+                      className="p-2 w-[300px] text-xs font-normal"
+                      
+                    >
+                      An estimated shipping cost per shipment can be found below. Please note, <strong>this is not an official offer</strong>—these figures represent an average of previous shipping costs based on historical invoices:
+                      <ul className="mt-1">
+                        <li><p>Europe: €17.00</p></li>
+                        <li><p>North America: $36.00</p></li>
+                        <li><p>Asia: $23.00</p></li>
+                        <li><p>Middle East: $22.00</p></li>
+
+                      </ul>
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
 
             { saleIsVisible &&
