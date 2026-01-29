@@ -4,6 +4,8 @@ import future_impact_v4_vip from "@/public/images/products/future-impact-v4-vip/
 import Image from "next/image";
 import Link from "next/link";
 
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 function FutureImpactV4VipPage() {
   return (
     <>
@@ -31,6 +33,24 @@ function FutureImpactV4VipPage() {
               compact, pedalboard-friendly form. With dimensions of 125 x 85 x
               60 mm (4.9 x 3.3 x 2.4 in) and a weight of 330g, it seamlessly
               integrates into any setup.
+            </p>
+          </div>
+        </section>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
+          <div className="w-full">
+            <AspectRatio ratio={16 / 9}>
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/ZmzzJEcUh2I?si=W-Wb8lgi8LhvAKaM"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
+            </AspectRatio>
+          </div>
+          <div className="flex flex-col justify-center align-baseline lg:order-first">
+            <h3>Don&apos;t just read about it — watch it, hear it!</h3>
+            <p>
+              Watch the newest product demo about the past and present of Future Impact V4.5, and experience the precision, performance, and sound quality that set our technology apart.
             </p>
           </div>
         </section>
