@@ -23,7 +23,6 @@ function FutureImpactV4VipPage() {
           />
           <div className="flex flex-col justify-center items-start space-y-4">
             <h3>Significantly smaller, equally powerful </h3>
-
             <p>
               Introducing the <strong>Future Impact V4 - VIP</strong>, the
               latest evolution in Panda Audio&apos;s renowned bass synthesizer
@@ -51,6 +50,22 @@ function FutureImpactV4VipPage() {
             <h3>Don&apos;t just read about it — watch it, hear it!</h3>
             <p>
               Watch the newest product demo about the past and present of Future Impact V4.5, and experience the precision, performance, and sound quality that set our technology apart.
+            </p>
+          </div>
+        </section>
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-4 justify-center items-center">
+          <AspectRatio ratio={16 / 9}>
+              <iframe
+                className="h-full w-full"
+                      src="https://www.youtube.com/embed/71MYcgnoQls?si=pyaAn4V3kE4mKSdF"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              ></iframe>
+            </AspectRatio>
+          <div className="flex flex-col justify-center items-start space-y-4">
+            <h3>Panda at NAMM 2026</h3>
+            <p>
+              Watch our quick recap of the events at the Anaheim NAMM show of 2026!
             </p>
           </div>
         </section>

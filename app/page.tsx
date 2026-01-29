@@ -35,8 +35,8 @@ export default function Home() {
     <>
       <Hero />
       <PageContent>
-        <div className="space-y-24 pb-8">
-          <section>
+        <div className="space-y-20 pb-8">
+          {/* <section>
             <div className="text-center mb-4">
               <h1 className="mb-0">Advanced Audio Technology</h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -78,31 +78,53 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </section> */}
+
+          <section className="px-4 md:px-16 lg:px-44">
+            <Card className="border border-border/30 rounded-lg overflow-hidden">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl md:text-3xl">See It. Hear It. Believe It.</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <p className="text-muted-foreground">
+                  Words can only say so much — press play and let Future Impact V4.5 speak for itself.
+                </p>
+                <div className="w-full">
+                  <AspectRatio ratio={16 / 9}>
+                    <iframe
+                      className="h-full w-full"
+                      src="https://www.youtube.com/embed/ZmzzJEcUh2I?si=W-Wb8lgi8LhvAKaM"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    ></iframe>
+                  </AspectRatio>
+                </div>
+              </CardContent>
+            </Card>
           </section>
 
-          <div className="w-full">
-            <section className="px-4 md:px-16 lg:px-44">
-            <div className="bg-primary border border-border/30 rounded-lg p-8 md:p-12 text-center space-y-4">
-              <h2 className="text-2xl md:text-3xl font-bold text-background">
-                Don&apos;t just read about it — watch it, hear it!
-              </h2>
-              <p className="text-background/70 max-w-2xl mx-auto">
-                Watch the newest product demo about the past and present of Future Impact V4.5, and experience the precision, performance,
-                and sound quality that set our technology apart.
-              </p>
-              <div className="flex justify-center">
-              <AspectRatio ratio={16 / 9}>
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/ZmzzJEcUh2I?si=W-Wb8lgi8LhvAKaM"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                ></iframe>
-              </AspectRatio>
-              </div>
-            </div>
+          <section className="px-4 md:px-16 lg:px-44">
+            <Card className="border border-border/30 rounded-lg overflow-hidden">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl md:text-3xl">Panda at NAMM 2026</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center space-y-4">
+                <p className="text-muted-foreground">
+                  Watch our quick recap of the events at the Anaheim NAMM show of 2026!
+                </p>
+                <div className="w-full">
+                  <AspectRatio ratio={16 / 9}>
+                    <iframe
+                      className="h-full w-full"
+                      src="https://www.youtube.com/embed/71MYcgnoQls?si=pyaAn4V3kE4mKSdF"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    ></iframe>
+                  </AspectRatio>
+                </div>
+              </CardContent>
+            </Card>
           </section>
-          </div>
 
           { saleIsVisible &&
             <section className="px-4 md:px-16 lg:px-44">
