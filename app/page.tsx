@@ -80,6 +80,30 @@ export default function Home() {
             </div>
           </section>
 
+          <div className="w-full">
+            <section className="px-4 md:px-16 lg:px-44">
+            <div className="bg-primary border border-border/30 rounded-lg p-8 md:p-12 text-center space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-background">
+                Don&apos;t just read about it — watch it, hear it!
+              </h2>
+              <p className="text-background/70 max-w-2xl mx-auto">
+                Watch the newest product demo about the past and present of Future Impact V4.5, and experience the precision, performance,
+                and sound quality that set our technology apart.
+              </p>
+              <div className="flex justify-center">
+              <AspectRatio ratio={16 / 9}>
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/ZmzzJEcUh2I?si=W-Wb8lgi8LhvAKaM"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                ></iframe>
+              </AspectRatio>
+              </div>
+            </div>
+          </section>
+          </div>
+
           { saleIsVisible &&
             <section className="px-4 md:px-16 lg:px-44">
               <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-8 text-center shadow-lg">
