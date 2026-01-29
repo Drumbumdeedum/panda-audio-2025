@@ -110,7 +110,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="text-center space-y-4">
                 <p className="text-muted-foreground">
-                  Watch our quick recap of the events at the Anaheim NAMM show of 2026!
+                  Watch our quick recap of the Anaheim NAMM show!
                 </p>
                 <div className="w-full">
                   <AspectRatio ratio={16 / 9}>

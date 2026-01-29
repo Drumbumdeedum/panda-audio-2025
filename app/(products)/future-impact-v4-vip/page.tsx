@@ -65,7 +65,7 @@ function FutureImpactV4VipPage() {
           <div className="flex flex-col justify-center items-start space-y-4">
             <h3>The Future Impact V4 - VIP at NAMM 2026</h3>
             <p>
-              Watch our quick recap of the events at the Anaheim NAMM show of 2026!
+              Watch our quick recap of the Anaheim NAMM show!
             </p>
           </div>
         </section>
