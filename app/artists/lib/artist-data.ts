@@ -12,6 +12,7 @@ import alissiaBenveniste from "@/public/images/artists/alissia_benveniste.webp";
 import waldemar_golebski from "@/public/images/artists/waldemar_golebski.webp";
 import reinHardRietsch from "@/public/images/artists/reinhard.webp";
 import mohiniDey from "@/public/images/artists/mohinidey.webp";
+import mikeGordon from "@/public/images/artists/mike_gordon.webp";
 import { StaticImageData } from "next/image";
 
 export type ArtistData = {
@@ -76,6 +77,17 @@ export const artists: ArtistData[] = [
       "The Future Impact has been a great investment for me because of the many different sounds that it has to offer.",
     quote: true,
     link: "https://mohinideybass.in",
+    product: "Future Impact",
+    productHref: "/future-impact-v4",
+  },
+  {
+    name: "Mike Gordon",
+    role: "Bass player of the legandary band Phish",
+    image: mikeGordon,
+    description:
+      "I used to say the Deep Impact was the one pedal I'd bring with me on a desert island. When the Future Impact arrived, I was amazed the digital format preserved the fat sound while adding countless new possibilities.",
+    quote: true,
+    link: "https://mike-gordon.com/",
     product: "Future Impact",
     productHref: "/future-impact-v4",
   },
